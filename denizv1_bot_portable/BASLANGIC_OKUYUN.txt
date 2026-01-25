@@ -1,0 +1,16 @@
+# denizv1 Bot - KURULUM
+
+## 1. Tesseract OCR Yukleyin
+   - tesseract-installer.exe dosyasina cift tiklayin
+   - Tum varsayilan ayarlari kabul edin
+
+## 2. denizv1_bot.exe Calistirin
+   - denizv1_bot.exe dosyasina cift tiklayin
+   - "Sistemi Baslat" butonuna tiklayin
+
+## NOTLAR:
+   - Oyun pencere modunda olmali
+   - Yesil kod ve butonlar gorunur olmali
+   - Bot SADECE %100 eslesme ile tiklar
+
+Sorun yasarsaniz NASIL_KULLANILIR.txt dosyasini okuyun.

@@ -1,0 +1,117 @@
+# 🎮 denizv1 Bot - Kullanım Kılavuzu
+
+## 📥 Kurulum (Tek Seferlik)
+
+### Adım 1: Tesseract OCR Yükleyin
+
+**ÖNEMLİ:** Bu yazılım olmadan bot çalışmaz!
+
+1. Şu linke gidin: https://github.com/UB-Mannheim/tesseract/wiki
+2. **tesseract-ocr-w64-setup-5.3.3.20231005.exe** dosyasını indirin
+3. Kurulumu başlatın
+4. Tüm varsayılan ayarları kabul edin (sadece "Next" tıklayın)
+5. Kurulum yeri: `C:\Program Files\Tesseract-OCR`
+
+### Adım 2: denizv1_bot.exe Dosyasını Çalıştırın
+
+- `denizv1_bot.exe` dosyasına çift tıklayın
+- Windows SmartScreen uyarısı çıkarsa:
+  - "Daha fazla bilgi" tıklayın
+  - "Yine de çalıştır" tıklayın
+
+---
+
+## 🎯 Nasıl Kullanılır?
+
+### 1. Oyunu Açın
+- Oyununuzu tam ekran YAPMAYIN (pencere modunda olsun)
+- Yeşil kod ve butonlar ekranda görünür olmalı
+
+### 2. Bot'u Başlatın
+- `denizv1_bot.exe` dosyasını açın
+- **"Sistemi Başlat"** butonuna tıklayın
+
+### 3. Bot Çalışıyor!
+- Bot her 2 saniyede ekranı tarar
+- Yeşil kodu bulur
+- 4 buton içinde eşleşeni arar
+- **SADECE %100 eşleşme varsa** tıklar
+- Eşleşme yoksa güvenle atlar (oyun kapanmaz!)
+
+### 4. İstatistikler
+- **✅ Başarı:** Doğru tıklama sayısı
+- **❌ Atla:** Eşleşme olmayan atlamalar
+
+---
+
+## ⚠️ ÖNEMLİ NOTLAR
+
+### Güvenlik
+- Bot **KRİTİK MOD**da çalışır
+- Sadece %100 tam eşleşme ile tıklar
+- Yanlış tıklama riski: **%0**
+- Oyun kapanma riski: **YOK**
+
+### Acil Durdurma
+- Fareyi ekranın **sol üst köşesine** götürün
+- VEYA bot penceresinde **"Sistemi Durdur"** tıklayın
+
+### Performans İpuçları
+- Oyun penceresini tam ekran yapma
+- Yeşil kod ve butonlar net görünsün
+- Ekran çözünürlüğü en az 1280x720 olsun
+
+---
+
+## 🔧 Sorun Giderme
+
+### "Tesseract bulunamadı" hatası
+**Çözüm:** Tesseract OCR'ı kurun (Adım 1)
+
+### Bot tıklamıyor
+**Olası Sebepler:**
+1. Yeşil kod yeterince net değil (font büyüklüğü)
+2. Butonlar tespit edilemiyor (renk uyumsuzluğu)
+3. Tam eşleşme yok (bot güvenli atlıyor)
+
+**Çözüm:** Log'lara bakın, hangi sayıları tespit ettiğini görün
+
+### Bot çok yavaş
+- Tarama süresi: 2 saniye (sabit)
+- Tıklama gecikmesi: 4-14 saniye (rastgele)
+- Bu süre BOT TESPİTİNİ önlemek için gereklidir
+
+---
+
+## 📊 Log Açıklaması
+
+```
+━━━ Tarama #1 ━━━
+🟢 Yeşil: 876609          ← Ekrandan okunan yeşil kod
+🔘 Butonlar: [592490, 876609, 714685, 905287]  ← Tespit edilen butonlar
+❌ Uyuşmuyor: 592490 ≠ 876609
+✅ TAM EŞLEŞMe: 876609    ← Eşleşme bulundu!
+⏱️ 8.2s bekleniyor...     ← Rastgele bekleme
+🎯 TIKLA: 876609 → (650, 720)
+✅ BAŞARILI! Toplam: 1
+```
+
+---
+
+## 📞 Destek
+
+Sorun yaşarsanız bot geliştiricisine ulaşın.
+
+**NOT:** Bu bot eğitim amaçlıdır. Ticari kullanım yasaktır.
+
+---
+
+## ✅ Hızlı Başlangıç Özeti
+
+1. ✅ Tesseract OCR yükleyin
+2. ✅ Oyunu pencere modunda açın
+3. ✅ denizv1_bot.exe çalıştırın
+4. ✅ "Sistemi Başlat" tıklayın
+5. ✅ Bot otomatik çalışır!
+
+**İyi oyunlar! 🎮**
