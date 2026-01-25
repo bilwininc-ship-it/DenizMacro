@@ -1,0 +1,149 @@
+🎮 OYUN BOTU - BASIT KURULUM REHBERİ
+═══════════════════════════════════════════════════════════
+
+📦 ARKADAŞINIZA GÖNDERECEKLERİNİZ (3 DOSYA):
+═══════════════════════════════════════════════════════════
+
+1. dist/OyunBotu.exe              ← Ana program
+2. TESSERACT_KUR.bat              ← Otomatik kurulum
+3. KULLANICI_KILAVUZU.txt         ← Kullanım rehberi
+
+✅ Hepsi bu kadar! Sadece 3 dosya!
+
+═══════════════════════════════════════════════════════════
+
+👥 ARKADAŞINIZ NE YAPACAK?
+═══════════════════════════════════════════════════════════
+
+ADIM 1: TESSERACT KURULUMU (İlk kullanım, tek seferlik)
+───────────────────────────────────────────────────────────
+
+   📁 TESSERACT_KUR.bat dosyasına ÇİFT TIKLA
+   
+   ⏳ 1-2 dakika bekle, otomatik kurulacak!
+   
+   ✅ "Kurulum tamamlandı" yazısını gör
+
+
+ADIM 2: BOTU KULLAN
+───────────────────────────────────────────────────────────
+
+   1. Oyunu pencere modunda aç (tam ekran yapma!)
+   
+   2. 📁 OyunBotu.exe dosyasına ÇİFT TIKLA
+   
+   3. Windows Defender uyarısı çıkarsa:
+      → "Daha fazla bilgi" tıkla
+      → "Yine de çalıştır" seç
+   
+   4. Bot penceresi açılır (300x300 küçük pencere)
+   
+   5. ▶ "Başlat" butonuna BAS
+   
+   6. 🎉 Hepsi bu! Bot otomatik çalışıyor!
+
+
+═══════════════════════════════════════════════════════════
+
+⚙️ BOT ÖZELLİKLERİ:
+═══════════════════════════════════════════════════════════
+
+✅ 300x300 küçük pencere
+✅ Her 2 saniyede ekranı tarar
+✅ Yeşil kodu bulur
+✅ 4-15 saniye arası rastgele bekler
+✅ Doğru butona tıklar
+✅ Eşleşme yoksa güvenle atlar
+✅ Başınızda olmasanız da çalışır
+
+═══════════════════════════════════════════════════════════
+
+🛑 DURDURMA:
+═══════════════════════════════════════════════════════════
+
+   • ⏹ "Durdur" butonuna tıkla
+   
+   VEYA
+   
+   • Fareyi ekranın SOL ÜST köşesine götür (acil durdurma)
+
+═══════════════════════════════════════════════════════════
+
+🔧 SORUN GİDERME:
+═══════════════════════════════════════════════════════════
+
+PROBLEM: Bot tıklamıyor
+───────────────────────────────────────────────────────────
+✅ Oyun pencere modunda olmalı (tam ekran değil!)
+✅ Yeşil kod ve butonlar ekranda görünür olmalı
+✅ Log kutusuna bak, ne tespit ettiğini gör
+
+
+PROBLEM: "Tesseract bulunamadı" hatası
+───────────────────────────────────────────────────────────
+✅ TESSERACT_KUR.bat dosyasını tekrar çalıştır
+✅ Kurulum tamamlanana kadar bekle
+
+
+PROBLEM: Pencere açılmıyor
+───────────────────────────────────────────────────────────
+✅ Windows 10 veya 11 olmalı
+✅ Antivirüs'ü geçici kapat
+✅ OyunBotu.exe'ye sağ tık → "Yönetici olarak çalıştır"
+
+
+═══════════════════════════════════════════════════════════
+
+❓ SIK SORULAN SORULAR:
+═══════════════════════════════════════════════════════════
+
+S: Python kurmam gerekir mi?
+C: ❌ HAYIR! Hiçbir şey kurmanıza gerek yok.
+   Sadece TESSERACT_KUR.bat çalıştırın.
+
+
+S: İnternet gerekli mi?
+C: Sadece Tesseract kurulumu için (ilk kulanım).
+   Sonra internet olmadan çalışır.
+
+
+S: Virüs var mı?
+C: ❌ HAYIR! Kaynak kodu açık, güvenlidir.
+   Windows Defender bazı botları uyarıyla engeller,
+   "Yine de çalıştır" seçin.
+
+
+S: Başka bilgisayara taşıyabilir miyim?
+C: ✅ EVET! 3 dosyayı kopyalayıp her bilgisayarda
+   kullanabilirsiniz.
+
+
+S: Masaüstüne koyabilir miyim?
+C: ✅ EVET! OyunBotu.exe'yi masaüstüne kopyalayın,
+   çift tıklayın.
+
+
+═══════════════════════════════════════════════════════════
+
+💡 İPUÇLARI:
+═══════════════════════════════════════════════════════════
+
+1. Bot penceresini oyunun yanına koyun
+2. "✅ Geçti" sayacını izleyin
+3. Log kutusunu okuyun, ne yaptığını görürsünüz
+4. İlk kullanımda 2-3 test yapın
+
+═══════════════════════════════════════════════════════════
+
+✅ HIZLI ÖZET:
+═══════════════════════════════════════════════════════════
+
+1. ✅ TESSERACT_KUR.bat → Çift tıkla (tek seferlik)
+2. ✅ OyunBotu.exe → Çift tıkla
+3. ✅ Oyunu pencere modunda aç
+4. ✅ "▶ Başlat" butonuna bas
+5. ✅ Artık otomatik çalışıyor!
+
+═══════════════════════════════════════════════════════════
+
+İyi oyunlar! 🎮

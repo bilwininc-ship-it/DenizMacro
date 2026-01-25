@@ -1,0 +1,146 @@
+🎮 OYUN DOĞRULAMA BOTU - KULLANIM KILAVUZU
+═══════════════════════════════════════════════════════════
+
+📌 ÖNEMLİ: İLK KURULUM (TEK SEFERLİK)
+═══════════════════════════════════════════════════════════
+
+1. TESSERACT OCR YÜKLEYIN:
+   
+   ⚠️ Bu olmadan bot çalışmaz!
+   
+   • İndirme linki: https://github.com/UB-Mannheim/tesseract/wiki
+   • Dosya: tesseract-ocr-w64-setup-5.3.3.20231005.exe
+   • Kurulum yeri: C:\Program Files\Tesseract-OCR
+   • Tüm varsayılan ayarları kabul edin
+
+2. PYTHON KÜTÜPHANELERİ YÜKLEYIN:
+   
+   Komut satırını açın (cmd) ve şu komutu çalıştırın:
+   
+   pip install opencv-python pytesseract Pillow pyautogui customtkinter numpy
+
+═══════════════════════════════════════════════════════════
+
+🚀 NASIL KULLANILIR?
+═══════════════════════════════════════════════════════════
+
+1. OYUNU AÇIN:
+   • Oyunu pencere modunda açın (TAM EKRAN YAPMAYIN!)
+   • Yeşil kod ve butonlar ekranda görünür olmalı
+
+2. BOTU BAŞLATIN:
+   • "CALISTIR_BENI.bat" dosyasına çift tıklayın
+   • VEYA komut satırından: python game_bot.py
+   
+3. BOT PENCERESİ:
+   • 300x300 boyutunda küçük bir pencere açılır
+   • "▶ Başlat" butonuna tıklayın
+   
+4. OTOMATİK ÇALIŞMA:
+   ✅ Bot her 2 saniyede ekranı tarar
+   ✅ Yeşil kodu bulur
+   ✅ Gri butonlarda eşleşeni arar
+   ✅ 4-15 saniye arası rastgele bekler
+   ✅ Doğru butona tıklar
+   ✅ Eşleşme yoksa güvenle atlar
+
+═══════════════════════════════════════════════════════════
+
+📊 İSTATİSTİKLER
+═══════════════════════════════════════════════════════════
+
+✅ Geçti: Başarılı doğrulama sayısı
+📝 Log: Anlık işlemler (tarama, eşleşme, tıklama)
+
+═══════════════════════════════════════════════════════════
+
+⚙️ ÖZELLİKLER
+═══════════════════════════════════════════════════════════
+
+✅ 300x300 kompakt pencere
+✅ 4-15 saniye arası rastgele bekleme
+✅ %100 doğru eşleştirme (yanlış tıklama yok)
+✅ Eşleşme yoksa güvenli atlama
+✅ Arka planda çalışabilir
+✅ Başınızda olmasanız da otomatik çalışır
+
+═══════════════════════════════════════════════════════════
+
+🛑 ACİL DURDURMA
+═══════════════════════════════════════════════════════════
+
+• Fareyi ekranın SOL ÜST köşesine götürün (FAILSAFE)
+• VEYA bot penceresinde "⏹ Durdur" tıklayın
+
+═══════════════════════════════════════════════════════════
+
+🔧 SORUN GİDERME
+═══════════════════════════════════════════════════════════
+
+PROBLEM: "Tesseract bulunamadı" hatası
+ÇÖZÜM: Tesseract OCR'ı kurun (Adım 1)
+
+PROBLEM: Bot tıklamıyor
+ÇÖZÜM: 
+  • Log'lara bakın, hangi sayıları tespit ettiğini görün
+  • Yeşil kod yeterince net olmalı
+  • Oyun pencere modunda olmalı
+  • Ekran çözünürlüğü en az 1280x720 olmalı
+
+PROBLEM: Pencere açılmıyor
+ÇÖZÜM:
+  • Python 3.7 veya üstü yüklü olmalı
+  • Kütüphaneler kurulu olmalı (pip install ...)
+  • Komut satırından çalıştırıp hata mesajını kontrol edin
+
+PROBLEM: Windows Defender uyarısı
+ÇÖZÜM:
+  • "Daha fazla bilgi" > "Yine de çalıştır" tıklayın
+  • Python kaynak kodu olduğu için güvenlidir
+  • İsterseniz kaynak kodunu inceleyebilirsiniz
+
+═══════════════════════════════════════════════════════════
+
+📁 DOSYA YAPISI
+═══════════════════════════════════════════════════════════
+
+GEREKLİ DOSYALAR (BU İKİSİ YETER):
+├── game_bot.py          ← Ana program (Python kodu)
+├── CALISTIR_BENI.bat    ← Kolay başlatma dosyası
+└── OKUBENI.txt          ← Bu dosya
+
+GEREKSİZ DOSYALAR (SİLEBİLİRSİNİZ):
+├── src/                 ← Eski kod klasörü
+├── build/               ← Eski derlemeler
+├── dist/                ← Eski exe dosyaları
+├── denizv1_bot_v2.0/    ← Eski versiyon
+├── denizv1_bot_portable/← Eski taşınabilir versiyon
+├── venv/                ← Sanal ortam (isteğe bağlı)
+└── *.spec, *.bat        ← Eski derleme dosyaları
+
+═══════════════════════════════════════════════════════════
+
+💡 İPUÇLARI
+═══════════════════════════════════════════════════════════
+
+1. Bot penceresini oyun penceresinin yanına koyun
+2. Log'ları takip edin, ne yaptığını görebilirsiniz
+3. Başarı sayısını izleyerek performansı kontrol edin
+4. İlk kullanımda birkaç test yapın
+5. Oyun kapanırsa bot otomatik durur, tekrar başlatın
+
+═══════════════════════════════════════════════════════════
+
+✅ HIZLI BAŞLANGIÇ
+═══════════════════════════════════════════════════════════
+
+1. ✅ Tesseract OCR yükleyin (tek seferlik)
+2. ✅ Kütüphaneleri yükleyin (tek seferlik)
+3. ✅ Oyunu pencere modunda açın
+4. ✅ CALISTIR_BENI.bat çift tıklayın
+5. ✅ "▶ Başlat" butonuna tıklayın
+6. ✅ Artık arka planda çalışır!
+
+═══════════════════════════════════════════════════════════
+
+İyi oyunlar! 🎮
