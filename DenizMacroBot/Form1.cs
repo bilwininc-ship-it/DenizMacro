@@ -481,7 +481,9 @@ namespace DenizMacroBot
             
             Log("========================================");
             Log("🤖 Bot başlatıldı - Ekran izleniyor...");
-            Log("Bot doğrulaması tespit edildiğinde otomatik işlem yapılacak.");
+            Log("⚡ HIZLI MOD: Her 0.5 saniyede kontrol edilecek");
+            Log("🔍 OCR: 3x büyütülmüş görüntü, gelişmiş tanıma");
+            Log("Bot doğrulaması tespit edildiğinde ANINDA işlem yapılacak.");
             Log("========================================");
 
             try
@@ -549,7 +551,7 @@ namespace DenizMacroBot
                         Log($"🎯 [Döngü {cycleCount}] BOT DOĞRULAMASI TESPİT EDİLDİ!");
                         Log($"🟢 Yeşil Kod: {greenCode}");
 
-                        // Read all 4 buttons
+                        // Read all 4 buttons QUICKLY
                         string?[] buttonCodes = new string?[4];
                         RegionConfig[] buttonRegions = {
                             _config.Button1Region,
@@ -558,15 +560,26 @@ namespace DenizMacroBot
                             _config.Button4Region
                         };
 
+                        // Read all buttons in parallel for SPEED
+                        var buttonTasks = new Task<string?>[4];
                         for (int i = 0; i < 4; i++)
                         {
-                            var buttonScreenshot = _captureService.CaptureRegionCopy(buttonRegions[i].Rectangle);
-                            var processedButton = _captureService.PreprocessForOCR(buttonScreenshot);
-                            buttonCodes[i] = _ocrService.RecognizeAndExtractCode(processedButton, _config.VerificationCodePattern);
-                            
-                            buttonScreenshot.Dispose();
-                            processedButton.Dispose();
+                            int index = i; // Capture for closure
+                            buttonTasks[i] = Task.Run(() => {
+                                var buttonScreenshot = _captureService.CaptureRegionCopy(buttonRegions[index].Rectangle);
+                                var processedButton = _captureService.PreprocessForOCR(buttonScreenshot);
+                                var code = _ocrService.RecognizeAndExtractCode(processedButton, _config.VerificationCodePattern);
+                                buttonScreenshot.Dispose();
+                                processedButton.Dispose();
+                                return code;
+                            });
+                        }
 
+                        await Task.WhenAll(buttonTasks);
+                        
+                        for (int i = 0; i < 4; i++)
+                        {
+                            buttonCodes[i] = buttonTasks[i].Result;
                             Log($"   Buton {i + 1}: {buttonCodes[i] ?? "Okunamadı"}");
                         }
 
@@ -584,7 +597,7 @@ namespace DenizMacroBot
                         if (matchingButton != -1)
                         {
                             Log($"✅ EŞLEŞME BULUNDU! Buton {matchingButton + 1} - Kod: {greenCode}");
-                            Log($"🖱 Butona tıklanıyor...");
+                            Log($"🖱 HEMEN TIKLANIYOR...");
 
                             // Calculate click position (center of button region)
                             Rectangle buttonRect = buttonRegions[matchingButton].Rectangle;
@@ -592,10 +605,10 @@ namespace DenizMacroBot
                             int clickY = buttonRect.Y + buttonRect.Height / 2;
                             Point clickPoint = MouseHelper.AddJitter(new Point(clickX, clickY), 5);
 
-                            // Perform click
+                            // Perform click IMMEDIATELY - NO DELAY!
                             await MouseHelper.MoveAndClickAsync(clickPoint, cancellationToken);
                             
-                            Log($"✅ Tıklama başarılı! Pozisyon: ({clickPoint.X}, {clickPoint.Y})");
+                            Log($"✅ TIKLANDI! Pozisyon: ({clickPoint.X}, {clickPoint.Y})");
                             Log($"⏳ Bot doğrulaması tamamlandı. Sonraki kontrol için bekleniyor...");
 
                             // Wait longer after successful verification
@@ -606,21 +619,22 @@ namespace DenizMacroBot
                         {
                             Log($"⚠ Eşleşme bulunamadı! Yeşil kod: {greenCode}");
                             Log($"   Okunan buton kodları: {string.Join(", ", buttonCodes.Select(c => c ?? "null"))}");
+                            Log($"   HEMEN TEKRAR DENENİYOR!");
                             
-                            // Quick retry
-                            await Task.Delay(1000, cancellationToken);
+                            // IMMEDIATE retry - no delay!
+                            await Task.Delay(300, cancellationToken);
                         }
                     }
                     else
                     {
-                        // No verification detected, check again soon
+                        // No verification detected, check again FAST
                         await Task.Delay(_config.CheckIntervalMs, cancellationToken);
                     }
                 }
                 catch (Exception ex)
                 {
                     Log($"⚠ Döngü hatası: {ex.Message}");
-                    await Task.Delay(2000, cancellationToken);
+                    await Task.Delay(1000, cancellationToken);
                 }
             }
         }

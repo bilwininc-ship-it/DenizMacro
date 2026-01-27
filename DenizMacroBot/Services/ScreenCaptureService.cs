@@ -67,43 +67,41 @@ namespace DenizMacroBot.Services
         }
 
         /// <summary>
-        /// Preprocesses image for better OCR results
+        /// Preprocesses image for better OCR results - ENHANCED VERSION
         /// </summary>
         public Bitmap PreprocessForOCR(Bitmap source)
         {
-            // Create a copy to work with
-            Bitmap processed = new Bitmap(source.Width, source.Height, PixelFormat.Format24bppRgb);
-
-            using (Graphics g = Graphics.FromImage(processed))
+            // Scale up the image 3x for better OCR accuracy
+            int scaleFactor = 3;
+            Bitmap scaled = new Bitmap(source.Width * scaleFactor, source.Height * scaleFactor, PixelFormat.Format24bppRgb);
+            
+            using (Graphics g = Graphics.FromImage(scaled))
             {
-                // High quality rendering
                 g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
                 g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
                 g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-
-                // Draw the source image
-                g.DrawImage(source, 0, 0, source.Width, source.Height);
+                g.DrawImage(source, 0, 0, scaled.Width, scaled.Height);
             }
 
-            // Convert to grayscale and increase contrast
-            for (int y = 0; y < processed.Height; y++)
+            // Convert to grayscale and apply adaptive thresholding
+            for (int y = 0; y < scaled.Height; y++)
             {
-                for (int x = 0; x < processed.Width; x++)
+                for (int x = 0; x < scaled.Width; x++)
                 {
-                    Color pixel = processed.GetPixel(x, y);
+                    Color pixel = scaled.GetPixel(x, y);
                     
                     // Grayscale conversion
                     int gray = (int)(pixel.R * 0.3 + pixel.G * 0.59 + pixel.B * 0.11);
                     
-                    // Increase contrast - threshold to pure black or white
-                    gray = gray > 128 ? 255 : 0;
+                    // More aggressive thresholding for better contrast
+                    gray = gray > 100 ? 255 : 0;
                     
                     Color newColor = Color.FromArgb(gray, gray, gray);
-                    processed.SetPixel(x, y, newColor);
+                    scaled.SetPixel(x, y, newColor);
                 }
             }
 
-            return processed;
+            return scaled;
         }
 
         public void Dispose()

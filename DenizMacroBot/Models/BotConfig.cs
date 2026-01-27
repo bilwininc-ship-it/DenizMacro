@@ -30,13 +30,13 @@ namespace DenizMacroBot.Models
         public int DelayMax { get; set; } = 14000; // 14 seconds
 
         [JsonProperty("checkIntervalMs")]
-        public int CheckIntervalMs { get; set; } = 1500; // Check every 1.5 seconds
+        public int CheckIntervalMs { get; set; } = 500; // Check every 0.5 seconds - FAST!
 
         [JsonProperty("tesseractDataPath")]
         public string TesseractDataPath { get; set; } = @".\Resources\tessdata";
 
         [JsonProperty("verificationCodePattern")]
-        public string VerificationCodePattern { get; set; } = @"\d{6}"; // 6-digit code pattern
+        public string VerificationCodePattern { get; set; } = @"\d{4,7}"; // 4-7 digit code pattern - flexible!
 
         public bool AllRegionsConfigured =>
             GreenCodeRegion.IsValid &&
