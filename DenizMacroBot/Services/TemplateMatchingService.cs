@@ -82,12 +82,32 @@ namespace DenizMacroBot.Services
         }
 
         /// <summary>
+        /// Applies Adaptive Threshold for better handling of lighting variations
+        /// </summary>
+        public Mat ApplyAdaptiveThreshold(Mat grayMat)
+        {
+            Mat thresholdMat = new Mat();
+            Cv2.AdaptiveThreshold(grayMat, thresholdMat, 255, 
+                AdaptiveThresholdTypes.GaussianC, ThresholdTypes.Binary, 11, 2);
+            return thresholdMat;
+        }
+        /// <summary>
         /// Applies Binary Threshold to focus on number shapes (ignores colors)
         /// </summary>
         public Mat ApplyBinaryThreshold(Mat grayMat, double thresholdValue = 128)
         {
             Mat thresholdMat = new Mat();
             Cv2.Threshold(grayMat, thresholdMat, thresholdValue, 255, ThresholdTypes.Binary);
+            return thresholdMat;
+        }
+        
+        /// <summary>
+        /// Applies OTSU threshold for automatic threshold calculation
+        /// </summary>
+        public Mat ApplyOtsuThreshold(Mat grayMat)
+        {
+            Mat thresholdMat = new Mat();
+            Cv2.Threshold(grayMat, thresholdMat, 0, 255, ThresholdTypes.Binary | ThresholdTypes.Otsu);
             return thresholdMat;
         }
 
@@ -102,19 +122,24 @@ namespace DenizMacroBot.Services
         }
 
         /// <summary>
-        /// Preprocesses image: Grayscale + Binary Threshold
+        /// Preprocesses image: Grayscale + Multiple Threshold Attempts
         /// </summary>
-        public Mat PreprocessImage(Bitmap bitmap, bool useCanny = false)
+        public Mat PreprocessImage(Bitmap bitmap, int method = 0)
         {
             using (Mat grayMat = ConvertToGrayscale(bitmap))
             {
-                if (useCanny)
+                switch (method)
                 {
-                    return ApplyCannyEdgeDetection(grayMat);
-                }
-                else
-                {
-                    return ApplyBinaryThreshold(grayMat);
+                    case 0: // Adaptive Threshold (Best for varying lighting)
+                        return ApplyAdaptiveThreshold(grayMat);
+                    case 1: // OTSU (Automatic threshold)
+                        return ApplyOtsuThreshold(grayMat);
+                    case 2: // Binary Threshold
+                        return ApplyBinaryThreshold(grayMat);
+                    case 3: // Canny Edge Detection
+                        return ApplyCannyEdgeDetection(grayMat);
+                    default:
+                        return ApplyAdaptiveThreshold(grayMat);
                 }
             }
         }
@@ -171,72 +196,65 @@ namespace DenizMacroBot.Services
 
         /// <summary>
         /// Compares target code against all 4 buttons and finds the best match
-        /// Returns: (buttonIndex, similarityScore, usedCanny)
+        /// Uses multi-method preprocessing for better accuracy
+        /// Returns: (buttonIndex, similarityScore, methodUsed)
         /// </summary>
-        public (int buttonIndex, double similarity, bool usedCanny) FindBestMatch(
+        public (int buttonIndex, double similarity, string methodUsed) FindBestMatch(
             Bitmap targetCodeBitmap, 
             Bitmap[] buttonBitmaps, 
             double minimumThreshold)
         {
-            Mat targetProcessed = null;
-            Mat targetCannyProcessed = null;
-            Mat[] buttonsProcessed = new Mat[4];
-            Mat[] buttonsCannyProcessed = new Mat[4];
-
-            try
+            // Method names for logging
+            string[] methodNames = { "Adaptive Threshold", "OTSU", "Binary Threshold", "Canny Edge" };
+            
+            // Try all 4 preprocessing methods
+            for (int method = 0; method < 4; method++)
             {
-                // First try: Binary Threshold preprocessing
-                targetProcessed = PreprocessImage(targetCodeBitmap, useCanny: false);
-                
-                double[] scores = new double[4];
-                for (int i = 0; i < 4; i++)
+                Mat targetProcessed = null;
+                Mat[] buttonsProcessed = new Mat[4];
+
+                try
                 {
-                    buttonsProcessed[i] = PreprocessImage(buttonBitmaps[i], useCanny: false);
-                    scores[i] = MatchTemplate(targetProcessed, buttonsProcessed[i]);
+                    // Preprocess target code with current method
+                    targetProcessed = PreprocessImage(targetCodeBitmap, method);
+                    
+                    // Preprocess all buttons and calculate scores
+                    double[] scores = new double[4];
+                    for (int i = 0; i < 4; i++)
+                    {
+                        buttonsProcessed[i] = PreprocessImage(buttonBitmaps[i], method);
+                        scores[i] = MatchTemplate(targetProcessed, buttonsProcessed[i]);
+                    }
+
+                    // Find best match
+                    int bestIndex = Array.IndexOf(scores, scores.Max());
+                    double bestScore = scores[bestIndex];
+
+                    // If threshold met, return immediately
+                    if (bestScore >= minimumThreshold)
+                    {
+                        return (bestIndex, bestScore, methodNames[method]);
+                    }
+                    
+                    // If this is the last method, return best found
+                    if (method == 3)
+                    {
+                        return (bestIndex, bestScore, methodNames[method]);
+                    }
                 }
-
-                // Find best match
-                int bestIndex = Array.IndexOf(scores, scores.Max());
-                double bestScore = scores[bestIndex];
-
-                // If threshold met, return result
-                if (bestScore >= minimumThreshold)
+                finally
                 {
-                    return (bestIndex, bestScore, usedCanny: false);
-                }
-
-                // Second try: Canny Edge Detection (fallback)
-                targetCannyProcessed = PreprocessImage(targetCodeBitmap, useCanny: true);
-                
-                double[] cannyScores = new double[4];
-                for (int i = 0; i < 4; i++)
-                {
-                    buttonsCannyProcessed[i] = PreprocessImage(buttonBitmaps[i], useCanny: true);
-                    cannyScores[i] = MatchTemplate(targetCannyProcessed, buttonsCannyProcessed[i]);
-                }
-
-                // Find best match with Canny
-                int bestCannyIndex = Array.IndexOf(cannyScores, cannyScores.Max());
-                double bestCannyScore = cannyScores[bestCannyIndex];
-
-                return (bestCannyIndex, bestCannyScore, usedCanny: true);
-            }
-            finally
-            {
-                // Dispose all OpenCV Mats
-                targetProcessed?.Dispose();
-                targetCannyProcessed?.Dispose();
-                
-                foreach (var mat in buttonsProcessed)
-                {
-                    mat?.Dispose();
-                }
-                
-                foreach (var mat in buttonsCannyProcessed)
-                {
-                    mat?.Dispose();
+                    // Dispose all Mats
+                    targetProcessed?.Dispose();
+                    foreach (var mat in buttonsProcessed)
+                    {
+                        mat?.Dispose();
+                    }
                 }
             }
+
+            // Fallback (should never reach here)
+            return (0, 0.0, "None");
         }
 
         /// <summary>
@@ -249,6 +267,8 @@ namespace DenizMacroBot.Services
                 System.IO.Directory.CreateDirectory(outputFolder);
             }
 
+            string[] methodNames = { "adaptive", "otsu", "binary", "canny" };
+
             // Save original images
             targetCode.Save(System.IO.Path.Combine(outputFolder, "0_target_original.png"));
             for (int i = 0; i < buttons.Length; i++)
@@ -256,31 +276,20 @@ namespace DenizMacroBot.Services
                 buttons[i].Save(System.IO.Path.Combine(outputFolder, $"{i + 1}_button{i + 1}_original.png"));
             }
 
-            // Save preprocessed (threshold) images
-            using (Mat targetThreshold = PreprocessImage(targetCode, useCanny: false))
+            // Save preprocessed images for all methods
+            for (int method = 0; method < 4; method++)
             {
-                targetThreshold.SaveImage(System.IO.Path.Combine(outputFolder, "0_target_threshold.png"));
-            }
-
-            for (int i = 0; i < buttons.Length; i++)
-            {
-                using (Mat buttonThreshold = PreprocessImage(buttons[i], useCanny: false))
+                using (Mat targetProcessed = PreprocessImage(targetCode, method))
                 {
-                    buttonThreshold.SaveImage(System.IO.Path.Combine(outputFolder, $"{i + 1}_button{i + 1}_threshold.png"));
+                    targetProcessed.SaveImage(System.IO.Path.Combine(outputFolder, $"0_target_{methodNames[method]}.png"));
                 }
-            }
 
-            // Save preprocessed (canny) images
-            using (Mat targetCanny = PreprocessImage(targetCode, useCanny: true))
-            {
-                targetCanny.SaveImage(System.IO.Path.Combine(outputFolder, "0_target_canny.png"));
-            }
-
-            for (int i = 0; i < buttons.Length; i++)
-            {
-                using (Mat buttonCanny = PreprocessImage(buttons[i], useCanny: true))
+                for (int i = 0; i < buttons.Length; i++)
                 {
-                    buttonCanny.SaveImage(System.IO.Path.Combine(outputFolder, $"{i + 1}_button{i + 1}_canny.png"));
+                    using (Mat buttonProcessed = PreprocessImage(buttons[i], method))
+                    {
+                        buttonProcessed.SaveImage(System.IO.Path.Combine(outputFolder, $"{i + 1}_button{i + 1}_{methodNames[method]}.png"));
+                    }
                 }
             }
         }

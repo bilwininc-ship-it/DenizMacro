@@ -185,7 +185,7 @@ namespace DenizMacroBot
                 Size = new Size(80, 25),
                 Minimum = 50,
                 Maximum = 100,
-                Value = 85,
+                Value = 70,
                 Increment = 1,
                 DecimalPlaces = 0,
                 BackColor = Color.FromArgb(45, 45, 45),
@@ -196,7 +196,7 @@ namespace DenizMacroBot
 
             Label lblThresholdPercent = new Label
             {
-                Text = "% (0.85 = %85)",
+                Text = "% (0.70 = %70)",
                 Location = new Point(225, 35),
                 Size = new Size(120, 20),
                 ForeColor = Color.Gray,
@@ -509,7 +509,7 @@ namespace DenizMacroBot
                         buttonBitmaps = _templateMatchingService.SplitButtonsArea(buttonsAreaBitmap);
 
                         // Step 5: Perform Template Matching
-                        var (buttonIndex, similarity, usedCanny) = _templateMatchingService.FindBestMatch(
+                        var (buttonIndex, similarity, methodUsed) = _templateMatchingService.FindBestMatch(
                             targetCodeBitmap,
                             buttonBitmaps,
                             _config.MatchingThreshold
@@ -517,7 +517,7 @@ namespace DenizMacroBot
 
                         Log($"");
                         Log($"🔍 [Döngü {cycleCount}] Template Matching Tamamlandı");
-                        Log($"   Preprocessing: {(usedCanny ? "Canny Edge Detection" : "Binary Threshold")}");
+                        Log($"   Preprocessing Metodu: {methodUsed}");
                         Log($"   En İyi Eşleşme: Buton {buttonIndex + 1}");
                         Log($"   Benzerlik Skoru: {similarity:P2} ({similarity:F3})");
 

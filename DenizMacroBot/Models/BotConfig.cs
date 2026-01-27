@@ -12,9 +12,9 @@ namespace DenizMacroBot.Models
         [JsonProperty("mainWindowRegion")]
         public RegionConfig MainWindowRegion { get; set; } = new RegionConfig();
 
-        // Template matching threshold (0.0 to 1.0, default 0.85)
+        // Template matching threshold (0.0 to 1.0, default 0.70)
         [JsonProperty("matchingThreshold")]
-        public double MatchingThreshold { get; set; } = 0.85;
+        public double MatchingThreshold { get; set; } = 0.70;
 
         // Click delay range (randomized between min and max)
         [JsonProperty("delayMin")]
