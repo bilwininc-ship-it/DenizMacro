@@ -59,7 +59,7 @@ namespace DenizMacroBot.Services
         }
 
         /// <summary>
-        /// Performs OCR on an image and extracts text
+        /// Performs OCR on an image and extracts text - THREAD-SAFE VERSION
         /// </summary>
         public string RecognizeText(Bitmap image)
         {
@@ -72,9 +72,15 @@ namespace DenizMacroBot.Services
             {
                 // Convert Bitmap to Pix using manual conversion
                 using (var pix = ConvertBitmapToPix(image))
-                using (var page = _engine.Process(pix))
                 {
-                    return page.GetText();
+                    // Tesseract is not thread-safe, so we need to lock
+                    lock (_engine)
+                    {
+                        using (var page = _engine.Process(pix))
+                        {
+                            return page.GetText();
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -149,9 +155,15 @@ namespace DenizMacroBot.Services
             try
             {
                 using (var pix = ConvertBitmapToPix(image))
-                using (var page = _engine.Process(pix))
                 {
-                    return page.GetMeanConfidence();
+                    // Tesseract is not thread-safe, so we need to lock
+                    lock (_engine)
+                    {
+                        using (var page = _engine.Process(pix))
+                        {
+                            return page.GetMeanConfidence();
+                        }
+                    }
                 }
             }
             catch

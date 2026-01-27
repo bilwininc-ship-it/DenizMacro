@@ -537,13 +537,22 @@ namespace DenizMacroBot
                 
                 try
                 {
-                    // Capture green code region
-                    var greenCodeScreenshot = _captureService.CaptureRegionCopy(_config.GreenCodeRegion.Rectangle);
-                    var processedGreen = _captureService.PreprocessForOCR(greenCodeScreenshot);
-                    string? greenCode = _ocrService.RecognizeAndExtractCode(processedGreen, _config.VerificationCodePattern);
+                    // Capture green code region with proper disposal
+                    Bitmap? greenCodeScreenshot = null;
+                    Bitmap? processedGreen = null;
+                    string? greenCode = null;
 
-                    greenCodeScreenshot.Dispose();
-                    processedGreen.Dispose();
+                    try
+                    {
+                        greenCodeScreenshot = _captureService.CaptureRegionCopy(_config.GreenCodeRegion.Rectangle);
+                        processedGreen = _captureService.PreprocessForOCR(greenCodeScreenshot);
+                        greenCode = _ocrService.RecognizeAndExtractCode(processedGreen, _config.VerificationCodePattern);
+                    }
+                    finally
+                    {
+                        greenCodeScreenshot?.Dispose();
+                        processedGreen?.Dispose();
+                    }
 
                     if (!string.IsNullOrEmpty(greenCode))
                     {
@@ -560,18 +569,30 @@ namespace DenizMacroBot
                             _config.Button4Region
                         };
 
-                        // Read all buttons in parallel for SPEED
+                        // Read all buttons in parallel for SPEED with proper disposal
                         var buttonTasks = new Task<string?>[4];
                         for (int i = 0; i < 4; i++)
                         {
                             int index = i; // Capture for closure
                             buttonTasks[i] = Task.Run(() => {
-                                var buttonScreenshot = _captureService.CaptureRegionCopy(buttonRegions[index].Rectangle);
-                                var processedButton = _captureService.PreprocessForOCR(buttonScreenshot);
-                                var code = _ocrService.RecognizeAndExtractCode(processedButton, _config.VerificationCodePattern);
-                                buttonScreenshot.Dispose();
-                                processedButton.Dispose();
-                                return code;
+                                Bitmap? buttonScreenshot = null;
+                                Bitmap? processedButton = null;
+                                try
+                                {
+                                    buttonScreenshot = _captureService.CaptureRegionCopy(buttonRegions[index].Rectangle);
+                                    processedButton = _captureService.PreprocessForOCR(buttonScreenshot);
+                                    return _ocrService.RecognizeAndExtractCode(processedButton, _config.VerificationCodePattern);
+                                }
+                                catch (Exception ex)
+                                {
+                                    Log($"⚠ Buton {index + 1} okuma hatası: {ex.Message}");
+                                    return null;
+                                }
+                                finally
+                                {
+                                    buttonScreenshot?.Dispose();
+                                    processedButton?.Dispose();
+                                }
                             });
                         }
 
@@ -634,6 +655,7 @@ namespace DenizMacroBot
                 catch (Exception ex)
                 {
                     Log($"⚠ Döngü hatası: {ex.Message}");
+                    Log($"   Detay: {ex.GetType().Name}");
                     await Task.Delay(1000, cancellationToken);
                 }
             }
