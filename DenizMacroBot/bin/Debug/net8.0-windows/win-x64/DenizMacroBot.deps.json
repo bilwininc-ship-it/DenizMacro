@@ -11,6 +11,7 @@
         "dependencies": {
           "Microsoft.NET.ILLink.Tasks": "8.0.19",
           "Newtonsoft.Json": "13.0.3",
+          "OpenCvSharp4.Extensions": "4.9.0.20240103",
           "OpenCvSharp4.Windows": "4.9.0.20240103",
           "Tesseract": "5.2.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "8.0.19",
@@ -966,6 +967,7 @@
         }
       },
       "Microsoft.NET.ILLink.Tasks/8.0.19": {},
+      "Microsoft.Win32.SystemEvents/7.0.0": {},
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -986,6 +988,18 @@
           }
         }
       },
+      "OpenCvSharp4.Extensions/4.9.0.20240103": {
+        "dependencies": {
+          "OpenCvSharp4": "4.9.0.20240103",
+          "System.Drawing.Common": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/OpenCvSharp.Extensions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "OpenCvSharp4.runtime.win/4.9.0.20240103": {
         "native": {
           "runtimes/win-x64/native/OpenCvSharpExtern.dll": {
@@ -1000,6 +1014,11 @@
         "dependencies": {
           "OpenCvSharp4": "4.9.0.20240103",
           "OpenCvSharp4.runtime.win": "4.9.0.20240103"
+        }
+      },
+      "System.Drawing.Common/7.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0"
         }
       },
       "System.Memory/4.5.5": {},
@@ -1041,6 +1060,13 @@
       "path": "microsoft.net.illink.tasks/8.0.19",
       "hashPath": "microsoft.net.illink.tasks.8.0.19.nupkg.sha512"
     },
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "hashPath": "microsoft.win32.systemevents.7.0.0.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
@@ -1055,6 +1081,13 @@
       "path": "opencvsharp4/4.9.0.20240103",
       "hashPath": "opencvsharp4.4.9.0.20240103.nupkg.sha512"
     },
+    "OpenCvSharp4.Extensions/4.9.0.20240103": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zqFJuQPV36ttTMrN1kMGQdj8rDD+wMDtTU5fVGE8osSPEAyehru1ow3xTAmB04uiaKlbzl/gy2G9BnbT+OgMNA==",
+      "path": "opencvsharp4.extensions/4.9.0.20240103",
+      "hashPath": "opencvsharp4.extensions.4.9.0.20240103.nupkg.sha512"
+    },
     "OpenCvSharp4.runtime.win/4.9.0.20240103": {
       "type": "package",
       "serviceable": true,
@@ -1068,6 +1101,13 @@
       "sha512": "sha512-IOtMfbVyZ0K7/39EAaRyz496WNNCWeI/SV1yRI1fCoWbID84EEnVnFcY2iqn1G6sWfQIpASm7pc44OF9y/gbFw==",
       "path": "opencvsharp4.windows/4.9.0.20240103",
       "hashPath": "opencvsharp4.windows.4.9.0.20240103.nupkg.sha512"
+    },
+    "System.Drawing.Common/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "path": "system.drawing.common/7.0.0",
+      "hashPath": "system.drawing.common.7.0.0.nupkg.sha512"
     },
     "System.Memory/4.5.5": {
       "type": "package",

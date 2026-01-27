@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "OpenCvSharp4.Extensions": {
+              "target": "Package",
+              "version": "[4.9.0.20240103, )"
+            },
             "OpenCvSharp4.Windows": {
               "target": "Package",
               "version": "[4.9.0.20240103, )"

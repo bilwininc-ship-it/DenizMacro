@@ -483,3 +483,4 @@ C:\Users\acika\OneDrive\Desktop\DenizMacro\DenizMacroBot\obj\Debug\net8.0-window
 C:\Users\acika\OneDrive\Desktop\DenizMacro\DenizMacroBot\obj\Debug\net8.0-windows\win-x64\DenizMacroBot.pdb
 C:\Users\acika\OneDrive\Desktop\DenizMacro\DenizMacroBot\obj\Debug\net8.0-windows\win-x64\DenizMacroBot.genruntimeconfig.cache
 C:\Users\acika\OneDrive\Desktop\DenizMacro\DenizMacroBot\obj\Debug\net8.0-windows\win-x64\ref\DenizMacroBot.dll
+C:\Users\acika\OneDrive\Desktop\DenizMacro\DenizMacroBot\bin\Debug\net8.0-windows\win-x64\OpenCvSharp.Extensions.dll
