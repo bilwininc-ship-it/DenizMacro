@@ -43,7 +43,7 @@ namespace DenizMacroBot.Utils
                 Padding = new Padding(10)
             };
             _instructionLabel.Location = new Point(
-                (Screen.PrimaryScreen.Bounds.Width - _instructionLabel.Width) / 2,
+                ((Screen.PrimaryScreen?.Bounds.Width ?? 1920) - _instructionLabel.Width) / 2,
                 50
             );
             Controls.Add(_instructionLabel);

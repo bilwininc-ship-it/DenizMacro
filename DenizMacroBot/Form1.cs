@@ -13,31 +13,31 @@ namespace DenizMacroBot
     {
         private const string ConfigPath = "config.json";
         
-        private BotConfig _config;
+        private BotConfig _config = null!;
         private OCRService? _ocrService;
         private ScreenCaptureService? _captureService;
         private CancellationTokenSource? _cancellationTokenSource;
         private bool _isRunning;
-        private int _currentRegionSelection = 0; // 0 = not selecting, 1-5 = region number
+ 
 
         // UI Controls
-        private Button _btnSelectAllRegions;
-        private Button _btnStart;
-        private Button _btnStop;
-        private TextBox _txtLog;
-        private Label _lblStatus;
-        private Panel _statusPanel;
-        private GroupBox _configGroup;
-        private Label _lblGreenCodeRegion;
-        private Label _lblButton1Region;
-        private Label _lblButton2Region;
-        private Label _lblButton3Region;
-        private Label _lblButton4Region;
-        private NumericUpDown _numDelayMin;
-        private NumericUpDown _numDelayMax;
-        private Label _lblDelayMin;
-        private Label _lblDelayMax;
-        private Label _lblSelectionProgress;
+        private Button _btnSelectAllRegions = null!;
+        private Button _btnStart = null!;
+        private Button _btnStop = null!;
+        private TextBox _txtLog = null!;
+        private Label _lblStatus = null!;
+        private Panel _statusPanel = null!;
+        private GroupBox _configGroup = null!;
+        private Label _lblGreenCodeRegion = null!;
+        private Label _lblButton1Region = null!;
+        private Label _lblButton2Region = null!;
+        private Label _lblButton3Region = null!;
+        private Label _lblButton4Region = null!;
+        private NumericUpDown _numDelayMin = null!;
+        private NumericUpDown _numDelayMax = null!;
+        private Label _lblDelayMin = null!;
+        private Label _lblDelayMax = null!;
+        private Label _lblSelectionProgress = null!;
 
         public Form1()
         {
