@@ -1,0 +1,12 @@
+{
+  "searchRegion": {
+    "x": 1027,
+    "y": 372,
+    "width": 133,
+    "height": 187
+  },
+  "delayMin": 7000,
+  "delayMax": 18000,
+  "tesseractDataPath": ".\\Resources\\tessdata",
+  "verificationCodePattern": "\\d{4,8}"
+}
