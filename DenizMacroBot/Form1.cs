@@ -14,29 +14,27 @@ namespace DenizMacroBot
         private const string ConfigPath = "config.json";
         
         private BotConfig _config = null!;
-        private OCRService? _ocrService;
+        private TemplateMatchingService? _templateMatchingService;
         private ScreenCaptureService? _captureService;
         private CancellationTokenSource? _cancellationTokenSource;
         private bool _isRunning;
- 
 
         // UI Controls
-        private Button _btnSelectAllRegions = null!;
+        private Button _btnSelectMainWindow = null!;
         private Button _btnStart = null!;
         private Button _btnStop = null!;
+        private Button _btnSaveDebugImages = null!;
         private TextBox _txtLog = null!;
         private Label _lblStatus = null!;
         private Panel _statusPanel = null!;
         private GroupBox _configGroup = null!;
-        private Label _lblGreenCodeRegion = null!;
-        private Label _lblButton1Region = null!;
-        private Label _lblButton2Region = null!;
-        private Label _lblButton3Region = null!;
-        private Label _lblButton4Region = null!;
+        private Label _lblMainWindowRegion = null!;
         private NumericUpDown _numDelayMin = null!;
         private NumericUpDown _numDelayMax = null!;
+        private NumericUpDown _numThreshold = null!;
         private Label _lblDelayMin = null!;
         private Label _lblDelayMax = null!;
+        private Label _lblThreshold = null!;
         private Label _lblSelectionProgress = null!;
 
         public Form1()
@@ -50,13 +48,13 @@ namespace DenizMacroBot
         private void InitializeCustomUI()
         {
             // Form settings
-            Text = "DenizMacroBot - Bot Doğrulama Otomasyonu";
-            Size = new Size(850, 750);
+            Text = "DenizMacroBot - Template Matching (Dynamic Cropping)";
+            Size = new Size(900, 800);
             BackColor = Color.FromArgb(30, 30, 30);
             ForeColor = Color.White;
             Font = new Font("Segoe UI", 9.5f);
             StartPosition = FormStartPosition.CenterScreen;
-            MinimumSize = new Size(700, 600);
+            MinimumSize = new Size(700, 650);
 
             // Status panel at top
             _statusPanel = new Panel
@@ -81,119 +79,145 @@ namespace DenizMacroBot
             // Configuration group
             _configGroup = new GroupBox
             {
-                Text = "⚙ Bölge Konfigürasyonu",
+                Text = "⚙ Konfigürasyon - Template Matching Modu",
                 ForeColor = Color.LightGray,
                 Location = new Point(20, 80),
-                Size = new Size(790, 280),
+                Size = new Size(840, 320),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
             };
             Controls.Add(_configGroup);
 
+            // Info label
+            Label infoLabel = new Label
+            {
+                Text = "📌 Template Matching ile Dinamik Bölge Kırpma:\n" +
+                       "• Ana pencereyi bir kez seçin (yeşil kod + 4 buton dahil)\n" +
+                       "• Bot otomatik olarak %20-40 (yeşil kod) ve %40-90 (butonlar) kırpar\n" +
+                       "• OpenCV ile görüntü eşleştirmesi yapar (OCR yok!)",
+                Location = new Point(20, 30),
+                Size = new Size(800, 75),
+                ForeColor = Color.LightBlue,
+                Font = new Font("Segoe UI", 9f)
+            };
+            _configGroup.Controls.Add(infoLabel);
+
             // Selection progress label
             _lblSelectionProgress = new Label
             {
-                Text = "Bölgeleri seçmek için butona tıklayın",
-                Location = new Point(20, 30),
-                Size = new Size(750, 25),
+                Text = "Ana pencereyi seçmek için butona tıklayın",
+                Location = new Point(20, 115),
+                Size = new Size(800, 25),
                 ForeColor = Color.Orange,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
             };
             _configGroup.Controls.Add(_lblSelectionProgress);
 
-            // Region status labels
-            _lblGreenCodeRegion = new Label
+            // Region status label
+            _lblMainWindowRegion = new Label
             {
-                Text = "❌ Yeşil Kod Bölgesi: Seçilmedi",
-                Location = new Point(20, 65),
-                Size = new Size(750, 22),
+                Text = "❌ Ana Pencere: Seçilmedi",
+                Location = new Point(20, 145),
+                Size = new Size(800, 22),
                 ForeColor = Color.OrangeRed,
                 Font = new Font("Segoe UI", 9.5f)
             };
-            _configGroup.Controls.Add(_lblGreenCodeRegion);
+            _configGroup.Controls.Add(_lblMainWindowRegion);
 
-            _lblButton1Region = new Label
+            // Select Main Window button
+            _btnSelectMainWindow = new Button
             {
-                Text = "❌ 1. Buton Bölgesi: Seçilmedi",
-                Location = new Point(20, 92),
-                Size = new Size(750, 22),
-                ForeColor = Color.OrangeRed,
-                Font = new Font("Segoe UI", 9.5f)
-            };
-            _configGroup.Controls.Add(_lblButton1Region);
-
-            _lblButton2Region = new Label
-            {
-                Text = "❌ 2. Buton Bölgesi: Seçilmedi",
-                Location = new Point(20, 119),
-                Size = new Size(750, 22),
-                ForeColor = Color.OrangeRed,
-                Font = new Font("Segoe UI", 9.5f)
-            };
-            _configGroup.Controls.Add(_lblButton2Region);
-
-            _lblButton3Region = new Label
-            {
-                Text = "❌ 3. Buton Bölgesi: Seçilmedi",
-                Location = new Point(20, 146),
-                Size = new Size(750, 22),
-                ForeColor = Color.OrangeRed,
-                Font = new Font("Segoe UI", 9.5f)
-            };
-            _configGroup.Controls.Add(_lblButton3Region);
-
-            _lblButton4Region = new Label
-            {
-                Text = "❌ 4. Buton Bölgesi: Seçilmedi",
-                Location = new Point(20, 173),
-                Size = new Size(750, 22),
-                ForeColor = Color.OrangeRed,
-                Font = new Font("Segoe UI", 9.5f)
-            };
-            _configGroup.Controls.Add(_lblButton4Region);
-
-            // Select All Regions button
-            _btnSelectAllRegions = new Button
-            {
-                Text = "📐 TÜM BÖLGELERİ HIZLICA SEÇ (1-5)",
-                Location = new Point(20, 210),
-                Size = new Size(750, 50),
+                Text = "🎯 ANA PENCEREYİ SEÇ (Doğrulama Dialogu)",
+                Location = new Point(20, 180),
+                Size = new Size(800, 50),
                 BackColor = Color.FromArgb(0, 120, 215),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
                 Font = new Font("Segoe UI", 11, FontStyle.Bold),
                 Cursor = Cursors.Hand
             };
-            _btnSelectAllRegions.FlatAppearance.BorderSize = 0;
-            _btnSelectAllRegions.Click += BtnSelectAllRegions_Click;
-            _configGroup.Controls.Add(_btnSelectAllRegions);
+            _btnSelectMainWindow.FlatAppearance.BorderSize = 0;
+            _btnSelectMainWindow.Click += BtnSelectMainWindow_Click;
+            _configGroup.Controls.Add(_btnSelectMainWindow);
 
-            // Delay configuration group
-            var delayGroup = new GroupBox
+            // Save Debug Images button
+            _btnSaveDebugImages = new Button
             {
-                Text = "⏱ Zamanlama Ayarları",
+                Text = "💾 Debug Resimleri Kaydet",
+                Location = new Point(20, 245),
+                Size = new Size(390, 40),
+                BackColor = Color.FromArgb(60, 60, 60),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                Cursor = Cursors.Hand,
+                Enabled = false
+            };
+            _btnSaveDebugImages.FlatAppearance.BorderSize = 0;
+            _btnSaveDebugImages.Click += BtnSaveDebugImages_Click;
+            _configGroup.Controls.Add(_btnSaveDebugImages);
+
+            // Settings group
+            var settingsGroup = new GroupBox
+            {
+                Text = "⚙ Bot Ayarları",
                 ForeColor = Color.LightGray,
-                Location = new Point(20, 380),
-                Size = new Size(790, 80),
+                Location = new Point(20, 420),
+                Size = new Size(840, 90),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
             };
-            Controls.Add(delayGroup);
+            Controls.Add(settingsGroup);
+
+            _lblThreshold = new Label
+            {
+                Text = "Eşleşme Eşiği:",
+                Location = new Point(20, 35),
+                Size = new Size(120, 20),
+                ForeColor = Color.LightGray,
+                Font = new Font("Segoe UI", 9.5f)
+            };
+            settingsGroup.Controls.Add(_lblThreshold);
+
+            _numThreshold = new NumericUpDown
+            {
+                Location = new Point(140, 32),
+                Size = new Size(80, 25),
+                Minimum = 50,
+                Maximum = 100,
+                Value = 85,
+                Increment = 1,
+                DecimalPlaces = 0,
+                BackColor = Color.FromArgb(45, 45, 45),
+                ForeColor = Color.White
+            };
+            _numThreshold.ValueChanged += (s, e) => _config.MatchingThreshold = (double)_numThreshold.Value / 100.0;
+            settingsGroup.Controls.Add(_numThreshold);
+
+            Label lblThresholdPercent = new Label
+            {
+                Text = "% (0.85 = %85)",
+                Location = new Point(225, 35),
+                Size = new Size(120, 20),
+                ForeColor = Color.Gray,
+                Font = new Font("Segoe UI", 8.5f)
+            };
+            settingsGroup.Controls.Add(lblThresholdPercent);
 
             _lblDelayMin = new Label
             {
                 Text = "Min Gecikme (sn):",
-                Location = new Point(20, 35),
-                Size = new Size(140, 20),
+                Location = new Point(380, 35),
+                Size = new Size(130, 20),
                 ForeColor = Color.LightGray,
                 Font = new Font("Segoe UI", 9.5f)
             };
-            delayGroup.Controls.Add(_lblDelayMin);
+            settingsGroup.Controls.Add(_lblDelayMin);
 
             _numDelayMin = new NumericUpDown
             {
-                Location = new Point(160, 32),
-                Size = new Size(80, 25),
+                Location = new Point(510, 32),
+                Size = new Size(70, 25),
                 Minimum = 1,
                 Maximum = 60,
                 Value = 4,
@@ -201,22 +225,22 @@ namespace DenizMacroBot
                 ForeColor = Color.White
             };
             _numDelayMin.ValueChanged += (s, e) => _config.DelayMin = (int)_numDelayMin.Value * 1000;
-            delayGroup.Controls.Add(_numDelayMin);
+            settingsGroup.Controls.Add(_numDelayMin);
 
             _lblDelayMax = new Label
             {
                 Text = "Max Gecikme (sn):",
-                Location = new Point(280, 35),
-                Size = new Size(140, 20),
+                Location = new Point(600, 35),
+                Size = new Size(135, 20),
                 ForeColor = Color.LightGray,
                 Font = new Font("Segoe UI", 9.5f)
             };
-            delayGroup.Controls.Add(_lblDelayMax);
+            settingsGroup.Controls.Add(_lblDelayMax);
 
             _numDelayMax = new NumericUpDown
             {
-                Location = new Point(420, 32),
-                Size = new Size(80, 25),
+                Location = new Point(735, 32),
+                Size = new Size(70, 25),
                 Minimum = 1,
                 Maximum = 60,
                 Value = 14,
@@ -224,14 +248,14 @@ namespace DenizMacroBot
                 ForeColor = Color.White
             };
             _numDelayMax.ValueChanged += (s, e) => _config.DelayMax = (int)_numDelayMax.Value * 1000;
-            delayGroup.Controls.Add(_numDelayMax);
+            settingsGroup.Controls.Add(_numDelayMax);
 
             // Control buttons
             _btnStart = new Button
             {
                 Text = "▶ BOT'U BAŞLAT",
-                Location = new Point(20, 480),
-                Size = new Size(300, 55),
+                Location = new Point(20, 530),
+                Size = new Size(350, 55),
                 BackColor = Color.FromArgb(16, 124, 16),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
@@ -246,8 +270,8 @@ namespace DenizMacroBot
             _btnStop = new Button
             {
                 Text = "■ BOT'U DURDUR",
-                Location = new Point(340, 480),
-                Size = new Size(300, 55),
+                Location = new Point(390, 530),
+                Size = new Size(350, 55),
                 BackColor = Color.FromArgb(180, 0, 0),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
@@ -263,7 +287,7 @@ namespace DenizMacroBot
             Label lblLog = new Label
             {
                 Text = "📋 Aktivite Günlüğü",
-                Location = new Point(20, 555),
+                Location = new Point(20, 605),
                 Size = new Size(150, 20),
                 ForeColor = Color.LightGray,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold)
@@ -272,8 +296,8 @@ namespace DenizMacroBot
 
             _txtLog = new TextBox
             {
-                Location = new Point(20, 580),
-                Size = new Size(790, 130),
+                Location = new Point(20, 630),
+                Size = new Size(840, 120),
                 Multiline = true,
                 ReadOnly = true,
                 BackColor = Color.FromArgb(20, 20, 20),
@@ -291,9 +315,10 @@ namespace DenizMacroBot
             
             _numDelayMin.Value = _config.DelayMin / 1000;
             _numDelayMax.Value = _config.DelayMax / 1000;
+            _numThreshold.Value = (decimal)(_config.MatchingThreshold * 100);
 
-            UpdateRegionLabels();
-            CheckIfAllRegionsConfigured();
+            UpdateRegionLabel();
+            CheckIfRegionConfigured();
         }
 
         private void InitializeServices()
@@ -301,18 +326,16 @@ namespace DenizMacroBot
             try
             {
                 _captureService = new ScreenCaptureService();
-                _ocrService = new OCRService(_config.TesseractDataPath);
+                _templateMatchingService = new TemplateMatchingService();
                 
-                if (_ocrService.Initialize())
-                {
-                    Log("✓ OCR motoru başarıyla başlatıldı");
-                }
+                Log("✓ Template Matching servisi başlatıldı");
+                Log("✓ OpenCvSharp4 hazır");
             }
             catch (Exception ex)
             {
                 Log($"✗ Servisler başlatılamadı: {ex.Message}");
                 MessageBox.Show(
-                    $"OCR motoru başlatılamadı.\n\nHata: {ex.Message}\n\nLütfen tessdata klasörünün doğru konumda olduğundan emin olun: {_config.TesseractDataPath}",
+                    $"Template Matching servisi başlatılamadı.\n\nHata: {ex.Message}",
                     "Başlatma Hatası",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
@@ -320,149 +343,68 @@ namespace DenizMacroBot
             }
         }
 
-        private async void BtnSelectAllRegions_Click(object? sender, EventArgs e)
+        private void BtnSelectMainWindow_Click(object? sender, EventArgs e)
         {
-            _btnSelectAllRegions.Enabled = false;
-            _lblSelectionProgress.Text = "🎯 HAZIR! İlk bölgeyi (Yeşil Kod) seçmek için ekranda alanı çizin...";
+            _btnSelectMainWindow.Enabled = false;
+            _lblSelectionProgress.Text = "🎯 ANA PENCEREYİ SEÇİN (tüm doğrulama dialogunu çizin)...";
             _lblSelectionProgress.ForeColor = Color.Yellow;
 
-            await Task.Delay(1500); // Kullanıcıya okuma zamanı ver
-
-            // Region 1: Green Code
-            _lblSelectionProgress.Text = "🟢 1/5: YEŞİL KOD bölgesini seçin...";
-            var region1 = RegionSelector.SelectRegion();
-            if (region1.HasValue)
+            Task.Delay(1000).ContinueWith(_ =>
             {
-                _config.GreenCodeRegion.SetFromRectangle(region1.Value);
-                UpdateRegionLabel(_lblGreenCodeRegion, "Yeşil Kod Bölgesi", region1.Value);
-                Log($"✓ Yeşil kod bölgesi seçildi: {region1.Value.Width}×{region1.Value.Height}");
-            }
-            else
-            {
-                ResetRegionSelection();
-                return;
-            }
-
-            await Task.Delay(500);
-
-            // Region 2: Button 1
-            _lblSelectionProgress.Text = "⬜ 2/5: 1. BUTON bölgesini seçin...";
-            var region2 = RegionSelector.SelectRegion();
-            if (region2.HasValue)
-            {
-                _config.Button1Region.SetFromRectangle(region2.Value);
-                UpdateRegionLabel(_lblButton1Region, "1. Buton Bölgesi", region2.Value);
-                Log($"✓ 1. buton bölgesi seçildi: {region2.Value.Width}×{region2.Value.Height}");
-            }
-            else
-            {
-                ResetRegionSelection();
-                return;
-            }
-
-            await Task.Delay(500);
-
-            // Region 3: Button 2
-            _lblSelectionProgress.Text = "⬜ 3/5: 2. BUTON bölgesini seçin...";
-            var region3 = RegionSelector.SelectRegion();
-            if (region3.HasValue)
-            {
-                _config.Button2Region.SetFromRectangle(region3.Value);
-                UpdateRegionLabel(_lblButton2Region, "2. Buton Bölgesi", region3.Value);
-                Log($"✓ 2. buton bölgesi seçildi: {region3.Value.Width}×{region3.Value.Height}");
-            }
-            else
-            {
-                ResetRegionSelection();
-                return;
-            }
-
-            await Task.Delay(500);
-
-            // Region 4: Button 3
-            _lblSelectionProgress.Text = "⬜ 4/5: 3. BUTON bölgesini seçin...";
-            var region4 = RegionSelector.SelectRegion();
-            if (region4.HasValue)
-            {
-                _config.Button3Region.SetFromRectangle(region4.Value);
-                UpdateRegionLabel(_lblButton3Region, "3. Buton Bölgesi", region4.Value);
-                Log($"✓ 3. buton bölgesi seçildi: {region4.Value.Width}×{region4.Value.Height}");
-            }
-            else
-            {
-                ResetRegionSelection();
-                return;
-            }
-
-            await Task.Delay(500);
-
-            // Region 5: Button 4
-            _lblSelectionProgress.Text = "⬜ 5/5: 4. BUTON bölgesini seçin...";
-            var region5 = RegionSelector.SelectRegion();
-            if (region5.HasValue)
-            {
-                _config.Button4Region.SetFromRectangle(region5.Value);
-                UpdateRegionLabel(_lblButton4Region, "4. Buton Bölgesi", region5.Value);
-                Log($"✓ 4. buton bölgesi seçildi: {region5.Value.Width}×{region5.Value.Height}");
-            }
-            else
-            {
-                ResetRegionSelection();
-                return;
-            }
-
-            // All regions selected successfully
-            _config.SaveToFile(ConfigPath);
-            _lblSelectionProgress.Text = "✅ TÜM BÖLGELER BAŞARIYLA SEÇİLDİ! Bot artık kullanıma hazır.";
-            _lblSelectionProgress.ForeColor = Color.LightGreen;
-            _btnSelectAllRegions.Enabled = true;
-            _btnStart.Enabled = true;
-            
-            Log("========================================");
-            Log("✅ KURULUM TAMAMLANDI!");
-            Log("Şimdi oyunu kapatıp botu başlatabilirsiniz.");
-            Log("========================================");
+                Invoke(new Action(() =>
+                {
+                    var region = RegionSelector.SelectRegion();
+                    if (region.HasValue)
+                    {
+                        _config.MainWindowRegion.SetFromRectangle(region.Value);
+                        _config.SaveToFile(ConfigPath);
+                        
+                        UpdateRegionLabel();
+                        
+                        _lblSelectionProgress.Text = "✅ Ana pencere başarıyla seçildi! Bot kullanıma hazır.";
+                        _lblSelectionProgress.ForeColor = Color.LightGreen;
+                        _btnStart.Enabled = true;
+                        _btnSaveDebugImages.Enabled = true;
+                        
+                        Log("========================================");
+                        Log("✅ ANA PENCERE SEÇİLDİ!");
+                        Log($"   Boyut: {region.Value.Width}×{region.Value.Height}");
+                        Log($"   Konum: ({region.Value.X}, {region.Value.Y})");
+                        Log("   Dinamik kırpma oranları:");
+                        Log($"   • Yeşil Kod: %{_config.TargetCodeTopPercent * 100}-{_config.TargetCodeBottomPercent * 100}");
+                        Log($"   • Butonlar: %{_config.ButtonsAreaTopPercent * 100}-{_config.ButtonsAreaBottomPercent * 100}");
+                        Log("========================================");
+                    }
+                    else
+                    {
+                        _lblSelectionProgress.Text = "❌ Seçim iptal edildi. Tekrar denemek için butona tıklayın.";
+                        _lblSelectionProgress.ForeColor = Color.Red;
+                        Log("⚠ Ana pencere seçimi iptal edildi");
+                    }
+                    
+                    _btnSelectMainWindow.Enabled = true;
+                }));
+            });
         }
 
-        private void ResetRegionSelection()
+        private void UpdateRegionLabel()
         {
-            _lblSelectionProgress.Text = "❌ Bölge seçimi iptal edildi. Tekrar denemek için butona tıklayın.";
-            _lblSelectionProgress.ForeColor = Color.Red;
-            _btnSelectAllRegions.Enabled = true;
-            Log("⚠ Bölge seçimi iptal edildi");
+            if (_config.MainWindowRegion.IsValid)
+            {
+                var rect = _config.MainWindowRegion.Rectangle;
+                _lblMainWindowRegion.Text = $"✅ Ana Pencere: {rect.Width}×{rect.Height} @ ({rect.X}, {rect.Y})";
+                _lblMainWindowRegion.ForeColor = Color.LightGreen;
+            }
         }
 
-        private void UpdateRegionLabel(Label label, string name, Rectangle region)
-        {
-            label.Text = $"✅ {name}: {region.Width}×{region.Height} @ ({region.X}, {region.Y})";
-            label.ForeColor = Color.LightGreen;
-        }
-
-        private void UpdateRegionLabels()
-        {
-            if (_config.GreenCodeRegion.IsValid)
-                UpdateRegionLabel(_lblGreenCodeRegion, "Yeşil Kod Bölgesi", _config.GreenCodeRegion.Rectangle);
-            
-            if (_config.Button1Region.IsValid)
-                UpdateRegionLabel(_lblButton1Region, "1. Buton Bölgesi", _config.Button1Region.Rectangle);
-            
-            if (_config.Button2Region.IsValid)
-                UpdateRegionLabel(_lblButton2Region, "2. Buton Bölgesi", _config.Button2Region.Rectangle);
-            
-            if (_config.Button3Region.IsValid)
-                UpdateRegionLabel(_lblButton3Region, "3. Buton Bölgesi", _config.Button3Region.Rectangle);
-            
-            if (_config.Button4Region.IsValid)
-                UpdateRegionLabel(_lblButton4Region, "4. Buton Bölgesi", _config.Button4Region.Rectangle);
-        }
-
-        private void CheckIfAllRegionsConfigured()
+        private void CheckIfRegionConfigured()
         {
             if (_config.AllRegionsConfigured)
             {
-                _lblSelectionProgress.Text = "✅ Tüm bölgeler yapılandırıldı! Bot başlatmaya hazır.";
+                _lblSelectionProgress.Text = "✅ Yapılandırma tamamlandı! Bot başlatmaya hazır.";
                 _lblSelectionProgress.ForeColor = Color.LightGreen;
                 _btnStart.Enabled = true;
+                _btnSaveDebugImages.Enabled = true;
             }
         }
 
@@ -473,17 +415,18 @@ namespace DenizMacroBot
             _isRunning = true;
             _btnStart.Enabled = false;
             _btnStop.Enabled = true;
-            _btnSelectAllRegions.Enabled = false;
+            _btnSelectMainWindow.Enabled = false;
             _lblStatus.Text = "● ÇALIŞIYOR";
             _lblStatus.ForeColor = Color.Lime;
 
             _cancellationTokenSource = new CancellationTokenSource();
             
             Log("========================================");
-            Log("🤖 Bot başlatıldı - Ekran izleniyor...");
-            Log("⚡ HIZLI MOD: Her 0.5 saniyede kontrol edilecek");
-            Log("🔍 OCR: 3x büyütülmüş görüntü, gelişmiş tanıma");
-            Log("Bot doğrulaması tespit edildiğinde ANINDA işlem yapılacak.");
+            Log("🤖 Bot başlatıldı - Template Matching Modu");
+            Log($"⚙ Eşleşme Eşiği: {_config.MatchingThreshold:P0}");
+            Log($"⏱ Gecikme: {_config.DelayMin / 1000}-{_config.DelayMax / 1000} saniye");
+            Log($"🔍 Kontrol Aralığı: {_config.CheckIntervalMs / 1000} saniye");
+            Log("🎯 Dinamik kırpma aktif");
             Log("========================================");
 
             try
@@ -516,14 +459,14 @@ namespace DenizMacroBot
             _isRunning = false;
             _btnStart.Enabled = true;
             _btnStop.Enabled = false;
-            _btnSelectAllRegions.Enabled = true;
+            _btnSelectMainWindow.Enabled = true;
             _lblStatus.Text = "● HAZIR";
             _lblStatus.ForeColor = Color.Gray;
         }
 
         private async Task RunBotAsync(CancellationToken cancellationToken)
         {
-            if (_captureService == null || _ocrService == null)
+            if (_captureService == null || _templateMatchingService == null)
             {
                 throw new InvalidOperationException("Servisler başlatılmamış");
             }
@@ -537,127 +480,166 @@ namespace DenizMacroBot
                 
                 try
                 {
-                    // Capture green code region with proper disposal
-                    Bitmap? greenCodeScreenshot = null;
-                    Bitmap? processedGreen = null;
-                    string? greenCode = null;
+                    // Capture main window
+                    Bitmap? mainWindowCapture = null;
+                    Bitmap? targetCodeBitmap = null;
+                    Bitmap? buttonsAreaBitmap = null;
+                    Bitmap[]? buttonBitmaps = null;
 
                     try
                     {
-                        greenCodeScreenshot = _captureService.CaptureRegionCopy(_config.GreenCodeRegion.Rectangle);
-                        processedGreen = _captureService.PreprocessForOCR(greenCodeScreenshot);
-                        greenCode = _ocrService.RecognizeAndExtractCode(processedGreen, _config.VerificationCodePattern);
-                    }
-                    finally
-                    {
-                        greenCodeScreenshot?.Dispose();
-                        processedGreen?.Dispose();
-                    }
+                        // Step 1: Capture the main window
+                        mainWindowCapture = _captureService.CaptureRegion(_config.MainWindowRegion.Rectangle);
 
-                    if (!string.IsNullOrEmpty(greenCode))
-                    {
+                        // Step 2: Dynamically crop Target Code (20-40%)
+                        targetCodeBitmap = _templateMatchingService.CropRegion(
+                            mainWindowCapture,
+                            _config.TargetCodeTopPercent,
+                            _config.TargetCodeBottomPercent
+                        );
+
+                        // Step 3: Dynamically crop Buttons Area (40-90%)
+                        buttonsAreaBitmap = _templateMatchingService.CropRegion(
+                            mainWindowCapture,
+                            _config.ButtonsAreaTopPercent,
+                            _config.ButtonsAreaBottomPercent
+                        );
+
+                        // Step 4: Split Buttons Area into 4 equal parts
+                        buttonBitmaps = _templateMatchingService.SplitButtonsArea(buttonsAreaBitmap);
+
+                        // Step 5: Perform Template Matching
+                        var (buttonIndex, similarity, usedCanny) = _templateMatchingService.FindBestMatch(
+                            targetCodeBitmap,
+                            buttonBitmaps,
+                            _config.MatchingThreshold
+                        );
+
                         Log($"");
-                        Log($"🎯 [Döngü {cycleCount}] BOT DOĞRULAMASI TESPİT EDİLDİ!");
-                        Log($"🟢 Yeşil Kod: {greenCode}");
+                        Log($"🔍 [Döngü {cycleCount}] Template Matching Tamamlandı");
+                        Log($"   Preprocessing: {(usedCanny ? "Canny Edge Detection" : "Binary Threshold")}");
+                        Log($"   En İyi Eşleşme: Buton {buttonIndex + 1}");
+                        Log($"   Benzerlik Skoru: {similarity:P2} ({similarity:F3})");
 
-                        // Read all 4 buttons QUICKLY
-                        string?[] buttonCodes = new string?[4];
-                        RegionConfig[] buttonRegions = {
-                            _config.Button1Region,
-                            _config.Button2Region,
-                            _config.Button3Region,
-                            _config.Button4Region
-                        };
-
-                        // Read all buttons in parallel for SPEED with proper disposal
-                        var buttonTasks = new Task<string?>[4];
-                        for (int i = 0; i < 4; i++)
+                        // Check if similarity meets threshold
+                        if (similarity >= _config.MatchingThreshold)
                         {
-                            int index = i; // Capture for closure
-                            buttonTasks[i] = Task.Run(() => {
-                                Bitmap? buttonScreenshot = null;
-                                Bitmap? processedButton = null;
-                                try
-                                {
-                                    buttonScreenshot = _captureService.CaptureRegionCopy(buttonRegions[index].Rectangle);
-                                    processedButton = _captureService.PreprocessForOCR(buttonScreenshot);
-                                    return _ocrService.RecognizeAndExtractCode(processedButton, _config.VerificationCodePattern);
-                                }
-                                catch (Exception ex)
-                                {
-                                    Log($"⚠ Buton {index + 1} okuma hatası: {ex.Message}");
-                                    return null;
-                                }
-                                finally
-                                {
-                                    buttonScreenshot?.Dispose();
-                                    processedButton?.Dispose();
-                                }
-                            });
-                        }
+                            Log($"✅ EŞLEŞME BULUNDU! Buton {buttonIndex + 1} - Skor: {similarity:P2}");
+                            Log($"🖱 Tıklama yapılıyor...");
 
-                        await Task.WhenAll(buttonTasks);
-                        
-                        for (int i = 0; i < 4; i++)
-                        {
-                            buttonCodes[i] = buttonTasks[i].Result;
-                            Log($"   Buton {i + 1}: {buttonCodes[i] ?? "Okunamadı"}");
-                        }
-
-                        // Find matching button
-                        int matchingButton = -1;
-                        for (int i = 0; i < 4; i++)
-                        {
-                            if (buttonCodes[i] == greenCode)
-                            {
-                                matchingButton = i;
-                                break;
-                            }
-                        }
-
-                        if (matchingButton != -1)
-                        {
-                            Log($"✅ EŞLEŞME BULUNDU! Buton {matchingButton + 1} - Kod: {greenCode}");
-                            Log($"🖱 HEMEN TIKLANIYOR...");
-
-                            // Calculate click position (center of button region)
-                            Rectangle buttonRect = buttonRegions[matchingButton].Rectangle;
-                            int clickX = buttonRect.X + buttonRect.Width / 2;
-                            int clickY = buttonRect.Y + buttonRect.Height / 2;
+                            // Calculate click position
+                            // Button position = MainWindow.Y + ButtonsAreaTop + (buttonIndex * buttonHeight) + (buttonHeight / 2)
+                            int buttonsAreaStartY = (int)(_config.MainWindowRegion.Rectangle.Height * _config.ButtonsAreaTopPercent);
+                            int buttonsAreaHeight = (int)(_config.MainWindowRegion.Rectangle.Height * (_config.ButtonsAreaBottomPercent - _config.ButtonsAreaTopPercent));
+                            int buttonHeight = buttonsAreaHeight / 4;
+                            
+                            int clickX = _config.MainWindowRegion.Rectangle.X + _config.MainWindowRegion.Rectangle.Width / 2;
+                            int clickY = _config.MainWindowRegion.Rectangle.Y + buttonsAreaStartY + (buttonIndex * buttonHeight) + (buttonHeight / 2);
+                            
                             Point clickPoint = MouseHelper.AddJitter(new Point(clickX, clickY), 5);
 
-                            // Perform click IMMEDIATELY - NO DELAY!
+                            // Perform click with randomized delay
+                            int preClickDelay = random.Next(_config.DelayMin, _config.DelayMax);
+                            Log($"⏳ {preClickDelay / 1000} saniye gecikme uygulanıyor...");
+                            await Task.Delay(preClickDelay, cancellationToken);
+
                             await MouseHelper.MoveAndClickAsync(clickPoint, cancellationToken);
                             
                             Log($"✅ TIKLANDI! Pozisyon: ({clickPoint.X}, {clickPoint.Y})");
-                            Log($"⏳ Bot doğrulaması tamamlandı. Sonraki kontrol için bekleniyor...");
-
-                            // Wait longer after successful verification
-                            int delay = random.Next(_config.DelayMin, _config.DelayMax);
-                            await Task.Delay(delay, cancellationToken);
+                            Log($"⏳ Bot doğrulaması tamamlandı. {_config.CheckIntervalMs / 1000} saniye sonra tekrar kontrol edilecek.");
+                            
+                            // Wait before next check
+                            await Task.Delay(_config.CheckIntervalMs, cancellationToken);
                         }
                         else
                         {
-                            Log($"⚠ Eşleşme bulunamadı! Yeşil kod: {greenCode}");
-                            Log($"   Okunan buton kodları: {string.Join(", ", buttonCodes.Select(c => c ?? "null"))}");
-                            Log($"   HEMEN TEKRAR DENENİYOR!");
+                            Log($"⚠ Eşleşme eşiği karşılanmadı (Skor: {similarity:P2} < Eşik: {_config.MatchingThreshold:P0})");
+                            Log($"   En yakın: Buton {buttonIndex + 1} - {similarity:P2}");
+                            Log($"   Yanlış tıklamayı önlemek için bekleyip tekrar taranacak.");
                             
-                            // IMMEDIATE retry - no delay!
-                            await Task.Delay(300, cancellationToken);
+                            // Continue monitoring
+                            await Task.Delay(_config.CheckIntervalMs, cancellationToken);
                         }
                     }
-                    else
+                    finally
                     {
-                        // No verification detected, check again FAST
-                        await Task.Delay(_config.CheckIntervalMs, cancellationToken);
+                        // Dispose bitmaps
+                        mainWindowCapture?.Dispose();
+                        targetCodeBitmap?.Dispose();
+                        buttonsAreaBitmap?.Dispose();
+                        
+                        if (buttonBitmaps != null)
+                        {
+                            foreach (var bitmap in buttonBitmaps)
+                            {
+                                bitmap?.Dispose();
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
                     Log($"⚠ Döngü hatası: {ex.Message}");
-                    Log($"   Detay: {ex.GetType().Name}");
                     await Task.Delay(1000, cancellationToken);
                 }
+            }
+        }
+
+        private void BtnSaveDebugImages_Click(object? sender, EventArgs e)
+        {
+            if (_captureService == null || _templateMatchingService == null)
+            {
+                MessageBox.Show("Servisler başlatılmamış!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!_config.MainWindowRegion.IsValid)
+            {
+                MessageBox.Show("Önce ana pencereyi seçmelisiniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                // Capture and process
+                using (Bitmap mainWindow = _captureService.CaptureRegion(_config.MainWindowRegion.Rectangle))
+                using (Bitmap targetCode = _templateMatchingService.CropRegion(
+                    mainWindow, 
+                    _config.TargetCodeTopPercent, 
+                    _config.TargetCodeBottomPercent))
+                using (Bitmap buttonsArea = _templateMatchingService.CropRegion(
+                    mainWindow,
+                    _config.ButtonsAreaTopPercent,
+                    _config.ButtonsAreaBottomPercent))
+                {
+                    Bitmap[] buttons = _templateMatchingService.SplitButtonsArea(buttonsArea);
+
+                    string outputFolder = Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                        "DenizBot_Debug_" + DateTime.Now.ToString("yyyyMMdd_HHmmss")
+                    );
+
+                    _templateMatchingService.SaveDebugImages(targetCode, buttons, outputFolder);
+
+                    // Dispose buttons
+                    foreach (var btn in buttons)
+                    {
+                        btn?.Dispose();
+                    }
+
+                    Log($"✅ Debug resimleri kaydedildi: {outputFolder}");
+                    MessageBox.Show(
+                        $"Debug resimleri başarıyla kaydedildi!\n\nKonum: {outputFolder}",
+                        "Başarılı",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                Log($"✗ Debug resimleri kaydedilemedi: {ex.Message}");
+                MessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -678,7 +660,7 @@ namespace DenizMacroBot
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             StopBot();
-            _ocrService?.Dispose();
+            _templateMatchingService?.Dispose();
             _captureService?.Dispose();
             base.OnFormClosing(e);
         }

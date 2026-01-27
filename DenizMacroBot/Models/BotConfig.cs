@@ -4,46 +4,43 @@ using Newtonsoft.Json;
 namespace DenizMacroBot.Models
 {
     /// <summary>
-    /// Configuration model for the macro bot
+    /// Configuration model for the macro bot - Template Matching version
     /// </summary>
     public class BotConfig
     {
-        [JsonProperty("greenCodeRegion")]
-        public RegionConfig GreenCodeRegion { get; set; } = new RegionConfig();
+        // Single main window region (entire verification dialog)
+        [JsonProperty("mainWindowRegion")]
+        public RegionConfig MainWindowRegion { get; set; } = new RegionConfig();
 
-        [JsonProperty("button1Region")]
-        public RegionConfig Button1Region { get; set; } = new RegionConfig();
+        // Template matching threshold (0.0 to 1.0, default 0.85)
+        [JsonProperty("matchingThreshold")]
+        public double MatchingThreshold { get; set; } = 0.85;
 
-        [JsonProperty("button2Region")]
-        public RegionConfig Button2Region { get; set; } = new RegionConfig();
-
-        [JsonProperty("button3Region")]
-        public RegionConfig Button3Region { get; set; } = new RegionConfig();
-
-        [JsonProperty("button4Region")]
-        public RegionConfig Button4Region { get; set; } = new RegionConfig();
-
+        // Click delay range (randomized between min and max)
         [JsonProperty("delayMin")]
         public int DelayMin { get; set; } = 4000; // 4 seconds
 
         [JsonProperty("delayMax")]
         public int DelayMax { get; set; } = 14000; // 14 seconds
 
+        // How often to check for verification dialog (milliseconds)
         [JsonProperty("checkIntervalMs")]
-        public int CheckIntervalMs { get; set; } = 500; // Check every 0.5 seconds - FAST!
+        public int CheckIntervalMs { get; set; } = 5000; // Check every 5 seconds
 
-        [JsonProperty("tesseractDataPath")]
-        public string TesseractDataPath { get; set; } = @".\Resources\tessdata";
+        // Dynamic cropping percentages
+        [JsonProperty("targetCodeTopPercent")]
+        public double TargetCodeTopPercent { get; set; } = 0.20; // 20%
 
-        [JsonProperty("verificationCodePattern")]
-        public string VerificationCodePattern { get; set; } = @"\d{4,7}"; // 4-7 digit code pattern - flexible!
+        [JsonProperty("targetCodeBottomPercent")]
+        public double TargetCodeBottomPercent { get; set; } = 0.40; // 40%
 
-        public bool AllRegionsConfigured =>
-            GreenCodeRegion.IsValid &&
-            Button1Region.IsValid &&
-            Button2Region.IsValid &&
-            Button3Region.IsValid &&
-            Button4Region.IsValid;
+        [JsonProperty("buttonsAreaTopPercent")]
+        public double ButtonsAreaTopPercent { get; set; } = 0.40; // 40%
+
+        [JsonProperty("buttonsAreaBottomPercent")]
+        public double ButtonsAreaBottomPercent { get; set; } = 0.90; // 90%
+
+        public bool AllRegionsConfigured => MainWindowRegion.IsValid;
 
         public static BotConfig LoadFromFile(string path)
         {

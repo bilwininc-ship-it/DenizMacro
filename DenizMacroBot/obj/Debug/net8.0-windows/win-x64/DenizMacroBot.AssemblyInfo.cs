@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DenizMacroBot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82621be94bb283ca266d0f0da4f1840461caabda")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b932d9aaaf506c38fbd4f003f3dd55e7643b1833")]
 [assembly: System.Reflection.AssemblyProductAttribute("DenizMacroBot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DenizMacroBot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
