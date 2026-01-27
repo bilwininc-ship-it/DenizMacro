@@ -1,12 +1,38 @@
 {
-  "searchRegion": {
-    "x": 1027,
-    "y": 372,
-    "width": 133,
-    "height": 187
+  "greenCodeRegion": {
+    "x": 465,
+    "y": 340,
+    "width": 81,
+    "height": 15
   },
-  "delayMin": 7000,
-  "delayMax": 18000,
+  "button1Region": {
+    "x": 420,
+    "y": 368,
+    "width": 173,
+    "height": 32
+  },
+  "button2Region": {
+    "x": 413,
+    "y": 409,
+    "width": 166,
+    "height": 30
+  },
+  "button3Region": {
+    "x": 416,
+    "y": 446,
+    "width": 168,
+    "height": 28
+  },
+  "button4Region": {
+    "x": 406,
+    "y": 484,
+    "width": 175,
+    "height": 29
+  },
+  "delayMin": 4000,
+  "delayMax": 14000,
+  "checkIntervalMs": 1500,
   "tesseractDataPath": ".\\Resources\\tessdata",
-  "verificationCodePattern": "\\d{4,8}"
+  "verificationCodePattern": "\\d{6}",
+  "AllRegionsConfigured": true
 }

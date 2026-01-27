@@ -8,20 +8,42 @@ namespace DenizMacroBot.Models
     /// </summary>
     public class BotConfig
     {
-        [JsonProperty("searchRegion")]
-        public RegionConfig SearchRegion { get; set; } = new RegionConfig();
+        [JsonProperty("greenCodeRegion")]
+        public RegionConfig GreenCodeRegion { get; set; } = new RegionConfig();
+
+        [JsonProperty("button1Region")]
+        public RegionConfig Button1Region { get; set; } = new RegionConfig();
+
+        [JsonProperty("button2Region")]
+        public RegionConfig Button2Region { get; set; } = new RegionConfig();
+
+        [JsonProperty("button3Region")]
+        public RegionConfig Button3Region { get; set; } = new RegionConfig();
+
+        [JsonProperty("button4Region")]
+        public RegionConfig Button4Region { get; set; } = new RegionConfig();
 
         [JsonProperty("delayMin")]
-        public int DelayMin { get; set; } = 12000; // 12 seconds
+        public int DelayMin { get; set; } = 4000; // 4 seconds
 
         [JsonProperty("delayMax")]
-        public int DelayMax { get; set; } = 18000; // 18 seconds
+        public int DelayMax { get; set; } = 14000; // 14 seconds
+
+        [JsonProperty("checkIntervalMs")]
+        public int CheckIntervalMs { get; set; } = 1500; // Check every 1.5 seconds
 
         [JsonProperty("tesseractDataPath")]
         public string TesseractDataPath { get; set; } = @".\Resources\tessdata";
 
         [JsonProperty("verificationCodePattern")]
-        public string VerificationCodePattern { get; set; } = @"\d{4,8}"; // Multi-digit code pattern
+        public string VerificationCodePattern { get; set; } = @"\d{6}"; // 6-digit code pattern
+
+        public bool AllRegionsConfigured =>
+            GreenCodeRegion.IsValid &&
+            Button1Region.IsValid &&
+            Button2Region.IsValid &&
+            Button3Region.IsValid &&
+            Button4Region.IsValid;
 
         public static BotConfig LoadFromFile(string path)
         {
