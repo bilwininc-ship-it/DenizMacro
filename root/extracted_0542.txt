@@ -1,0 +1,5 @@
+ZToolTip ,localeInfo ,chat
+
+GUI_TYPE_ATTR = 1
+class ItemUseDialog(ui.ScriptWindow):
+	def __init__(self

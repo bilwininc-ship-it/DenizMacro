@@ -1,0 +1,4 @@
+.CODEPAGE+"_"
+
+MAN			= 0
+WO

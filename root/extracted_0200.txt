@@ -1,0 +1,1 @@
++ (".cpp" if "c++" == m.language else ".c"))

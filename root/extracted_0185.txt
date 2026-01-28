@@ -1,0 +1,2 @@
+%: "d:/ymir work/ui/game/windows/face_warrior.sub",
+	_

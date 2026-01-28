@@ -1,0 +1,3 @@
+1import uiScriptLocale
+
+BUTTON_ROOT = "d:/ymir work/ui/public/"+

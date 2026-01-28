@@ -1,0 +1,6 @@
+gimport uiScriptLocale
+
+BOARD_VALUE_FILE = "d:/ymir work/ui/public/Parameter_Slot_06.sub"
+
+window = {
+	"name" : "GuildW

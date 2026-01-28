@@ -1,0 +1,4 @@
+@Info
+
+LOCALE_PATH = "d:/ymir work/ui/privatesearch/"
+GOLD_COLOR	= 0xFFFEE3AEK

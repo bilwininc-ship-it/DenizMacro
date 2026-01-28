@@ -1,0 +1,1 @@
+class TargetBoard(ui.Thin

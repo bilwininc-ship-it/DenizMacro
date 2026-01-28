@@ -1,0 +1,3 @@
+6import uiScriptLocale
+
+RUMI_ROOT = "d:/ymir work/ui/minigame/rumi/"0

@@ -1,0 +1,8 @@
+Timport app, uiScriptLocale
+
+ROOT = "d:/ymir work/ui/minimap/"
+
+window = {
+	"name" : "MiniMap",
+
+	"x

@@ -1,0 +1,1 @@
+.cfg", "w").write("%s\t%s" % tuple(B

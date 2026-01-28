@@ -1,0 +1,4 @@
+>app
+
+class CharacterDetailsUI(ui.ScriptWindow):
+	def __init__(self, parent

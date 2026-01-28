@@ -1,0 +1,2 @@
+"d:/ymir work/ui/game/windows/"
+BG_PHOTO_J

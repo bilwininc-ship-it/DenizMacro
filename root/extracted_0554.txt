@@ -1,0 +1,4 @@
+]import ui, dbg, constInfo, player, app, net, event, chat
+
+class SkillBoard(ui.Window):
+	def __init__(self

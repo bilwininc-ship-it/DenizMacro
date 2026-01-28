@@ -1,0 +1,4 @@
+%import uiScriptLocale
+
+ADD_HEIGHT = 17
+LOCALE_PATH =.

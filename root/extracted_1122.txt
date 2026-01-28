@@ -1,0 +1,1 @@
+BOARD_X = SCREEN_WIDTH * (65) / 800$

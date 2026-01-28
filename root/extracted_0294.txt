@@ -1,0 +1,4 @@
+,AffectShower
+
+class TestGame(ui.Window):
+	def __init__(self

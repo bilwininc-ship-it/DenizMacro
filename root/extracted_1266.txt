@@ -1,0 +1,1 @@
+SetRenderingRect(0.0, 0.0 - floa8

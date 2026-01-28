@@ -1,0 +1,3 @@
+ToolTip
+
+class ChestDropInfoWindow(ui.Script

@@ -1,0 +1,3 @@
+2app
+
+ROOT_PATH			= "d:/ymir work/ui/game/premium_private_shop/"<

@@ -1,0 +1,5 @@
+'app
+
+ROOT = "d:/ymir work/ui/game/"
+
+BOARD_WIDTH = 290

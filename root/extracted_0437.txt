@@ -1,0 +1,5 @@
+0sys
+ITEM_FLAG_APPLICABLE = 1 << 14
+
+
+class DragonSoulWindow(ui.

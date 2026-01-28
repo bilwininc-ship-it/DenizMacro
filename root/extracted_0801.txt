@@ -1,0 +1,9 @@
+eimport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/game/"
+
+Y_ADD_POSITION = 0
+window = {
+	"name" : "ExpandTaskBar",
+
+	"x

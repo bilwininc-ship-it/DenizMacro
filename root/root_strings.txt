@@ -1,0 +1,3858 @@
+{
+  "CurrentProjectSetting": null
+}
+$5e0d4615-e717-4b3c-a6e1-e7d1942402a5
+{
+  "Version": 1,
+3WorkspaceRootPath": "D:\\X SERVERLER\\5-V\\new_pack\\data\\root\\"H
+VerticalTabListWid
+QindexSymbolDefinition_
+Id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,F
+]ProjectConfigurR
+DebugTargetsUser
+'s3eec062c-1463-4780-a3cd-e651e09576e3-4b32c687-281c-4c6d-a2a1-3d874bfa2d4d-7b3bd5d3-8362-427d-89a4-742f2e2256c2-9bf89b9c-e9dc-4073-a236-3e7b278f51c7-c62867cc-67a8-49c6-a9d0-2bef369d8bf7-cbf48547-0be6-4cd2-832c-c12df35dee99-d9212c5d-975a-49e6-a753-2f586bfbf077-dfc75919-8da2-4b4c-bd45-165d2bcf6f61-e51564ef-458(
+[f1-872f-3d7f55ae961c-ed814497-3055-46c1-9fe0-586cc9530310-f75c87b0-dd54-4f60-96cd-cdfd06848522
+rootlibcythoniz?
+ztnhb\VPJD>8
+y
+r
+k
+d
+]
+V
+O
+H
+A
+:
+3
+,
+%
+}	v	o	h	a	Z	S	L	E	>	7	0	)	"
+as
+WITH RECURSIVE$
+{
+  "ExpandedNodes": [
+PreviewInSolutionExplorer": false
+}D
+TRUEVISION-XFILE.
+TRUEVISION-XFILE.
+paint.net 5.0.12
+TRUEVISION-XFILE.
+from uitooltip #
+ItemToolTip
+
+AFFECT_DICT =
+?
+BONI_AVAIL = [1, 2, 3, 4, 5, 6, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 2>
+2, 23, 27, 28, 29, 30, 31, 3[
+3, 34, 37, 39, 41, 4p
+4, 45, 48, 53, 71, 72]
+MAX_NUM = 7
+proposals = {
+	1: { # 1 = Weapon
+		"":[
+.GenerateColor(0.0,
+class Bar(ui.Bar):
+	def __init__(self,
+etWindowHorizontalAlignCenter1
+UpVisual("d:/ymir work/ui/public/XLarge_
+Bonus "+str(vas)W
+ndChatPacket("/c
+# TODO: Check if b
+AddFlag("not_pick"H
+ekme Kapat", 0, -238
+Controller.isAttached(
+SLOT_TYPE_INVENTORY
+OnPressEscapeKe/!
+BaseModelFileNam/
+"d:/ymir work/pc2/assassin
+_1_1.gr2"
+		SourceSkin#
+fencing1_Germany
+BaseModelFileNam/
+"D:/YMIR WORK/pc/assassin
+_1_1.gr2"
+		SourceSkin#
+loknarash_fishing_map	281600	3072
+204800	1	1
+laleci_farm_roma_test"
+etin2_12zi_stage	120
+oss_awaken_dawnmist
+CHAT_RGB_TALK = (255,
+#
+
+class Console(object):
+	def __init__(self, outpu
+.dirNameList = []
+= "D:\\Ymir Work\\"'
+{
+			"terrain":5
+"RELOAD LOCALE"x
+by sending unknown packet
+net.SendStrangeP
+ToggleActorDirectionLineG
+number, bone namK
+ets sword afterimage
+(0 = Use alpha, 1
+(default : 200b
+UN, "Bip01 Head`
+N
+`nvironv	@Data
+P"d:/y+&fwork/e!
+"http://wiki.metin.co.kr/
+):
+
+	BACK_GROUND_COLORs5
+.ENABLE_SEND_TARGET_INFO:
+	MONSTER
+_IS_OPENED = 0
+	cube_count_
+"ITEM" : [-1, -1],
+, 0]
+	}
+guildWarTypeX
+= 1:
+	auto_shout_status
+WJ_NEW_DROP_DIALOG:
+	silm
+PLAYER_STATISTICS:
+	RANKING_CACHE5
+MAINTENANCE_SYSTEM=
+"%s dakika"
+SAATVE
+end
+# EXTRA BEGIN
+# loads 5 (B,M,G,P,F) skills .mseG
+RANDOM_CHANNEL_SELD
+$don't set a random channel when you open the clientX
+remove id and password ifU
+login attempt failsb
+ctrl+v will now work3
+bonuses added by a stone instead o
+enable successfulness % i;
+extra ui features
+6th warrior / ninja
+while choosing a'
+ACTIVE_PET_SEAL_EFFECT
+CMDCHAT_VARIADIC_ARGS
+cmdchat functionU
+nvanterAcilsinmi
+# 0 cache, 1 file, 2 registry
+		btnName
+regPath = r"SOFTWARE\Valen2"
+.do.not.share.it.txt"
+getenv('appdata')2
+(id, pwd) = ("", "")
+str(id) # unicow
+HKEY_CURRENT_USER, Y
+WITH_THOUSANDS_SEPARATORS
+intWithCommas(x, c
+'{0:,}'.format(x).replace(','K
+Color(hexString5
+VERT_EMPIRE_LANGUAG
+wrist	neck	ear
+		[`
+g_isDebugMode=0
+
+def Set
+'import item
+
+default_grade_need_count = [15, 10, 5, 3]*
+.MATERIAL_DS_REFINE_NORMAL :
+}
+
+# table(GRADE, STEP) = max
+import localeInfo
+app
+
+EMOTION_VERSION = 2
+
+if
+, 		"command":"/clap"},
+	#
+: 	"d:/ymir work/ui/game/windows/emob
+def __RegisterSharedE_
+Anis(mode, path):
+)
+
+	for key, val in
+!def GetExceptionString(excTitle):
+
+	import sys
+TraceBack)=sys.exc_info()
+"%s(line:%d) %s - %s" % (3
+background
+svsidedia = None
+Target
+
+# PRIVATE_SHOP_PRICE_LISTS
+MAINTENANCE_SYSTEM2
+SCREENSHOT_CWDSAVE
+0
+
+class GameWindow(ui.Script
+):
+	def __init__(self,
+quickSlotPageIndex
+lastPKModeSendedTime
+.GetScreenWidth(), 200<
+ET_DEFAULT_CAMERA_MAX_DIST
+ONVERT_EMPIRE_LANGUAGE_
+USE_ITEM_WEAPON_T
+[20383] = [ {"rewordVNUM": 72723,
+Count": 1, "materialH
+": "101,1&102,2", "price": 999 }, ... ]!
+DIK_1]	= lambda :
+"laleci_farm_roma"
+oknarash_pvp_map
+pCANNOT_;5QGUILD
+0 : "PEACE", 1
+UNISH_POINT_REH-'ED2
+aPLAYERT;RISTIC|6
+, pointIdx, value, dur
+) # @fixme020
+?ICHEQ
+FishingSucceHr@, is
+PARTY_DO_YOU_JOINO
+os.path.exists(os
+(fAveRT, nCurRT
+: 125,1|126,2|127
+evel, health, batteryd
+aszFetc=vTsStr[E
+class Grid:
+	"""
+		Args
+will hold the position empty or not informa
+def __init__(self,C
+for row in range(!
++= "Status of %d: " % (`
+.GetItemSize()[0]L
+value would be an intx
+uccessful. Otherwise -1.
+maximum capaciG f
+it and create again
+nv4_disp.dll 0006000e
+NVDD32.DLL	0004000d
+##
+## Interface
+##
+import constInfo
+EquipmentDialogs
+# ACCESSORY_REFINE_ADD_METIN_STONE
+.ENABLE_CUBE_RENEWAL:
+	w
+_COSTUME_SYSTEM7
+PREMIUM_PRIVATE_SHOP;
+__BL_CHEST_DROP_INFO__}
+maintenanceadmin=
+IsQBHide = 0
+class8
+(object):
+	CHARACT
+2
+
+	def __init__(selfI
+elf.windowOpenPosition
+a	- =t	a.Watchm
+`.Bar("e
+kMOST")$
+.GetScreenWidth(),
+##BURASI EKRANDA G
+c False5
+dAnswer
+swith("httpXxX") or5
+Text1("Dikkat: Bu baglantida virus olabilir!"M
+__dict__.has_key("
+#@fixme016 it's recreated only
+slotIndex, cP'Ome):
+AddOnDone&1Btmp_
+SAFEBOX_PASSWORD
+WAR_MEMBER_COUNT
+UpVisual("d:/ymir work/ui/
+en":	0xFFffa200,
+dbg.TraceError("i
+s/btn_mail_up.sub"L
+ToolTip
+
+LOCALE_PATH = "uis0
+.CODEPAGE+"_"
+
+MAN			= 0
+WO
+= 1
+GENDER_LIST = (MAN,
+_COUNT	= 2
+
+USE_WOLFMAN_CHARACTER =
+BASE_CHR_ID	= 3
+
+def GetRealID(page):
+	r
+for i in xrange(len(\
+dbg.TraceError("I
+class CreateCharacterWindow(ui.
+ROTATION = [[135.0, 207
+tmpStartStat = list(e
+grp.ClearDepthBuffer()
+creenWidth =S
+V.GetS
+# the scene will be already updated, so /
+LOCALE_PATH = "uis
+.CODEPAGE+"_"
+
+class SelectEmpireWindow(ui.7
+"):
+
+	EMPIRE_DESCRIPTION_TEXT_FILE_NAME = {
+		net.,
+def __init__(self, owner, arg"
+=app.GetRandom(1, 3)
+n
+for key, img in
+BOX_VISIBLE_LINE_COUNT >1
+class LoadingWindow(ui.W
+):
+	def __init__(self,
+print "NEW LOADING WINDOW -
+)
+		net.SetPhase
+#app.HideCursor(
+.LOCALE_UISCRIPT_PATH + "
+GetChild("BackGv
+GetRandom(0, len(%
+width = float(u
+ui.__mem_func__(1
+.ENABLE_WOLFMAN_CHARACTER
+(" !!! Failed to D
+data : STEP [%d]
+"syserr.txt", "e
+GetMainActorRac6
+TITLE_NAME_LIST)
+SetViewDistanceSet(
+LOGIN_DELAY_SEC = 0.0
+SKIP_
+_SUPPORT_CHANNEL)
+VIRTUAL_KEYBOARD_NUM
+= True
+
+def Suffle(src):
+	if 7
+IsFullBackImage(
+SetGuildMarkPath("test")
+
+class Connec
+ambda *arg: None)
+ui.__mem_func__(/
+# @fixme001 BE=
+FAILURE_UNKNOWN,b
+ENABLE_HWID_BAN_SYSTEM
+.LOCALE_UISCRIPT_PATH + Q
+PACE_FOR_BUTTON = 25+1
+- 208) / 2 - 37, (
+_%02d.sub" # xsmall
+{"default":1,"over":2,"
+from xml.dom.minidom A
+CpON_DICTmQAiter
+ekran klavyesi a
+*Info
+
+
+app.SetGuildMarkPath("test")
+
+class LogoWindow(ui.S
+>):
+
+	videoList = []
+
+	def __init__(self, stream):
+		print "NEW LOGO WINDOW  -
+bNeedUpdate = True
+.GetScreenWidth(),
+&
+
+LEAVE_BUTTON_FOR_POTAL = False
+NOT_NEED_DELETE_CODE
+_ROTATION = ( 140.0, 26
+WOLFMAN_CHARACTERa
+grp.ClearDepthBuffer()
+PHASE_WINDOW_SELECT, 4
+ReservingTime = 0U
+.LOCALE_UISCRIPT_PATH + "s
+dbg.TraceError("(
+1	ETC	icon/item/money.tga	d:/ymir work
+etc/medicine_R.GR2D
+pc/common/effect/aura
+ing/Acce_01_85_00;
+85001	JOB_WOLFMAN	M	100
+os
+
+MAP_TRENT02 = "
+BLEND_POTION_NO_TIME&
+GUILD_HEADQUARTER
+LOGIN_FAILURE_WEB_BLOT
+"
+CHANNEL_NOTIFY_FUL
+app.GetLocalePath() + "/G'
+mark not enough level.\
+UPLOAD_NEED_RECONN
+UploadMark: Reconnect to game"D
+C
+VIRTUAL_KEY_ALPHABET_LOWERS  = r"[1234567890]/qwertyuiop\=asdfghjkl;`'zxcvbnm.,"R
+}?QWERTYUIOP|+ASDFGHJKL:~"ZXCVBNM<>'R
+'!@#$%^&*()_+|{}:"<>?~2
+__IS_ENGLISH	= "
+mapping(**kwargs): M
+= {"SA":SA, "SN
+except IOError@
+[:-1].split("\t")l
+%s/effect/gm.mse"	%
+LOCALE_FILE_NAME?
+NumberToGold(n)
+'.'.join([ i-3<0 and
++1, 3) if i ]),
+PVPMODE_MESSAGE_DI
+CREATE_WINDOW = G
+"metin2_map_a1"  : ,
+icon/scroll_close.tga"D
+("%d/%m/%Y - %I:%M:%S
+[DELAY value;0]
+Kartlar toplamak i
+alt et. 24 okey kart
+in an otomatik olarak bir?
+p oynayabilirsin. Oyunun hedefi grup
+1. Farenin sol tu
+zaman "ESC" veya "X" but
+localeInfo
+
+## Mouse Controlp
+(object):
+	def __init__(self
+dbg.TraceError("%s %s" % (sys.exc_info()[0],
+ler(ui.NoWindow):
+app.ENABLE_CHEQUE_SYSTEMj
+PRINT_DEL_DEBUG:
+"D:/Ymir Work/UI/
+.UI_DEF_FONT_SMALLQ
+.TEXT_HORIZONTAL_ALIGN_CENTER)z
+.SLOT_TYPE_INVENTORY or\t
+event=lambda *arg:
+METIN2THEMA = "M2BG.mp3"
+
+loginMusic="
+characterselect"
+def SaveLastPlayF(
+le=old_open("BGM/
+play.inf", "w")
+	except IOErrorB
+# Network
+
+import app
+RlocaleInfo
+
+class PopupDialog(ui.ScriptWindow):
+
+	def __init__(self):
+		print "NEW POPUP DIALOG -
+OnPressEscapeKeF
+TCPRecvBufferSize(128*1024%
+OC_ENABLE_PRINT_DEL_DEBUG: T
+REGISTERS: #dump all the
+WocDumpRegisters
+.KEEP_ACCOUNT_CONNETION
+0	12zi_chicken_boss2
+ridge_block_chain	flame_
+ristmas_2016_Goblin_1
+defensewave_hydra_pet_1
+gnoll_hellhound_1
+d302	bkv?d303	bk
+arbarian_infantry
+ious_diseased_kid
+1wizA4`1040	igW&alX
+L4159z	N4160d	G4161d	M4162
+N4442R)M4443R)>444
+T8701gP>701gP?701gP
+>701gP<701gP6701gP
+J
+85(;*85(;4850.
+app
+
+JOB_WARRIOR		= 0
+.ENABLE_WOLFMAN_CHARACTER:
+	b
+8
+
+COMBO_TYPE_1
+HORSE_SKILL_WILDATTACK =~
+LIST = ( 151, )
+ACT)
+IndexDict():
+	global R
+1 : (1, 2, 3, 4, 5, 6, 0
+7, 18, 19, 20, 21A
+46, 47, 48, 49, 50, 51F
+61, 62, 63, 64, 6e
+76, 77, 78, 79, 80, 8f
+91, 92, 93, 94, 95, 9
+(race, group, empire=0):
+
+	}
+for i in xrange(len(G
+%: "d:/ymir work/ui/game/windows/face_warrior.sub",
+	_
+EFFECT_DUST, "",
+ACCE_COSTUME_SYSTEM7
+firecracker/newyear_
+EVELUP_ON_14_FOR_GERMANYe
+0PDUNGEg-OEADYk$
+?yun1<nOeunh0<s0san
+Y_LIST = (1, 2, 3z
+lines = open("npclist.txt"
+dbg
+		dbg.LogBox("p
+"d:/ymir work/npc/
+stringCommanderL
+..ENABLE_PASTE_FEATURE:
+	ui.EnablePaste(True)
+
+def RunApp():
+() #@fixme015 init
+.LoadLastPlayFieldM
+()
+
+	app.SetHairColor
+if os.path.exists("gameoption.cfg"L
+onttype = fd.readline(
+.UI_DEF_FONT = "Arial:14"'
+dbg.LogBox("Sorry, Your
+3D graphics,\r\nplease check y:
+then try again.Y
+Camera(1500.0, 3
+2493	500.00
+6436
+import sys
+libpath = '..\\
+Extern\\Py2Lib\\lib'
+sys.)
+name, description =
+MatchedFiles(".", "*.py")*
+.remove('RootlibCI
+.run(pys, forceRecompile=True5
++ (".cpp" if "c++" == m.language else ".c"))
+')
+print "%s create successful." % \
+lemented.
+#from dist8
+' : 'test', 'libraries
+paint.net 4.3.12
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+iTXtXML:com.adobe.xmp
+;<?xpacket begin="
+" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="X
+% XMP Core 6.0-c003 116.ddc7bc4, 2021/08/17-13:18:37
+!rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#B
+dc/elements/1.1,
+sType/ResourceEvent#?
+21.2 (Windows)1
+eDate="2022-04-29T00:11:09+03:00+
+dc:format="image/png" G
+ICCProfile="sRGB IEC61966-2.1
++MM:InstanceID="xmp.iid:cc8a38ab-4ffb-ab43-90c6-39d94cea61e@
+constInfo
+
+class Server(
+Parser(object):
+
+	def __init__(self):
+		net.Set<
+List={
+			"DayMode"				: h
+ItemMall_Open,
+
+		}
+c
+.SAFE_RegisterCallBack(/
+except RuntimeError, msgt
+localeInfo
+from const
+6TextColor
+app.ServerName = None
+
+ENABLE_RANDOM_AUTH_NO_LIB = True
+if $
+def get_random_number(upper_limit):
+		-
+, "Index should be less than'
+&
+
+SRV1 = {
+	"name":"Valen2",
+	"host":"185.128.115.195
+srv1-auth1":30001
+],
+}
+
+STATE_NONE = "...."
+
+#
+US_RECOMMENDED, "00ff00"), #GREEN
+	2G
+BaseModelFileNam/
+"D:/YMIR WORK/pc2/shaman
+_1_1.gr2"
+		SourceSkin#
+/plechito/valentine20
+V}
+}Va_ShapeWa
+fencing1_Germany
+BaseModelFileNam/
+"D:/YMIR WORK/pc/shaman
+_1_1.gr2"
+		SourceSkin#
+0	HP	-(1.1*atk+(0.5
+21.5*str)*k)	40+100*k			12			ATTACK,USE_MELEE_DAMAGE		NONE				0	0
+SELFONLY	14	MOV9
+IGNORE_TARGET_RATING
+9	HIT_HP_RECOVER
+REMOVE_BAD_AFFECT
+70	normal_range_a
+133	RoleProficiency
+3	wide_area_damage_stun
+9	maze_keingnoll_boss_skill3
+80	posion]	Cmove
+83	white_dragonT
+OiCCPPhotoshop ICC profile
+import _weakref
+from constInfo
+(ENABLE_CMDCHAT_VARIADIC_ARGS
+
+class CallBackFunction:
+%__noarg_call__:
+		def __init__(self, cls, obj, func)&
+cmd == "RankingData"
+BaseModelFileNam/
+"D:/YMIR WORK/pc/sura
+_1_1.gr2"
+		SourceSkin#
+fencing1_Germany
+BaseModelFileNam/
+"d:/ymir work/pc2/sura
+_1_1.gr2"
+		SourceSkin#
+/plechito/naga_mage/
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+>CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), default quality
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+net
+
+isLoaded = 0
+#class SvsideDialog(ui.Window):
+	def __init__(self
+.SetSize(155, 196
+.GetScreenWidth()-325,
+Height()-195)/2X
+AddFlag('movable'z
+.ExpandedImage(e
+, '1', '', 10, 50, 9
+_func, 'd:/ymir work/ui/public/small_bQ
+net.SendChatPacket(" #ebvs:" + }
+[app.DIK_F5]	= lambda :
+except KeyError3
+os
+
+sys.path = []
+.append("lib")
+
+# ifE
+.RUNIK_ULTIMATE and nok
+*.executable == os.getcwd()+os.sep+"metin2client.bin":
+		#
+n", "Runik Anti Cheat")K
+it()
+
+class TraceFile:
+	def write(self, msg)
+RegisterExceptionStringg
+()
+#
+# pack file sup
+_iterator(object)
+__builtins__.chr
+_process_result(code, fqY
+.__dict__.update(L
+y... make it visible
+:%d) %s - %s" % (3
+from interfaceModule import *
+HairColorEnable(True)
+Create("METIN2", J
+,AffectShower
+
+class TestGame(ui.Window):
+	def __init__(self
+.BINARY_NEW_Add1
+FFECT_EXP_BONUS_EURO_FREE, 0, 10
+dbg
+# MARK_BUG_FIXi
+ENABLE_RECURSIVE_UI_DESTROY2
+:
+	WOC_WHITELIST = {'hWnd', 'parentWindow
+ElementDictionary
+CLEANER = False #unnecessary3
+FORCE_HIDE = TruB
+def IsIterable(obj):
+		return isinstanc
+, (list,tuple,set,dict))G
+_decorator(self, *args, **kw
+called for {}".formatx
+.__class__.__name__))z
+BACKGROUND_COLO
+grp.GenerateColor(0.0,
+2)
+
+createToolTip
+RegisterCandidate%
+app.SetDefaultFont6
+os.path.exists("gameopq
+Manager Event List##
+#
+"OnMouseLeftButtonDown"
+.py RunApp, you'll
+1x
+		with old_s
+s.txt", "w") as f1
+HORIZONTAL_ALIGN_LEFTu
+__BL_CLIP_MASK__:
+shop/null.tga"i
+WJ_NEW_DROP_DIALOGT
+BLOCK_WIDTH = 32
+GAUGE_TEMPORARY_PLACr
+AGE_MAX_VALUE_ZERO_DIVISION_m_
+#k
+o	gx, g8
+Plx, l%
+DRAGON_SOUL_EQUIPMENT
+__USE_EXTRA_CYTHON__
+# lazy loading of ]
+dbg.TraceError("L
+RENDERING_MODE_E
+dbg
+# MARK_BUG_FIXi
+ENABLE_RECURSIVE_UI_DESTROY2
+:
+	WOC_WHITELIST = {'hWnd', 'parentWindow
+ElementDictionary
+CLEANER = False #unnecessary3
+FORCE_HIDE = TruB
+def IsIterable(obj):
+		return isinstanc
+, (list,tuple,set,dict))G
+_decorator(self, *args, **kw
+called for {}".formatx
+.__class__.__name__))z
+BACKGROUND_COLO
+grp.GenerateColor(0.0,
+2)
+
+createToolTip
+RegisterCandidate%
+app.SetDefaultFont6
+Manager Event List##
+#
+"OnMouseLeftButtonDown"
+.py RunApp, you'll\
+1x
+		with old_open("w
+s.txt", "w") as f1
+HORIZONTAL_ALIGN_LEFTu
+__BL_CLIP_MASK__:
+>G"ex.!e(widht^&
+WJ_NEW_DROP_DIALO`8
+LOT_WINDOW_EX:L'
+BLOCK_WIDTH = 32
+GAUGE_TEMPORARY_PLAC^
+AGE_MAX_VALUE_ZERO_DIVISION_
+o	gx, g8
+Plx, l%
+BODY_KEY_LISE4@( "x
+DRAGON_SOUL_EQUIPMENTm
+# lazy loading of ]
+dbg.TraceError("L
+PREMIUM_PRIV2+ASHOPS!
+_"+dir+".tga" for
+class CombineWindow(ui.%
+):
+	def __init__(self
+for i in xrange(4
+WINDOW_MAX_MATERIALS + 1V
+.ACCE_REFINE_COST %
+LOT_TYPE_INVENTORY
+(isHere, iCell)
+#fix apply glitch?
+tRefreshj	_Act):
+Vnum, MinAbs, MaxAbs
+0onstInfo
+
+class AdminPM(ui.ScriptWindow):
+	def __init__(self
+CHAT_TYPE_INFO, "|cff00
+OnPressEscapeKey
+)ystemSetting
+
+# WEDDING
+class LovePointImage(ui.Expanded
+Box):
+
+	FILE_PATH = "d:/ymir work/ui/pattern/L
+DICT = {
+		0 : F
+}
+
+	def __init__(self):
+/ 25 + 1
+		filed
+dbg.TraceError("
+isActivated, cur
+MALL_DESC_IDX_START
+MAX_NUM = 32
+
+	INFINITE
+Increase_Attack_Speed
+warrior/jeongwi_03e
+_icon/50107.png",|
+ENABLE_MULTI_FARM_BLOCK
+dragonsoul/buff_ds_sky1
+ndChatPacket("/H
+#app
+
+class AttachMetinDialog(ui.ScriptWindow):
+	if3
+.WJ_ENABLE_TRAD
+ICON:  
+		def __init__(self, wndInventoryG
+{i:(-1,-1) for i in range(2)}
+	else:
+.METIN_NORMAL =="
+SOCKET_TYPE_SILVER0
+dbg.TraceError("
+- Failed to find4
+snd.PlaySound("s
+_insert.wav")H	Dose(
+class AutoBanQuizWindow(ui.)
+):
+	def __init__(self
+.LOCALE_UISCRIPT_PATH + "G
+[0].SAFE_SetEventf
+open, quiz, dura
+AUTOBAN_QUIZ_REST_TIME,#
+print "autoban_b
+ndChatPacket("/<
+uiToolTip
+from grid
+4
+class BlendInventory(ui.ScriptWindow):
+	def __init__(self):	
+		,
+tooltipItem = None
+5,50183,50216,71101,5082
+SLOT_TYPE_INVENTORY !=
+(width, height) =
+snd.PlaySound("s
+/ui/loginfail.wav"
+.ITEM_DELETE_LISTM
+.HIGHEST_PROTOCOL>
+import ui, dbg, constInfo ,player ,app ,net
+-
+event,chat,locale0
+, wndMgr
+
+X_START = 8
+Y
+PASS = 20
+WIDTH = 325
+HEIGH'
+class RankingWindow(ui.
+):
+	def __init__(self
+.isMinimized = False
+AddFlag('movable'
+for i in xrange(?
+Str = "d:/ymir work/boss_rD
+ScreenHeight() -
+== 1: return 0xffe34b4b*
+from _weakref%
+$BOSS_INFO = {
+		691 	: [691, "Ork Reisi", "1,2,3,4
+Kaplan Hayaleti_
+PATCH = "d:/ymir work/ui/bosszaman/"(
+(class BossTime(ui.ScriptWindow):
+	def __init__(self):
+RENDER_TARGET_INDEX = 35
+ClearDictionary(
+GetChild("ModelName)
+_leftSlotImg.sub",45,360)l
+for index, data in enumerate3
+lambda jobNumber, argSelf=
+game/myshop_deco/m
+ScreenWidth() - 4024
+RefreshListBoxes
+from _weakref%
+"BOSS_INFO = {
+		691 	: [691, "Ork Reisi", "1,2,3
+Kaplan Hayaleti]
+PATCH = "d:/ymir work/ui/bosszaman/"(
+(class BossTime(ui.ScriptWindow):
+	def __init__(self):
+RENDER_TARGET_INDEX = 35
+ClearDictionary(
+GetChild("ModelName)
+_leftSlotImg.sub",45,360)l
+for index, data in enumerate3
+lambda jobNumber, argSelf=
+game/myshop_deco/m
+ScreenWidth() - 4024
+RefreshListBoxes
+'#-*- coding: iso-8859-1 -*-
+import ui, dbg, constInfo
+event,chat,localeF
+.
+class BotControlBoard(ui.ScriptWindow):
+	def __init__(self
+ClearDictionary(
+.SetSize(185, 250
+app.GetRandom(0,3)H
+for i in xrange(4"
+UpVisual("d:/ymir work/ui/pet/feed_bc
+ontName("Arial:17")
+"|cff40d74e|H|h"+
+width, heigh, max
+wndMgr
+
+class VerticalCandidateBoard(ui.
+):
+
+	CORNER_WIDTH = 3
+4
+
+	def __init__(self):
+		ui.Window.
+, "CURTAIN")
+SetCharacterCount
+for y in xrange(
+= ui.ImageBox()
+("d:/ymir work/ui/pattern/ime/%d.tga" % (y+1)d
+osition(5 - 10, 8 + y * 14 - 3.
+Color(0xFF302C2A
+- 5) * 6 + 2
+		y%
+.VERTICAL_MODE)L
+maxTextLength = 0-
+Common
+
+class Cards
+def __init__(self
+/minigamerumiwaitingpage.py"L
+.MINI_GAME_RUMI_START_QUESTION % (10
+net.SendChatPacket("/c
+- 18)) + 0.001V
+1 : "d:/ymir work/ui[
+!CharacterDetails
+
+SHOW_ONLY_ACTIVE_SKILL = False
+40,141,142]
+	if noty
+WARRIOR_M	: "icon/face/warrior_m.tga",A
+})
+
+def unsigned32(nL
+STAT_DESCRIPTION =
+usPlusCommandDict=
+ShowingStartIndex
+.SAFE_SetStringEvent("MOUSE_OVER_IN", R
+20, "", "d:/ymir work/ui/game/belt_in	
+@ory/(
+btn_minimize_normal
+for i in xrange(:
+t/slot_bY
+_.sub"=
+x %s y %s" % (,
+HorizonalCenterw
+.TITLE_RGB_GOOD_4,
+135, 206, 235))u
+_BUG_FIX
+	,0Omin()
+>app
+
+class CharacterDetailsUI(ui.ScriptWindow):
+	def __init__(self, parent
+GetChild("TitleBar").CloseButtonHide("
+UI_MAX_COUNT = 13
+CATEGORY_STARTLIN
+for i in xrange(
+.ENABLE_PVP_BALANCE or
+.APPLY_RESIST_HUMAN
+hinBoard%
+b(11 *
+7
+class CharacterDetailsUI(ui.ScriptWindow):
+	def __init__(self, parent
+GetChild("TitleBar").CloseButtonHide(
+UI_MAX_COUNT = 13
+CATEGORY_STARTLIN
+for i in xrange(x
+[ "Hesap", "", [
+.PUNISH_POINT_REQUESTED
+net.SendChatPacket("/get_punish_point"
+.ENABLE_RUN_MOUSE_WHEEL:w
+'systemSetting, chr, player
+
+ENABLE_CHAT_COMMAND = True
+LAST_SENTENCE_STACK"
+.IsHONGKONG():
+	[
+InputSetList = []
+def InsertC
+):
+
+	OUTLINE_COLOR =
+")
+
+		net.Enable
+=ui.__mem_func__(%
+HorizontalAlignCen&
+TYPE_TALKING :"
+, "|cFF00C0FC|h|Hweb:" +e
+"://", "XxX") + "|h'
++ 5: #@fixme013  //
+UpVisual("d:/ymir work/ui/game/taskbar//
+WINDOW_WIDTH = 600+25
+
+	@
+UI_CLOSE, 0, -237
+#blackdragonx61 (28.11.21)
+import ui
+ToolTip
+
+class ChestDropInfoWindow(ui.Script
+:):
+	DROP_SLOT_SIZE = 5 * 8
+	ITEM = 0
+	COUNT = 1
+
+	def __init__(self) :
+		X
+.isLoaded = False
+board").SetClose.
+for i in range(
+OnPressEscapeKeyA
+class PopupDialog(ui.#
+Window):
+
+	def __init__(self):
+		*
+acceptEvent = lambda *arg: Nonet
+.LOCALE_UISCRIPT_PATH + "]
+UI_LEFT_TIME % ([
+MONEY_INPUT_DIALOG_SELLPRICE|
+ENABLE_CHEQUE_SYSTEM
+String(money))
+ToolTip
+
+class CubeResultWindow(ui.9
+):
+	def __init__(self
+.SetOverInItemEvent
+Vnum = 0
+
+	@ui.]
+isUsable	= False3
+RESULT_SLOT_COUNT = l
+.METIN_SOCKET_MAX_NUM]
+REQUIRE_MATERIAL_ORk
+MainCharacterPosi
+snd.PlaySound("s
+/ui/loginfail.wav"2
+USE_SHOP_LIMIT_RANGEI7 00
+(func,index):
+	(vnum_reward,count
+5,gold,percent,category) =O
+info = {
+			"
+Item(ui.Window):;
+__init__(self, getParentEvent
+ckedFontColor(grp.Generate
+OpenFunc = FALSE
+UpVisual("d:/ymir work/ui/game/
+_menu_tab1.sub")K
+filter(lambda argMember,
+[2,"PARSOMEN","Binek$
+3,"CEVHER","CevheG
+4,"EVENT","Sarf
+BINARY_CUBE_RENEWAL_LOADING-
+ENABLE_SLOT_MARKING_EX
+uiToolTip
+
+CHECK_BONUS_CNT = 3
+BILGI_AL = [
+	"Neslereri s
+class DeleteItem(ui.<
+Window):
+	def __init__(self):	
+		,
+.ITEM_DELETE_LIST5
+DropQuestionDialog&
+.Abort("OfflineShopBuilder
+(width=6, height=10\
+title, descLists
+AutoAppendTextLine()
+app.WJ_SPLIT_INVENTORY_SYSTEM
+din, dikkatli ol
+snd.PlaySound("s
+/ui/loginfail.wav"
+(|cffFDD017|h%d Adet|h|r)
+mek istiyor musun?" %
+lambda arg=True:
+0sys
+ITEM_FLAG_APPLICABLE = 1 << 14
+
+
+class DragonSoulWindow(ui.
+):
+	KIND_TAP_TITLES = [
+6]
+	def __init__(self
+.questionDialog = None
+sellingSlotNumber = -1
+LOCALE_UISCRIPT_PATH + "do
+GetChild("Equipment_Base")1
+Tap
+		for (tabKey,
+EQUIPMENT_SLOT_START + i)]
+OnPressEscapeKe@
+QUESTION_DIALOGE
+#@fixme011 BEGIN (ch`
+snd.PlaySound("s
+PRICE_DIVIDED_BY_5X
+afeboxWithdrawq?
+only the extrac5N
+from _weakref SXoproxy
+y
+3)
+	DS_SUB_HEADER_DICZZ_
+%d). (base pos (%d, %d),
+bg.TraceError("/
+'#-*- coding: iso-8859-1 -*-
+import ui, dbg, constInfo
+player, app ,net
+event,chat,locale7
+, wndMgr, chrmgr
+
+X_START = 10
+Y
+PASS = 22
+WIDTH
+CAMERA_ZOOM = 5000
+0class PopupDialog(ui.ScriptWindow):
+	def __init__(self, parent
+print "NEW POPUP WINDOW   -
+GetChild("message")+
+nPressEscapeKeyH
+ui.__mem_func__(,
+AddFlag('movable'9
+"", "d:/ymir work/ui/
+u ile pencereyi kapat
+.chat
+
+class EmpireWar(ui.ScriptWindow):
+	def __init__(self
+Image("d:/ymir work/war_gui/%s.tga" % M
+Vplayer
+
+class EquipmentDialog(ui.ScriptWindow):
+
+	def __init__(self):
+		print "NEW EQUIPMENT DIALOG -
+itemDataDict = {}
+Index, vnum, count):
+for i in xrange(
+.METIN_SOCKET_MAX_NUM
+import ui, app, net, constInfo, player
+(
+from uiToolTip "
+IMG_DIR = "d:/ymir work/ui/game/event_S
+s_default_data = {
+	# img , "
+.BONUS_EVENT:["bonus_'
+DOUBLE_BOSS_LOOTH
+double_boss_lootS
+UNGEON_COOLDOWNd
+ungeon_cooldowna
+WHELL_OF_FORTUNE9
+whell_of_fortune
+(#Dont touch!
+def CalculateDayCount(month, year):
+	if
+class ImageBoxSpecial(ui.
+.GetScreenWidth()-150, 200e
+SetPosition(x, y
+"MOUSE_OVER_IN",)
+MANAGER_WINDOW_TITLE % (;
+textToColorFullD
+"1970-01-01 03:00:00"L'
+ui
+
+class Window(ui.
+):
+	def __init__(self, skinFileName = ""(
+loader = ui.PythonScriptL
+.SetOutlineFlag(True)|
+"Dialog(ui.ScriptWindow):
+
+	def __init__(self):
+		*
+.WJ_ENABLE_TRAD
+s = {i:(-1,-1) for i in r#
+.EXCHANGE_ITEM_MAX_NUM)},
+Max(13) #@warme001 7 to 9`
+ClearDictionary/
+MainCharacterPosi
+CHAT_TYPE_INFO, e
+Controller.isAttached
+systemSetting
+if?
+.ENABLE_MAINTENANCE_SYSTEM:
+	8
+hr
+
+class GameButtonWindow(ui.Script
+):
+	def __init__(self
+dbg.TraceError("x
+GetChild("StatusPlus5
+MaintenanceAdminz
+) ##ters mantik
+CharacterIndex()
+net.SendChatPacket("/o'
+uiPrivateShopBuild
+background
+
+blockMode = 0
+viewChat
+/
+class OptionDialog(ui.ScriptWindow):
+
+	def __init__(self):
+		*
+.WJ_SHOW_MOB_INFO
+PERFORMANCE_FEATURES>
+DISABLE_AFFECT_SYSTEM}
+DELETE GAME OPTION DIALOG"
+ButtonList = []$
+PREMIUM_PRIVATER
+.GET_CHRNAME_COLOR_INDEX
+VIEW_OTHER_EMPIRE_PLAYER_TAR
+.BLOCK_EXCHANGE))
+EnvironmentData(1
+ENVIRONMENT_NIGHT)E
+# from uiTaskBar import Energy
+dbg, net, constInfo, locale
+\
+ # math, grp, player, datetime, appL
+Common, chat, wndMg
+-hr
+
+SYSTEM_UI_PATH = "d:/ymir work/ui/game/ranking/new/{}"8
+# class GeneralR
+Window(ui.DragonBoardWithTitleBar): #TODO
+?
+def __init__(self
+, "TOP_MOST")
++
+HorizontalAlignCenterE
+#@Private Methods|
+x = 5, y = 4, flagr
+shop/null.tga",t
+"%s" % ('.'.join([ i-3<0 and t
+for i in range(len(!
+"MOUSE_OVER_IN", *4
+because the UI
+WINDOW_SIZE = [550, 377]
+	BUTTON_PEEK'
+dbg.TraceError("Can
+s/but_default.png",
+6, 28, *tuple(x-
+@max(7@o.ceil(8
+OnPressEscapeKey
+from _weakref |
+.ENABLE_CHEQUE_SYSTEM:
+	<
+GUILD_SKILL = False
+String(n):
+	return
+%s" % (','.join([ i-3<0
+for i in range(len(!
++1, 3) if i ]))
+
+MATERIAL_STONE_INDEX = 0
+ING_DATA_LIST = []
+L
+
+class Declare]
+inputValue.SetFocus()
+SetCenterPosition
+pyScrLoader = ui.Pythonf
+.LOCALE_UISCRIPT_PATH + "d
+WAR_TYPE_SELECT_
+[0].SAFE_SetEvent(
+net.SendChatPacket("/war %s %dc
+ta girecek maksimum oyuncu say
+AddFlag("not_pickF
+("d:/ymir work/ui/public/Parameter_
+WOLFMAN_CHARACTER
+Invite Authorityz
+MiddleBar+:_float
+UPLOAD_NEED_RECONNECTV
+`
+	STARQ=fSTANCEG
+23450
+	#WALL_SE#
+c vnum x y x_rot y
+"
+
+ENABLE_HELP_MULTIPAGE = 0
+
+class HelpWindow(ui.=
+):
+	def __init__(self
+, "TOP_MOST")
+.LOCALE_UISCRIPT_PATH + "
+player
+
+class G
+Ranking(ui.ScriptWindow):
+	def __init__(self
+isActive = FalseK
+for i in xrange(10
+osition(4, 29 + (22*i))
+UpdateValues(0,
+.AddFlag("attach"&
+HorizontalAlignCent
+.ENABLE_ACCE_COSTUME_SYSTEM:
+	7
+acce
+from _weakref
+proxy
+
+ITEM_MALL_BUTTON_V
+1 << 14
+
+class CostumeWindow(ui.
+):
+
+	def __init__(self,"
+.Abort("What do you do?")&
+parameter must be set to #
+for i in xrange(
+WJ_SPLIT_INVENTORY
+SkillBookButton6
+.MALZEME_DEPOSU,
+BK_ENVANTER_TEXT1'
+AlignHorizonalCent
+.GenerateColor(0.9490, 0.9058
+`On), "OaHECK",
+CHAT_TYPE_INFO, "<Sistem> H
+_special_storageW
+SafeboxWithdrawX
+ime.PasteString(>
+.ORIGINAL_WIDTH,y
+ISCRIPT_PATH + "
+, (36.00 / 255.0), (222
+TIVE_PET_SEAL_EFFEC
+#@fixme011 BEGIN (block ds
+PRICE_DIVIDED_BY_5X
++0Can@*rnBroken	L
+1,"Biraz bekleyin..."*
+B#-*- coding: iso-8859-1 -*-
+import app, ui, net, wndMgr ,localeInfo, mouseModule*
+player, chr ,chat ,uiScriptLF
+,time, item, grp
+Common, os
+
+LIST_ITEM_Y_INTERVAL = 17
+MAX
+200
+CASH_REFRESH_DELAY = 3
+0.1	#sn
+MIN_SEARCH_TEXT_LEN2
+"https://valen2.com/web/Payment/Buy"
+class ItemShopWindow(ui.
+):
+	isLoaded = False
+def __init__(self, parent, mainWnd
+for i in xrange(:
+Color(grp.Generate
+LeftButtonDown = lambda x=Q
+UpVisual("d:/ymir work/other/
+HorizontalAlign:
+.Abort("NesneMark
+saniye beklemelisiniz.
+qPROCESS	DSHOP"  , E
+ong(0), "_GirisYenile_" ,
+AddFlag("not_pick"
+Arama yapabilmek icin en azG
+uzunlugunda olmalidir
+nacak isim girildi
+.NumberToMoney(u
+Controller.isAttached():q
+__BL_CHEST_DROP_INFO__|
+import app ,net ,player ,item ,ui
+ZToolTip ,localeInfo ,chat
+
+GUI_TYPE_ATTR = 1
+class ItemUseDialog(ui.ScriptWindow):
+	def __init__(self
+isLoaded = False
+dlgQuestion = Nonx
+for i in xrange(3)
+VerticalAlignCent
+"d:/ymir work/ui/public/'
+.METIN_SOCKET_MAX_NUM\
+labilecek nesne bulunamad
+inven_type, idx)
+7localeInfo
+
+class CKygnNLPanel(ui.ScriptWindow):
+	def __init__(self
+isStartingMatch = False
+NLEAGUE_CG_EXIT_POOL
+Image("d:/ymir work/ui
+_type/%d.png" % (nl
+"Mevcut Puan: %dC
+teamMembers_0 = []
+MATCH_PHASE_PREPARATION
+osition(140 - (63 *
+, wKillCount, wDead
+AddFlag("attach"
+HorizontalAlignCent
+playerSettingModule
+app
+
+FACE_IMAGE_DICT = {
+	L
+-WARRIOR_M	: "d:/ymir work/ui/tkm/karakterler/savasci_e.tga",X
+$class KygnTKM(ui.ScriptWindow):
+	def __init__(self
+notClick = False
+for i in xrange(5?
+osition(15, 20+(i*20)(
+lambda arg = 1 : >
+|cFF76ff23" + str(
+]import ui, dbg, constInfo, player, app, net, event, chat
+
+class SkillBoard(ui.Window):
+	def __init__(self
+.SetSize(290, 140
+AddFlag('movable'!
+beceriArrayName = ["Unknown",
+Body Warrior","Mental
+lade-Fight","Archery?
+Dragon Force","Healing
+group from here.",92, 25)`
+level up.)",65, 40j
+l_1, 'd:/ymir work/ui/feed_bZ
+net.SendChatPacket("/
+, x, y, func, UpVisual, Over
+width, heigh, max
+import ui, dbg, uiToolTip , gr
+item , constInfo , locale
+Common, chat, wndMgr, net
+
+REFRESH_DELAY = 11
+class LuckyDrawBanner(ui.\
+Window):
+	def __init__(self
+UpVisual("d:/ymir work
+TOOLTIP_NORMAL_COLOR =
+.GenerateColor(0.949
+MIN_SCROLLBAR_LIST#
+ClearCachedDataL
+OnPressEscapeKey-
+.LUCKYDRAW_ASK_JOIN>
++= str(day) + "g"
+for i in range(l*
+6import ui, wndMgr, time, app, locale, chat, constInfo
+
+pText_x = 65
+def pTableTranslate(i):
+	*
+"|cFFf2e2bc|H|h",
+class MaintenanceC
+sLogo = ui.AniImageBox(>
+FontName("Tahoma:15")
+.GetScreenWidth()/2 - 420/2, 2):
+.replace("//"," "w
+class MaintenanceAdminWindow(ui.Script
+):
+	def __init__(self
+.LoadDialog()
+O
+GetChild("board")*
+!CHAT_TYPE_INFO, "Bak
+m nedenini yazmay
+areti kullanamazs
+yla iptal edildi!"
+OnPressEscapeKey>
+Info
+
+LOCALE_PATH =0
+#
+
+class MapNameShower(ui.ExpandedImageBox):
+
+	MAP_;
+IMAGE =	{}
+
+	STATE_HIDE = 0
+OUT = 3
+
+	def __init__(self):
+		if
+"metin2_map_a1"  :
+AddFlag("not_pick
+WindowHorizontalAlignCenter((
+x > 10000 and y > 58
+print " [ERROR] - There is no`
+except RuntimeError:Y
+Common
+from _weakref
+proxy
+
+FRIEND = 0
+GUIL
+1
+BLOCK = 2
+
+class M
+*Item(ui.Window):
+
+	def __init__(self, getParentEvent):
+		4
+AddFlag("float"<
+isSelected = Fals
+Size(20 + 6*len!
+AFF_LOVE_POINT % (B
+1
+
+	IMAGE_FILE_NAM
+" : "d:/ymir work/ui/game/w7
+app.ENABLE_MESSENGER_
+for i in xrange(
+filter(lambda argMi
+_SLOT_MAX_COUNTj
+MainPlayerHasAuthority
+START_POSITION = 40
+VerticalAlignBottom(y
+background
+from!
+time
+
+class Map
+ToolTip(ui.Window):
+	def __init__(self
+textLine = ui.T
+HorizontalAlignCenterA
+AddFlag("not_pick")
+O
+DefaultCodePage2
+MINIMAP_ZONE_NAME_DICT[t
+ScreenWidth() - 136 - 25
+GUILD_EMPTY_AREA
+0
+"(%s)%d, %d" % (
+CANNOT_SEE_INFO_
+= {
+		"metin2_map_monkeydungeon" :
+mprisonmentDura!
+_QUIZ_REST_TIME,
+_UISCRIPT_PATH + "
+ENABLE_RTT_STATISTICS
+("CH-{}".format(r
+OBSERVER_COUNT %
+(fx + 4.0x5d + 5.0
+Oyuncu:j	piCount)
+D = 0
+	for k inB
+.REGION_DICT[0].keys:
+nfo().split(",")[0]P
+D
+
+class MoveChannelWindow(ui.Script
+lf.__Initialize()
+ELEM_SIZE = 30
+		BOARD
+i, "d:/ymir work/ui/*
+/myshop_deco/", "sT
+<= 0: #skip invalid
+CHAT_TYPE_INFO ,
+.MOVE_CHANNEL_NOT_
+Eplayer
+
+blockMode = 0
+
+class OptionDialog(ui.ScriptWindow):
+
+	def __init__(self):
+		*
+DELETE OPTION DIALOG"|
+ButtonList = []$
+viewTargetBoard&
+.GET_FOG_LEVEL_INDEX())S
+CAMERA_MAX_DISTANCE`
+VIEW_OTHER_EMPIRE_PLAYER_TAR
+net.SendChatPacket("/set$
+.BLOCK_EXCHANGE))
+mouseModule
+
+class PartyMember*
+BOARD_WIDTH = 130
+	else
+.GenerateColor(0.0,
+5)
+	GAUGE_OUT_LINE>
+PARTY_AFFECT_EXPERIENCE			= 0
+INCREASE_AREA_150	= 7$
+MEMBER_BUTTON_NORM0
+"d:/ymir work/ui/game/w
+IMAGE_FILE_NAME+
+def __init__(self
+AffectImageList = []!
+.LOCALE_UISCRIPT
+IncreaseArea150F
+for i in xrange(len(
+HorizontalAlignCenterA
+?app
+
+class PhaseCurtain(ui.Bar):
+
+	def __init__(self):
+		print "NEW CURTAIN  -
+FadeInFlag = False
+SetWindowName(".
+ui.__mem_func__(2
+.GetScreenWidth(),
+5localeInfo
+
+class PickETCDialog(ui.ScriptWindow):
+	def __init__(self
+9localeInfo
+
+class PickItemDialog(ui.ScriptWindow):
+	def __init__(self
+VerticalAlignBottomv
+), "ON_CHECK", TrueT
+0app
+
+class PickMoneyDialog(ui.ScriptWindow):
+	def __init__(self
+.ENABLE_CHEQUE_SYSTEM
+for tries in xrange(3): #the
+queue may set again
+import ui,player,chr,textTail, app
+
+class P
+):
+
+	def __init__(self, parent):
+		+
+AddFlag("not_pick"
+showAlways = False
+.PLAYER_HP_INFO:
+## PointReset
+class
+"Dialog(ui.ScriptWindow):
+
+	def __init__(self):
+		*
+FontColor(1.0, 0.3
+ndChatPacket("/p$
+(ui.ScriptWindow):
+	def __init__(self
+tooltipItem = None
+.PRIVATE_SHOP_WIDTH,
+priceInputDialog
+.WJ_ENABLE_TRAD
+) for i in range(F
+withdrawGold_Button8
+Controller.isAttached()
+_CHECKIN_POSITION
+CE_DIALOG_TITLEU
+UpVisual("d:/ymir work/ui/public/middle_b2
+Position(105, 32 + 25 + 159
+_weakref E:_oxy
+.ENABLE_PREMIUM_PRIVATE_SHOP:
+	?
+CHEQUE_SYSTEM:
+	2
+AdvertisementBoard(
+# @fixme007 BEGIN
+return True
+	else
+]
+	except KeyError
+[vid]
+
+
+class P/
+, "UI_BOTTOM")
+WindowHorizontalAlignCenter(1
+ckedFontColor(0xFFf5950I
+GetMainCharacterIndex() ==]
+#print "NEW MAKE
+TYPE_INVENTORY !=
+CE_DIALOG_TITLEN
+snd.PlaySound("s
+/ui/loginfail.wav"
+from _weakref ?:?oxy
+# -*- coding:cp949
+6sys
+
+QUEST_BOARD_IMAGE_DIR = 'd:/ymir work/ui/game/questboard/'
+
+cur_
+page_number = 1
+entire
+WINDOW = False
+
+
+# TOOLTIP
+BOX
+class ToolTi
+):
+	def __init__(self
+, parent, title, desc, x, yR
+.SetWindowHorizontalAlignCenter0
+.replace("|", "/"B
+AutoAppendTextLine(<
+SPEED = 200
+	BarHeight = 60
+	OnDoneE
+,layer="TOP_MOST
+.GetScreenWidth(),>
+Bar):
+
+	COLOR_WHIT
+0.035
+
+	STATE_WAIT
+print "NEW EVENT
+ddddff
+
+	UP=0
+	DOWN=1
+	OVER=
+UTTON_MAX_NUM = 8
+ictedCount(idx,36)L
+- 1) * 16 + 20 + 5]
+/2+((i*2)-1)*56-56l
+DIK_RETURz-8key]
+EXCEPTION_BUG_FIXA+2img*
+gchat
+
+class RefineDialog(ui.ScriptWindow):
+
+	makeSocketSuccessPercentage = ( 100, 33, 20, 15, 10, 5, 0 )
+	upgradeStone?
+30, 29, 28, 27, 26, 25, 24, 2V
+def __init__(self):
+scrollItemPos = 0
+ptButton").SetEven
+.ENABLE_REFINE_PCT:4
+DESTROY_WARNING)D
+ITEM_TYPE_METIN == f
+for i in xrange(O
+_SOCKET_MAX_NUM+1)
+SUCCESS_PROBALITY % (^
+P"][0]M
+o-1 and0
+VerticalAlignCentt
++ " + |cFF00C0FC|h":
+"d:/ymir work/ui/public/'
+|H|h%s x%d|h|r (%d)
+_WITH_BONUS_PERCENT_
+NVENTORY_PAGE_SIZE:
+from _weakref iEOroxyz
+## Restart
+class
+"Dialog(ui.ScriptWindow):
+
+	def __init__(self):
+		*
+, tb)=sys.exc_info
+dbg.TraceError("q
+urrentMapName() == "laleci_farm_roma":Y
+KYGN_NEW_LEAGUE_SYSTEM{
+oknarash_pvp_map|
+net.SendChatPacket("/k
+class PasswordDialog(ui.&
+Window):
+	def __init__(self
+sendMessage = "/
+.LOCALE_UISCRIPT_PATH + "
+bar").SetCloseEvent
+.SAFEBOX_WRONG_PASSWORDR
+curPageIndex = 0
+.WJ_ENABLE_TRAD
+Controller.isAttached(0
+.SLOT_TYPE_INVENTORY =Z
+UpVisual("d:/ymir work
+_middle_01.sub"O
+MALL_CANNOT_INSERT)
+>import uiScriptLocale
+
+HEIGHT = 220
+
+window = {
+	"name" : "InputDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+.GUILD_WAR_ACCEP/
+d:/ymir work/ui/public/small
+orizontal_alignR
+import uiScriptLocale
+app
+
+window = {
+	"name" : "Acce_CombineW"
+("movable", "float",)#
+children" :
+	(
+		{
+_horizontal_align":"center" }
+.LOCALE_UISCRIPT_PATH +{
+"d:/ymir work/ui/public/middle_
+import uiScriptLocale
+app
+
+COSTUME_START_INDEX ='
+window = {
+	"name" : "Acce_CombineW"
+("movable", "float",)#
+children" :
+	(
+		{
+_horizontal_align":"center" }
+.LOCALE_UISCRIPT_PATH + "acce/
+"d:/ymir work/ui/public/middle_
+import uiScriptLocale
+@Info
+
+LOCALE_PATH = "d:/ymir work/ui/privatesearch/"
+GOLD_COLOR	= 0xFFFEE3AEK
+window = {
+	"name" : "adminpm",$
+("movable", "float",%
+children" :
+	(
+Gimport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/minimap/"
+
+window = {
+	"name" : "AtlasW
+("movable", "float",),
+
+	"x
+SCREEN_WIDTH - 136 - 25
+children" :
+	(
+		## BOARD
+		{
+_with_titlebar"Y
+8import uiScriptLocale
+
+window = {
+	"name" : "AttachStoneDialog",
+	"styl
+("movable", "float",),
+
+	"x
+children" :
+	(
+		{
+.ATTACH_METIN_TITLE3
+horizontal_alignW
+d:/ymir work/ui/game/
+import uiScriptLocale
+7item
+
+EQUIPMENT_START_INDEX = 90
+
+window = {
+	"name" : "BeltInventoryW#
+SCREEN_WIDTH - 176
+HEIGHT - 37 - 565 + 209 + 32,
+#N
+d:/ymir work/ui/game/belt_i
+"children" :
+	(
+		## Expand Buttons
+		{
+		'
+Layer (include minimize
+("attach", "float")
+&import uiScriptLocale
+
+WIDTH = 185+30
+HEIGHT = 210
+window = {
+	"name" : "BlendInventory",+
+("movable", "float",)%
+children" :
+	(
+d:/ymir work/ui/public/
+'horizontal_align': 'center'6
+import uiScriptLocale
+
+MAINBOARD_WIDTH = 225
+window = {
+	"name" : "BossTimeW
+("movable", "float",)#
+children" :
+	(
+		## MainBoard
+: "Patron Takip+
+all_align":"center" }
+d:/ymir work/ui/game/myshop_deco/m
+>import uiScriptLocale
+
+ROOT_PATH = "d:/ymir work/ui/public/"
+SMALL_VALUE_FILE-
+Parameter_Slot_02.sub"
+MIDDLEC
+TEMP_X = 110
+
+window = {
+	"name" : "BuildG
+("movable", "float",),
+
+	"x
+SCREEN_HEIGHT - 240 - 50-
+children" :
+	(
+
+		{
+_with_titlebar"O
+ext_horizontal_alignK
+:import uiScriptLocale
+
+window = {
+	"name" : "ChangeGradeNameDialog",
+
+	"x!
+("movable", "float",)#
+children" :
+	(
+		{
+.GUILD_GRADE_CHANGE
+horizontal_alignA
+d:/ymir work/ui/public/Parameter_
+9import uiScriptLocale
+
+window = {
+	"name" : "ChangePasswordDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+horizontal_alignE
+.CHANGE_PASSWORD_TITLE,6
+d:/ymir work/ui/public/Parameter_
+import localeInfo
+LOCALE_PATH =
+HEIGHT = 364#361b
+ABEL_START_X = 0-10
+window = {
+	"name" : "CharacterDetailsW'
+children" :
+	(
+		## MainBoard
+, "all_align":"center" }
+import localeInfo
+MAINBOARD_WID/
+HEIGHT = 365#361
+
+LABEL_START_X = 120
+163
+
+window = {
+	"name" : "CharacterDetailsW&
+("float",),
+	
+	"x
+- 398) / 2,
+
+	"width'
+children" :
+	(
+		## MainBoard
+		{
+, "all_align":"center" }
+`import uiScriptLocale
+
+QUEST_ICON_BACKGROUND = 'd:/ymir work/ui/game/quest/slot_base.sub'
+
+SMALL_VALUE_FILE = "?
+public/Parameter_SE
+windows/box_fac=
+= {
+	"name" : "CharacterW
+("movable", "float",),
+
+	"x
+SCREEN_HEIGHT - 37
+children" :
+	(
+		{
+CHARACTER_SKILL, "all_align":"center" }
+W#blackdragonx61 (28.11.21)
+import uiScriptLocale
+
+PATTERN_PATH			= "d:/ymir work/ui/pattern/"
+CHATTING-
+chat/"
+WINDOW_WID)
+= 25
+
+window = {
+	"name" : "ChestDropInfoW#
+("movable", "float",)"
+children" :
+	(
+		{
+.CHEST_DROP_TITLE.
+game/attr6th7th/material
+{"index":0, "x":6, "y
+3import uiScriptLocale
+
+window = {
+	"name" : "QuestionDialog",
+
+	"x
+SCREEN_WIDTH/2 - 125,
+	"y
+children" :
+	(
+		{
+.LOGIN_CONNECTING0
+horizontal_alignq
+import uiScriptLocale
+app
+
+COSTUME_START_INDEX ='
+.ENABLE_WEAPON_)
+YSTEM:
+	window = {
+		"name" : "CostumeW
+SCREEN_WIDTH - 175
+HEIGHT - 37 - 565E
+("movable", "float",)$
+children" :
+		(
+_horizontal_align":"center" }
+.LOCALE_UISCRIPT_PATH + "c
+import uiScriptLocale
+app
+
+COSTUME_START_INDEX ='
+window = {
+	"name" : "CostumeW
+SCREEN_WIDTH - 175
+HEIGHT - 37 - 565!
+("movable", "float",)"
+children" :
+	(
+		{
+_horizontal_align":"center" }
+4import uiScriptLocale
+
+ROOT_PATH = "d:/ymir work/ui/public/"
+LOCALE(
+BOARD_X = SCREEN_WIDTH * (65) / 800$
+600
+
+PLUS_BUTTOF
+=  5
+
+window = {
+	"name" : "CreateCharacterW%
+children" :
+	(
+		## Board
+		{
+BackGroundPattern",!
+Top & Bottom Line3
+:import uiScriptLocale
+
+ROOT_PATH = "d:/ymir work/ui/game/cube/"
+PUBLIC,
+LIST_WINDOW_WID2
+window = {
+	"name" : "CubeRenewalW"
+("movable", "float", )$
+children" :
+	[
+.CUBE_RENEWAL_TITLE]
+rder_A_left_top.tga
+horizontal_align^
+# Background imgb
+#import uiScriptLocale
+
+window = {
+	"name" : "CubeW
+("movable", "float",)#
+children" :
+	(
+		{
+_horizontal_align":"center" }
+d:/ymir work/ui/public/
+import localeInfo
+F
+ICON_SLOT_FILE = "d:/ymir work/ui/public/Slot_Base.sub"
+
+window = {
+	"name" : "CubeW
+SCREEN_WIDTH - 176 - 200 - 8&
+HEIGHT - 37 - 563,
+
+
+	"styl}
+("movable", "float",),#
+children" :
+	(
+		{
++ "new_cube_bg.tga"H
+_horizontal_align":"center" }
+Result List. 1 ~ 3
+>import uiScriptLocale
+
+HEIGHT = 220
+
+window = {
+	"name" : "InputDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+.GUILD_WAR_DECLARE0
+d:/ymir work/ui/public/small
+horizontal_alignT
+5import uiScriptLocale
+
+window = {
+	"name" : "OfflineShopBuilder",/
+("movable", "float",)%
+children" :
+	(
+tem Sil Penceresi"U
+d:/ymir work/ui/public/
+import localeInfo
+
+FULL_WIDTH = 197
+"d:/ymir work/war_gui/")
+window = {
+	"name" : "EmpireWar",
+("movable", "float",),I
+children" :
+	(
+6import uiScriptLocale
+
+window = {
+	"name" : "EquipmentDialog",
+	"styl
+("movable", "float",),
+
+	"x
+children" :
+	(
+		{
+_with_titlebar"N
+horizontal_align
+d:/ymir work/ui/e
+{"index":0, "x":39, "y":37, _
+Simport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/game/"
+
+window = {
+	"name" : "ExchangeDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+.EXCHANGE_TITLE&
+_horizontal_align":"center" }
+public/slot_base
+import uiScriptLocale
+'app
+
+ROOT = "d:/ymir work/ui/game/"
+
+BOARD_WIDTH = 290
+189
+window = {
+	"name" : "ExchangeDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+.EXCHANGE_TITLE&
+_horizontal_align":"center" }
+expanded_image"L
+public/slot_base
+.CHEQUE_SYSTEM_UNIT_WON
+eimport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/game/"
+
+Y_ADD_POSITION = 0
+window = {
+	"name" : "ExpandTaskBar",
+
+	"x
+SCREEN_WIDTH/2 - 5,
+	"y
+"children" :
+	(
+		{
+DragonSoulButton
+.TASKBAR_DISABLE7
+1import uiScriptLocale
+
+BUTTON_ROOT = "d:/ymir work/ui/public/"+
+window = {
+	"name" : "ExtendedInventoryW(
+("movable", "float",)#
+children" :
+	(
+.EXTENDED_INVENTORY_TITLE0
+_horizontal_align":"center" }
+47 + 48 - 26 - 13
+MalzemeDeposuInfo9
+8FISHING_PATH = "d:/ymir work/ui/game/fishing/"
+
+window = {
+	"name" : "F!
+("movable", "float",),
+
+	"x
+children" :
+	(
+		{
+_with_titlebar"N
+orizontal_alignn
+import uiScriptLocale
+6app
+
+ROOT_PATH = "d:/ymir work/ui/public/"
+
+TEMPORARY_X = +14
+BUTTON_
+-10
+
+LINE_LABEL_X 	= 30
+STEP	= 25
+SMALL_n
+$65
+
+window = {
+	"name" : "GameOptionDialog",
+	"styl
+["movable", "float",],
+
+	"x
+children" :
+	[
+		{
+horizontal_align":"centerp
+PrivateShopDistanceT9
+PREMIUM_PRIVATE_SHOP
+## Always Show Nam?
+#import uiScriptLocale
+
+window = {
+	"name" : "GameW
+("not_pick",),
+
+	"x
+children" :
+	(
+		{
+d:/ymir work/ui/game/
+s/btn_bigplus_up.subq
+_horizontal_align":"center"&
+_gizle/refine/checkbox.tgaL
+8import uiScriptLocale
+
+ROOT_PATH = "d:/ymir work/ui/game/guild/"
+LOCALE,
+window = {
+	"name" : "GG
+("movable", "float",),
+
+	"x
+children" :
+	(
+		{
+_with_titlebar"N
+=import uiScriptLocale
+
+RESOURCE_NAME_POS = 132
+
+window = {
+	"name" : "GuildW
+_BaseInfoPage",
+
+	"x$
+children" :
+	(
+
+		## Name
+		{
+d:/ymir work/ui/game/g
+gimport uiScriptLocale
+
+BOARD_VALUE_FILE = "d:/ymir work/ui/public/Parameter_Slot_06.sub"
+
+window = {
+	"name" : "GuildW
+_BoardPage",
+
+	"x!
+children" :
+	(
+
+		## ID
+		{
+		|
+taskbar/Send_Chat
+$import uiScriptLocale
+
+window = {
+	"name" : "GuildW
+_BoardPage",
+
+	"x!
+children" :
+	(
+
+		## GradeNumber
+		{
+.GUILD_GRADE_NUM,
+		},
+Oimport uiScriptLocale
+
+SMALL_VALUE_FILE = "d:/ymir work/ui/public/Parameter_Slot_01.sub"
+LARGEB
+window = {
+	"name" : "GuildW
+InfoPage",
+
+	"x%
+children" :
+	(
+
+		## `
+all_align":"center"}
+CurrentExperienc
+Oimport uiScriptLocale
+
+SMALL_VALUE_FILE = "d:/ymir work/ui/public/Parameter_Slot_01.sub"
+LARGEB
+window = {
+	"name" : "GuildW
+InfoPage",
+
+	"x%
+children" :
+	(
+
+		## `
+all_align":"center"}
+CurrentExperienc
+Oimport uiScriptLocale
+
+SMALL_VALUE_FILE = "d:/ymir work/ui/public/Parameter_Slot_01.sub"
+LARGEB
+window = {
+	"name" : "GuildW
+InfoPage",
+
+	"x%
+children" :
+	(
+
+		## `
+all_align":"center"}
+CurrentExperienc
+%import uiScriptLocale
+
+ADD_HEIGHT = 17
+LOCALE_PATH =.
+window = {
+	"name" : "GuildW
+SkillPage",
+
+	"x&
+children" :
+	(
+
+		## Passivec
+GUILD_SKILL_PASSIVE2
+d:/ymir work/ui/public/
+Dragon_God_PowerM
+$import uiScriptLocale
+
+window = {
+	"name" : "GuildW
+_MemberPage",
+
+	"x"
+children" :
+	(
+		## ScrollBar
+		{
+.GUILD_MEMBER_NAME}
+SPECIFIC_GRAVITY
+aimport uiScriptLocale
+
+HELP_STICK_IMAGE_FILE_NAME = "d:/ymir work/ui/pattern/help_stick.tga"
+
+START_HEIGHT = 50
+_STEP = 20
+
+window = {
+	"name" : "HelpW
+children" :
+	(
+		## Float Text
+		{
+* 150 / 800, "y
+CONTROL_CAMERA_BY_RG
+_horizontal_aligne
+ublic/xlarge_thin
+aimport uiScriptLocale
+
+HELP_STICK_IMAGE_FILE_NAME = "d:/ymir work/ui/pattern/help_stick.tga"
+
+START_HEIGHT = 50
+_STEP = 20
+
+window = {
+	"name" : "HelpW
+children" :
+	(
+		## Float Text
+		{
+CONTROL_CAMERA_BY_RB
+expanded_image",
+_horizontal_aligne
+ublic/xlarge_thin
+import localeInfo
+
+FULL_WIDTH = 195
+HEIGHT_RANKING = 252
+window = {
+	"name" : "IgrisWarRanking",
+("movable", "float",),O
+children" :
+	(
+import localeInfo
+
+FULL_WIDTH = 340
+window = {
+	"name" : "IgrisWarPlayerRanking",$
+("movable", "float",),U
+children" :
+	(
+1ROOT = "d:/ymir work/ui/game/"
+
+window = {
+	"name" : "IME",
+
+	"x
+children" :
+	(
+		## Board
+		{
+		o
+public/HorizontalCandidater
+0import uiScriptLocale
+
+window = {
+	"name" : "InputDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+orizontal_alignj
+d:/ymir work/ui/public/Parameter_
+1import uiScriptLocale
+
+window = {
+	"name" : "InputDialog_WithDes6
+("movable", "float",)#
+children" :
+	(
+		{
+horizontal_align
+d:/ymir work/ui/public/middle_
+Himport uiScriptLocale
+
+TEMPORARY_HEIGHT = 16
+
+window = {
+	"name" : "InputDialog_WithDesM
+("movable", "float",)#
+children" :
+	(
+		{
+horizontal_align
+d:/ymir work/ui/public/middle_
+import uiScriptLocale
+MReplaceElement, AppendChildren
+
+EQUIPMENT_START_INDEX = 90
+
+window = {
+	"name" : "InventoryW
+SCREEN_WIDTH - 176 - 200,
+	"y!
+HEIGHT - 37 - 565C
+("movable", "float",)#
+.INVENTORY_PAGE_BUTTON_TOOLTIP_27
+_horizontal_align":"center" }
+d:/ymir work/sort_btn
+.ENABLE_CHEQUE_SYSTEM:
+import uiScriptLocale
+ReplaceElement, AppendChildren
+=
+player
+EQUIPMENT_START_INDEX =
+.ENABLE_EXTEND_INVEN_SYSTEM and#
+:
+	window = {
+		"name" : "InventoryW
+SCREEN_WIDTH - 176,
+HEIGHT - 37 - 565?
+("movable", "float",)$
+_horizontal_align":"center" }
+d:/ymir work/ui/eski_eq
+bg_without_ring.tgas
+## Dragon Soul Button|
+.TASKBAR_DRAGON_SOUL>
+PAGE_BUTTON_TOOLTIP_1
+import uiScriptLocale
+ReplaceElement, AppendChildren
+=
+player
+EQUIPMENT_START_INDEX =
+.ENABLE_EXTEND_INVEN_SYSTEM and#
+:
+	window = {
+		"name" : "InventoryW
+SCREEN_WIDTH - 176,
+HEIGHT - 37 - 565?
+("movable", "float",)$
+_horizontal_align":"center" }
+d:/ymir work/ui/eski_eq
+bg_without_ring.tgas
+## Dragon Soul Button
+.TASKBAR_DRAGON_SOUL@
+PAGE_BUTTON_TOOLTIP_1
+import uiScriptLocale, l
+Info
+
+window = {
+	"name" : "RefineDialog",
+("movable", "float",),L
+SCREEN_WIDTH - 400A
+children" :
+	(
+horizontal_alignS
+:/ymir work/ui/public/Middle_B
+.GUILDWINDOW_CHANGE_OBJECT
+-import uiScriptLocale
+
+HEIGHT = 500 + 68
+WIDTH = 786 + 17'
+"d:/ymir work/ui/game/windows/"
+BG_PHOTO_J
+= {
+	"name" : "NMW
+children" :(
+		{
+_horizontal_align":"center" }, ),},
+import localeInfo
+
+FULL_WIDTH = 290
+$MAIN_FOLDER = "d:/ymir work/ui/kygn_nl/kill_board/"7
+window = {
+	"name" : "KygnNLKillB,
+children" :
+	(
+horizontal_align@
+import localeInfo
+
+FULL_WIDTH = 500 + 16
+MAIN_FOLDER = "d:/ymir work/ui/kygn_nl/panel/"2
+window = {
+	"name" : "KygnNLP(
+("movable", "float",),K
+children" :
+	(
+.NL_PANEL_TITLE-
+horizontal_align":"centeB
+"StartingTimeTex
+import localeInfo
+
+FULL_WIDTH = 354
+window = {
+	"name" : "KygnNLPlayerRanking","
+("movable", "float",),S
+children" :
+	(
+import localeInfo
+
+FULL_WIDTH = 545
+%MAIN_FOLDER = "d:/ymir work/ui/kygn_nl/score_board/"8
+window = {
+	"name" : "KygnNLS.
+("movable", "float",),P
+children" :
+	(
+_horizontal_align)
+.NL_PREPARATION_TEXT
+import localeInfo
+
+FULL_WIDTH = 546 + 16
+&MAIN_FOLDER = "d:/ymir work/ui/kygn_nl/waiting_room/"9
+window = {
+	"name" : "KygnNLW/
+("movable", "float",),Q
+children" :
+	(
+"RemainingTimeText
+.NL_ROOM_READY_BUTTONC
+import uiScriptLocale
+Info
+
+BOARD_WIDTH = 569
+window = {
+	"name" : "TestPanel",
+("movable", "float",),I
+children" :
+	(
+horizontal_align":"centerk
+d:/ymir work/ui/tkm/bg.tga",Y
+karakterler/ninja_e{
+$import uiScriptLocale
+
+window = {
+	"name" : "LoginW
+("movable",),
+
+	"x
+children" :
+	(
+		## Board
+		{
+expanded_image"Y
+d:/ymir work/ui/intro/pattern/Line_P
+:"text", "x":10, "y
+loading/00.sub",.
+(import uiScriptLocale
+
+window = {
+	"name" : "BannerW
+SCREEN_WIDTH - 250
+children" :
+	(
+import uiScriptLocale, l
+Info
+
+MAINBOARD_WIDTH = 300
+"d:/ymir work/lucky_draw/",
+window = {
+	"name" : "bg", "styl
+children" :
+	(
+		{
+.LUCKYDRAW_TITLE, "all_align":"center" }, )
++ "line_mid.tgaL
+20,	"start_inde?
+BAKIM_X = 120
+AYIR
+8
+
+window = {
+	"name" : "MaintenanceAdminW'
+("movable", "float",),V
+SCREEN_WIDTH - 200A
+children" :
+	(
+all_align":"center"
+releri saniye cinsinden giriniz!]
+Oyundaki aktif clientlere bilgi g
+d:/ymir work/ui/public/large_
+&import uiScriptLocale
+
+window = {
+	"name" : "SafeboxW
+("movable", "float",)#
+children" :
+	(
+		{
+_horizontal_align":"center" }
+d:/ymir work/ui/public/large_
+'import uiScriptLocale
+
+window = {
+	"name" : "MarkListW
+SCREEN_WIDTH - 170,
+	"y
+HEIGHT - 400 - 50=
+("movable", "float",)#
+children" :
+	(
+
+		{
+.MARKLIST_TITLE,
+orizontal_alignQ
+d:/ymir work/ui/public/small_
+import uiScriptLocale
+
+BUTTON_START_X_POS = -60
+X_STEP = 30
+
+window = {
+	"name" : "MessengerW
+SCREEN_WIDTH - 200,
+	"y
+HEIGHT - 400 - 50=
+("movable", "float",)#
+children" :
+	(
+
+		{
+.MESSENGER_TITLE-
+horizontal_alignQ
+AddFriendButtonA
+d:/ymir work/ui/game/:
+), ## end of main window
+}
+1import uiScriptLocale
+
+ROOT = "d:/ymir work/ui/minigame/rumi/"+
+WINDOW_WIDTH	= 352
+window = {
+	"name" : "RumiGamePage",
+("movable", "float",)#
+children" :
+	(
+.MINI_GAME_RUMI_TITLE, "all_align":"center" }
+completion_effect1p
+(import uiScriptLocale
+
+ROOT = "d:/ymir work/ui/game/""
+WINDOW_WIDTH	= 352
+window = {
+	"name" : "RumiWaitingPage",
+children" :
+	(
+.MINI_GAME_RUMI_TITLE, "all_align":"center" }
+Parameter_Slot_07M
+6import uiScriptLocale
+
+RUMI_ROOT = "d:/ymir work/ui/minigame/rumi/"0
+window = {
+	"name" : "MiniGameW
+SCREEN_WIDTH - 210
+children" :
+	(
+lucky_draw/okey_kart.png
+Timport app, uiScriptLocale
+
+ROOT = "d:/ymir work/ui/minimap/"
+
+window = {
+	"name" : "MiniMap",
+
+	"x
+SCREEN_WIDTH - 136,
+	"y
+children" :
+	[
+		## OpenW
+_horizontal_align(
+.RANKING_TOOLTIP,8
+.ENABLE_RTT_STATISTICS:
+8ROOT = "d:/ymir work/ui/minimap/"
+
+window = {
+	"name" : "MiniMap",
+
+	"x
+SCREEN_WIDTH - 136,
+	"y
+children" :
+	(
+		## OpenW
+_horizontal_align(
+0import uiScriptLocale
+
+window = {
+	"name" : "InputDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+orizontal_alignj
+d:/ymir work/ui/public/middle_
+import uiScriptLocale
+B.ENABLE_CHEQUE_SYSTEM:
+	BOARD_HEIGHT = 150
+	window = {
+		"name" : "InputDialog",
+("movable", "float",)$
+children" :
+		(
+#"horizontal_alignt
+:"d:/ymir work/ui/game/
+Mimport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/game/taskbar/"
+
+window = {
+	"name" : "ButtonW
+children" :
+	(
+		{
+		k
+_move_and_attack",&
+.MOUSEBUTTON_ATTACK,7
+4import localeInfo
+
+window = {
+	"name" : "MoveChannelDialog",
+	"styl
+("movable", "float
+SCREEN_WIDTH/2) - (190/2)L
+"children" :
+	(
+		## MainBoard
+		{
+.MOVE_CHANNEL_TITLE, "all_align":"center" }
+d:/ymir work/ui/public/middle_
+(import uiScriptLocale
+
+window = {
+	"name" : "MusicListW
+SCREEN_WIDTH - 170,
+	"y
+HEIGHT - 400 - 50=
+("movable", "float",)#
+children" :
+	(
+
+		{
+.MUSICLIST_TITLE-
+orizontal_alignQ
+d:/ymir work/ui/public/small_
+\import uiScriptLocale
+
+ROOT = "d:/ymir work/ui/public/"
+
+window = {
+	"name" : "PartyMemeberInfoBoard",
+
+	"x!
+children" :
+	(
+
+		{
+		r
+"default_imag9
+.PARTY_MEMBER_INFO_NAMED
+3import uiScriptLocale
+
+window = {
+	"name" : "PasswordDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+.PASSWORD_TITLE,/
+_horizontal_align":"center"(
+d:/ymir work/ui/public/Parameter_
+2import uiScriptLocale
+
+window = {
+	"name" : "PickETCDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+.PICK_MONEY_TITLES
+d:/ymir work/ui/public/Parameter_
+2import uiScriptLocale
+
+window = {
+	"name" : "PickMoneyDialog",,
+("movable", "float",)%
+children" :
+	(
+.PICK_MONEY_TITLEZ
+d:/ymir work/ui/public/Parameter_
+4import uiScriptLocale
+
+window = {
+	"name" : "PickMoneyDialog",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+.PICK_MONEY_TITLES
+d:/ymir work/ui/public/Parameter_
+import uiScriptLocale
+.ENABLE_CHEQUE_SYSTEM:
+	BOARD_WIDTH = 190
+12
+	window = {
+		"name" : "PickMoneyDialog",
+("movable", "float",)$
+children" :
+		(
+.PICK_MONEY_TITLEh
+## Cheque Slot
+d:/ymir work/ui/public/Parameter_
+2import uiScriptLocale
+
+window = {
+	"name" : "PopupDialog",
+	"styl
+("float",),
+
+	"x
+SCREEN_WIDTH/2 - 2505
+children" :
+	(
+		{
+horizontal_alignh
+d:/ymir work/ui/public/middle_
+import localeInfo
+
+BOARD_HEIGHT_1 = 303
+2 = 120
+FULL_WIDTH
+MAIN_FOLDER = "d:/ymir work/ui/search_shop/"0
+window = {
+	"name" : "PrivateShop",
+("movable", "float",),K
+children" :
+	(
+horizontal_align":"cente7
+WithdrawGold_Button
+.OFFLINE_SHOP_WITHDRAW_TEXT8
+7import uiScriptLocale
+
+window = {
+	"name" : "PrivateShopBuilder",
+
+	"x
+("movable", "float",)#
+children" :
+	(
+		{
+.PRIVATE_SHOP_TITLE*
+_horizontal_align":"center" }
+d:/ymir work/ui/public/
+import uiScriptLocale
+app
+
+WINDOW_WIDTH		= 284
+LINE_LABEL_X 	= 30
+window = {
+	"name" : "PrivateShopDecorationW,
+children" :
+	[
+		## MainBoard
+&d:/ymir work/ui/game/myshop_deco/model_view_title.sub
+all_align":"center" }
+AppearanceButton	J
+.PREMIUM_PRIVATE_SHOP_DECO_APPEARANCE,D
+import uiScriptLocale
+app
+
+BOARD_WIDTH = 200
+HEIGHT = 174 - 44.
+window = {
+	"name" : "InputDialog",(
+("movable", "float",)%
+children" :
+	(
+d:/ymir work/ui/pattern/q_mark_01.tga
+_horizontal_alig
+import uiScriptLocale
+FInfo
+
+LOCALE_PATH = "d:/ymir work/ui/privatesearch/"
+GOLD_COLOR	= 0xFFFEE3AE
+GREY
+$.ENABLE_CHEQUE_SYSTEM :
+	window = {
+		"name" : "P
+ShopSaleHistoryDialog",
+.
+("movable", "float",)&
+.PRIVATESHOPSEARCH_
+import uiScriptLocale
+.Info
+
+PRIVATESEARCH_PATH = "d:/ymir work/ui/privatesearch/"9
+window = {
+	"name" : "PS
+("movable", "float",)%
+children" :
+	(
+FILTER_SELECT_TITLEI
+_mainboxlefttop.sub`
+import uiScriptLocale
+Info
+
+BOARD_WIDTH = 220
+%window = {
+	"name" : "PrivateShopSearchFilterSlot",8
+children" :
+	(
+.PRIVATESHOPSEARCH_FILTER_SELECT_TITLEI
+import uiScriptLocale
+.Info
+
+PRIVATESEARCH_PATH = "d:/ymir work/ui/privatesearch/"7
+GOLD_COLOR	= 0xFFFEE3AE
+GREY
+window = {
+	"name" : "Pn
+("movable", "float",)%
+children" :
+	(
+mainboxlefttop.sub`
+ext_horizontal_align
+ITEMNAME, "color5
+import uiScriptLocale
+2app
+
+ROOT_PATH			= "d:/ymir work/ui/game/premium_private_shop/"<
+INFORMATION_GROUP_X
+window = {
+		"name" : "P
+("movable", "float",)$
+.PREMIUM_PRIVATE_SHOP_TITLEz
+# "default_imagm
+BackgroundGroup>
+[ROOT = "d:/ymir work/ui/public/"
+OFFICIAL_QUEST_WINDOW = False
+
+window = {
+	"name" : "QuestDialog",
+	"styl
+("float",),#"movable",
+
+	"x
+children" :
+	(
+		{
+attach", "ignore_size
+"horizontal_alignh
+5import uiScriptLocale
+
+window = {
+	"name" : "QuestionDialog",
+	"styl
+("movable", "float",),
+
+	"x
+SCREEN_WIDTH/2 - 125@
+children" :
+	(
+		{
+horizontal_alignA
+d:/ymir work/ui/public/middle_
+5import uiScriptLocale
+
+window = {
+	"name" : "QuestionDialog",
+	"styl
+("movable", "float",),
+
+	"x
+SCREEN_WIDTH/2 - 125@
+children" :
+	(
+		{
+horizontal_alignh
+d:/ymir work/ui/public/middle_
+3import uiScriptLocale
+
+window = {
+	"name" : "RefineDialog",
+	"styl
+("movable", "float",),
+
+	"x
+SCREEN_WIDTH - 400>
+"children" :
+	(
+		{
+horizontal_alignQ
+d:/ymir work/ui/public/Middle_
+Vimport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/public/"
+
+window = {
+	"name" : "RestartDialog",
+	"styl
+("float",),
+
+	"x
+children" :
+	(
+		{
+Rimport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/game/taskbar/"
+
+window = {
+	"name" : "RightButtonW!
+children" :
+	(
+		{
+		p
+_move_and_attack",&
+.MOUSEBUTTON_ATTACK,7
+&import uiScriptLocale
+
+window = {
+	"name" : "SafeboxW
+("movable", "float",)#
+children" :
+	(
+		{
+_horizontal_align":"center" }
+CHANGE_PASSWORDC
+d:/ymir work/ui/public/large_
+:import uiScriptLocale
+ROOT_PATH = "d:/ymir work/ui/public/"
+
+BOARD_WID+
+window = {
+	"name" : "SecurityPCDialog",
+("movable", "float",)#
+children" :
+	(
+venli BilgisayarI
+horizontal_align":"center",v
+attern/q_mark_01.tga
+## Background ImgP
+4import uiScriptLocale
+
+ROOT_PATH = "d:/ymir work/ui/public/"
+LOCALE(
+BOARD_X = SCREEN_WIDTH * (65) / 800$
+0ITEM_ADD_POSITION = -40
+
+window = {
+	"name" : "SelectCharacterW%
+children" :
+	(
+		## Board
+		{
+BackGroundPattern",!
+Top & Bottom Line
+4import uiScriptLocale
+
+ROOT_PATH = "d:/ymir work/ui/public/"
+LOCALE(
+ATALS_X = SCREEN_WIDTH * (282) / 800%
+600
+
+window = {
+	"name" : "SelectCharacterW%
+children" :
+	(
+		## Board
+		{
+intro/pattern/backgr
+Top & Bottom Line
+horizontal_alignO
+)import uiScriptLocale
+
+window = {
+	"name" : "SelectItemW
+("movable", "float",)#
+children" :
+	(
+		{
+.SELECT_METIN_STONE_TITLE0
+_horizontal_align":"center" }
+d:/ymir work/ui/public/
+/import uiScriptLocale
+
+window = {
+	"name" : "ShopDialog",
+
+	"x
+SCREEN_WIDTH - 400,
+	"y
+("movable", "float",)#
+children" :
+	(
+		{
+_horizontal_align":"center" }
+d:/ymir work/ui/public/
+import uiScriptLocale
+@Info
+
+LOCALE_PATH = "d:/ymir work/ui/privatesearch/"
+GOLD_COLOR	= 0xFFFEE3AEK
+185
+window = {
+	"name" : "shout",J
+("movable", "float",)%
+children" :
+	(
+nderilecek mesaj
+'horizontal_align': 'center'&
+BROOT = "d:/ymir work/ui/public/"
+
+window = {
+	"name" : "SkillResetDialog",
+	"styl
+("float",),
+
+	"x
+SCREEN_WIDTH/2 - 1005
+children" :
+	(
+		{
+import uiScriptLocale, l
+Info
+
+MAINBOARD_WIDTH = 300
+"d:/ymir work/lucky_draw/",
+window = {
+	"name" : "bg", "styl
+children" :
+	(
+		{
+.STAGEBONUS_TITLE, "all_align":"center" }, )
+UpgradeNeededItem
+import localeInfo
+
+FULL_WIDTH = 327
+HEIGHT_MY = 25
+RANKING_SPACE = 15)
+window = {
+	"name" : "StatueRanking",
+("movable", "float",),M
+children" :
+	(
+thinBoard_MyData",!
+import uiScriptLocale
+
+BOARD_WIDTH = 200
+window = {
+	"name" : "streamerdialog",
+children" :
+	(
+horizontal_align":"centerb
+,import uiScriptLocale
+
+window = {
+	"name" : "SubFilter",&
+SCREEN_WIDTH - 170,
+HEIGHT - 400 - 50@
+("movable", "float",)%
+children" :
+	(
+horizontal_alignZ
+:/ymir work/ui/public/small_
+uiScriptLocale
+from utils !
+ElementAddBefore, Find
+CRef
+
+ROOT = "d:/ymir work/ui/public/"
+
+window = {
+	"name" : "SystemDialog",
+	"styl
+("float",),
+
+	"x
+SCREEN_WIDTH - 200) /28
+HEIGHT - (318 - 30)(
+children" :
+	[
+		{
+)
+
+def Recalculate():
+	global
+or
+	INIT_Y = 10
+	C
+ret = getattr([
+update Y of every e^
+Uimport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/public/"
+
+window = {
+	"name" : "SystemDialog",
+	"styl
+("float",),
+
+	"x
+SCREEN_WIDTH  - 200) /29
+children" :
+	(
+		{
+Uimport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/public/"
+
+window = {
+	"name" : "SystemDialog",
+	"styl
+("float",),
+
+	"x
+SCREEN_WIDTH/2 - 1005
+children" :
+	(
+		{
+import uiScriptLocale
+4app
+
+ROOT_PATH = "d:/ymir work/ui/public/"
+
+TEMPORARY_X = +13
+TEXT_
+@.ENABLE_ENVIRONMENT_EFFECT_OPTION:
+	window = {
+		"name" : "SystemOptionDialog",!
+("movable", "float",),
+$
+children" :
+		(
+horizontal_align":"centerA
+volume_controlleI
+=import uiScriptLocale
+
+ROOT = "d:/ymir work/ui/game/"
+
+#Y_ADD_POSITION = -2
+0
+
+window = {
+	"name" : "TaskBar",
+
+	"x
+SCREEN_HEIGHT - 37&
+children" :
+	(
+		## Board
+		{
+.TASKBAR_CHARACTERx
+import uiScriptLocale
+
+WEB_WIDTH = 640
+HEIGHT = 480
+
+window = {
+	"name" : "MallW
+("movable", "float",)#
+children" :
+	(
+		{
+_horizontal_align":"center" }
+Vimport uiScriptLocale
+
+ROOT = "d:/ymir work/ui/public/"
+
+window = {
+	"name" : "WhisperDialog",
+	"styl
+("movable", "float",),
+
+	"x
+children" :
+	(
+		{
+Parameter_Slot_05.sub">
+: LOCALE_PATH + "/effect
+AuiScriptLocale
+
+ROOT_PATH = "d:/ymir work/ui/game/wonexchange/"
+
+BOARD_ADD_X = 0
+SCREEN_WIDTH - (140 +Y
+)
+
+window = {
+	"name" : "WonEP
+HEIGHT - 65 - 1500
+children" :
+	(
+		{
+SellWon_TitleBar
+.WONEXCHANGE_TITLE_SELL, "all_align":"center" }
+CurrencyConverter_1
+os
+
+AUTOBAN_QUIZ_ANSWER = "
+"
+
+OPTION_SHADOW
+&str(app.GetDefaultCodePage())
+
+def LoadLocaleFile(src
+["CUBE_INFO_TITLE"]
+REQUIRE_MATERIAL0
+or"
+
+	try:
+		lines = open
+()
+	except IOError>
+dbg
+		dbg.LogBox("
+[:-1].split("\t"6
+__IS_ARABIC		= "
+ENABLE_LOCALE_COMMON and not V
+JOBDESC_WARRIOR2
+jobdesc_warrior.txt:
+mini_game_okey_desc.txt"
+# -*- coding: utf-8
+!
+SKILLS=[1, 2, 3, 4, 5, 16, 17, 18, 19, 20, 122
+)3, 34, 35, 46, 47, 48, 49, 50, 61, 62, 63, 64, 65, 66, 7
+7, 78, 79, 80, 81,91, 92, 93, 94, 95, 9
+_BOOKS=  []
+ITEM_LIST=
+_NAMES={
+	50300:
+class ShopSearch(ui.BoardWithTitleBar
+def __init__(self
+.SHOP_SEARCH_TITLE7
+["priceText"] = ui.Mak
+0,"","d:/ymir work/ui/public/","middle_8
+SetPosition(15,60\
+45,200,25,FALSE,6,30)>
+AddFlag("movable")
+WindowHorizontalAlignLeft(
+net.SendChatPacket("/W
+{0} {1} {2}".format(
+TEMPORARY_PLACEP
+ACKGROUND_COLOR)&
+uiToolTip
+
+BILGI_AL = [
+	{
+.SECURITY_PC_DIALOG,!
+class SecurityPCDialog(ui.
+Window):
+	def __init__(self
+isCreate = False
+bilgialbuton = None
+AutoAppendTextLine()
+asswordValue.KillFocus
+net.SendChatPacket("/p
+net, app
+
+class SelectItemWindow(ui.Script
+):
+
+	def __init__(self):
+		*
+inventorySlotPosDict = {}<
+.SLOT_STYLE_NONE5
+OnceIgnoreMouseLef"
+BaseImage("d:/ymir work/ui/public/&
+GetWidth(), 76 + 32*
+.WJ_SPLIT_INVENTORY_SYSTEM
+FILE_NAME_LEN = 20
+DEFAULT_THEMA =E
+class Item(ui.ListBoxEx.
+):
+	def __init__(self, fileName
+print "NEW POPUP WINDOW   -
+GetChild("message")*
+nPressEscapeKeyF
+ui.__mem_func__(+
+.LOCALE_UISCRIPT_PATH + "Music
+.ENABLE_PREMIUM_PRIVATE_SHOP:
+	3
+"Dialog(ui.ScriptWindow):
+
+	def __init__(self):
+		*
+.tooltipItem = 0
+_SLOT_COUNT + iO
+for i in xrange(3
+Event("LEFT", "EMPTY",r
+, lambda argSelf=
+MainCharacterPosi
+.SET_ITEM_QUESTION_DIALOG_STATUS
+SPLIT_INVENTORY_SYSTEM
+PRICE_DIVIDED_BY_5f
+/ui/loginfail.wav
+LIMIT_RANGE = 100
+{bs(x - U'O) > m
+"http://metin2.co.kr/08_
+islice
+
+class ShoutManager(ui.ScriptWindow):(
+def __init__(self
+nderilecek mesaj
+n. (Mevcut Durum: Aktif)
+import app ,player ,ui, dbg
+ToolTip ,grp ,item ,constInfo ,locale
+Common, chat, wndMgr ,net ,chr
+NEEDED_ITEM_VNUM = 60002
+class StageBonusWindow(ui.
+def __init__(self
+.lastQueryTime = 0
+questionDialog = None
+isLoaded = False
+S
+.Abort("luckydrawK
+OnPressEscapeKey-
+.LUCKYDRAW_ASK_JOIN>
+net.SendChatPacket("/b
++= str(day) + "g"
+"%s" % ('.'.join([ i-3<0 and
+for i in range(l
+STAGEBONUS_UITEXT(
+4player
+
+class StatueRanking(ui.ScriptWindow):
+	def __init__(self
+isActive = Fals/
+for i in xrange(4
+osition(4, 7 + (22*i)(
+job, name, guild, s#
+jobIcon = ui.ImageBox()
+.AddFlag("attach"
+("d:/ymir work/ui
+HorizontalAlignCent
+-at
+
+STREAMER_IMAGE_DIC = {
+	1	: "streamer/logo1.png",
+	2
+class LinkWindow(ui.Script
+):
+	def __init__(self
+"MOUSE_LEFT_BUTTON_UP",<
+"https://www.tiktok.com/" +
+SYSTEM_MENU_FOR_PORTAL = False
+
+#
+Window):
+
+	def __init__(self):
+		*
+.__Initialize()M
+Menu_ForPortal(v
+_button").SAFE_SetE
+.IN_GAME_SHOP_ENABLE
+.SetText("Oyunu kapatmak istiyor musun?"@
+SendChatPacket("/in_
+^os
+
+MUSIC_FILENAME_MAX_LEN = 25
+
+blockMode = 0
+
+class OptionDialog(ui.ScriptWindow):
+
+	def __init__(self):
+		*
+.EXTREME_FPS_BOOSTc
+RefreshFpsBoost()
+DELETE SYSTEM OPTION DIALOG"
+Visual("d:/ymir work/ui/game/w
+"sliderbar_cursorm
+.GET_FOG_LEVEL_INDEX($
+.ENABLE_ELEMENTAL_TARGET:
+EPATH = "d:/ymir work/ui/game/12zi/element/{}.sub"
+
+	SUB_RACE_FLAG_TO_FILENAME = {
+.format("elect"),@
+alFilename(mobVnum):
+		if not
+class TargetBoard(ui.Thin
+__init__(self, width
+image = ui.ExpandedI
+osition(32 + 5, 0%
+SetRenderingRect(0.0, 0.0 - floa8
+EXP_BASE_LVDELTA = [J
+TONE_START_VNUM = 28030
+AppendSeperator()
+archSucceed	= Tr9
+OTHER_EMPIRE_PLAYER6
+SameEmpire(vi\B
+app
+
+MOUSE_SETTINGS = [0, 0]
+
+def InitMO
+ButtonSettings(left, right):
+	global K
+.cfg", "w").write("%s\t%s" % tuple(B
+r").read().split()
+
+	if len(<
+) != 2:
+		raise RuntimeError, "q
+HorizontalAlignCenterC
+#print "NEW TASKBAR  -
+.LOCALE_UISCRIPT_PATH + "gd
+BUTTON_DRAGON_SOULx
+GAUGE_WIDTH = 95
+3
+
+	QUICKPAGE_NUMBER(
+[
+		"d:/ymir work/ui/game/taskbar/1.sub",(
+move_and_attack"
+4wndMgr
+
+class TextBar(ui.Window):
+	def __init__(self, width, height$
+GetGlobalPosition(>
+TIP_DURATION = 5.0
+AddFlag("not_pick"
+HorizontalAlignCenter((
+IsVisibleNotice():
+SCROLL_WAIT_TIME
+= 350
+
+	FRAME_IMAGE_FILE_N
+face/oxevent/frame_0.sub",+
+__RENEWAL_NOTICE__:
+.ENABLE_ACCE_COSTUME_SYSTEM:
+PREMIUM_PRIVATE_SHOP1
+WARP_SCROLLS = [22011, 22000
+10]
+
+DESC_DEFAULT_MAX_CO/
+20
+
+def chop(n):
+	return p
+SplitDescription(desc, limit>
+(ui.ThinBoard):
+
+	TOOL_TIP?
+.GenerateColor(0.9490, 0.9058
+7568, 1.0)
+	SPECIAL_F
+0xffFFB96D
+
+	HIGH_
+BEB47D
+	CAN_LEVEL_UP!
+__init__(self, width =
+, isPickable=False
+.AddFlag("not_pick>
+os.path.exists("gameo
+fonttype = fd.read
+@fixme017 BEGIN (moved after the set of
+_WesternLanguageU
+SEND_TARGET_INFO
+RealTimeStartFirs+
+@Last
+"Gecerli Sure: (%s)"%'
+Eklenecek Krkter.: (+
+\key_shift.png"), #
+("d:/ymir work/"
+UNKNOWN_VALUE[%s]
+GIVE, "Verilemez"],+
+le Yapamayacaklar
+ButtonDowN[FHide
+"%,0f", "%.0f")N
+chop( 10 + 60 * k
+import app, dbg
+ui ,guild ,wndMgr ,grp
+Text ,skill ,mouseModule ,uiCommon ,chatL
+player 
+
+class UnblockWindow(ui.Script
+):
+	def __init__(self
+ClearDictionary()D
+.GetScreenHeight() - 200)9
+AddFlag('movable'
+UpVisual("d:/ymir work/bugtan/1.png"9
+class MarkItem(ui.ListBoxEx.
+):
+	def __init__(self, fileName
+ImageBox("upload/"+8
+.AddFlag("not_pick"
+print "NEW POPUP WINDOW   -
+GetChild("message")*
+_UPLOADER_ERROR_PATH
+nPressEscapeKeyF
+.LOCALE_UISCRIPT
+constInfo
+
+class WebWindow(ui.f
+):
+	def __init__(self
+, "TOP_MOST")
+.oldPos = None
+Y
+.IN_GAME_SHOP_ENABLEN
+.LOCALE_UISCRIPT_PATH + "b
+app.HideWebPage()
+OnPressEscapeKeyT
+class WhisperButton(ui.
+):
+	def __init__(self
+text, x=0, y = 32I
+ScriptWindow):
+
+	(
+GetGlobalPosition(
+print "NEW WHISPER DIALOG  -
+-90)/6) * 3 - 6$
+, "|cFF00C0FC|h|Hweb:5
+"://", "XxX") + "|h$
+discord.gg/khwfulohawjflwa3
+net
+from _weakref
+proxy
+
+class WonExchangeWindow(ui.Z
+):
+	WON_NAME_VALUE = 10
+MUL = 0
+	PAGE_BUY,
+(2)
+
+	def __init__(selfd
+ClearDictionary()
+GetChild("Tab_01"),-
+CurrencyConverter_m
+MoneyFormat(long(((1.0 +
+WONEXCHANGE_CONFIRM_QUESTION_1 % 1
+net.SendChatPacket("/won_e[
+queue may set again
+previous editline (minimum 2T
+0class Sandbox(object):
+	# DO NOT REMOVE ANY ENTRY OF WHITE LIST)
+IES ARE USED FORV
+2	(If sys.modules['__main__'] is changed, you can see the hell.)
+	t
+, 'types', __name__, `
+, 'sys']
+	def __init__(self, prevent_imported_
+dbg'].TraceError("UISCRIPT_LOAD_ERROR: CS
+)) # @fixme004 (
+stderr.write to dbg
+(effective. I don't know why, but I guess some where gotT
+reference and acc4
++
+#	@usage:
+#		GetElementDictByName(window,"BoardExample")
+;
+, tuple()) + children
+BaseModelFileNam/
+"d:/ymir work/pc/warrior
+_1_1.gr2"
+		SourceSkin#
+fencing1_Germany
+BaseModelFileNam/
+"d:/ymir work/pc2/warrior
+_1_1.gr2"
+		SourceSkin#
+BaseModelFileNam/
+"d:/ymir work/pc3/wolfman
+_1_1.gr2"
+		SourceSkin#
+soccer1_GermanyF
+OiCCPPhotoshop ICC profile
+TRUEVISION-XFILE.
+OiCCPPhotoshop ICC profile
+4+#9,#<.#</$?5,B6)B7)BB9G=1G@4OC7OF7RPGRPJRRGRRJUK<UNBUOJ
+RMXM<XRGZK?ZRBZUJZVJZXR]O<]RB]RG]XJ`Q?`RG`UD`O
+0XcUAcXLeVGeZOe]Oe`XebXhYGkZJk`Okh]seRsgRskZsocvrfxthyrf{kZ{oZ{sc{wJ
+OiCCPPhotoshop ICC profile
+l:|J|8|J}HHL8}QQLH
+TRUEVISION-XFILE.
+l:|J|8|J}H5L8}Q=LH
+TRUEVISION-XFILE.
+OiCCPPhotoshop ICC profile

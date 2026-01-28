@@ -1,0 +1,6 @@
+RlocaleInfo
+
+class PopupDialog(ui.ScriptWindow):
+
+	def __init__(self):
+		print "NEW POPUP DIALOG -

@@ -1,0 +1,1 @@
+-WARRIOR_M	: "d:/ymir work/ui/tkm/karakterler/savasci_e.tga",X

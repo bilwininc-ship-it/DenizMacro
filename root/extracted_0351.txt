@@ -1,0 +1,4 @@
+4
+class BlendInventory(ui.ScriptWindow):
+	def __init__(self):	
+		,

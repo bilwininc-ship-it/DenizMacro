@@ -1,0 +1,1 @@
+.MOVE_CHANNEL_TITLE, "all_align":"center" }

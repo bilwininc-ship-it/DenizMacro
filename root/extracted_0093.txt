@@ -1,0 +1,2 @@
+.ENABLE_CUBE_RENEWAL:
+	w

@@ -1,0 +1,3 @@
+islice
+
+class ShoutManager(ui.ScriptWindow):(

@@ -1,0 +1,3 @@
+0
+
+class GameWindow(ui.Script

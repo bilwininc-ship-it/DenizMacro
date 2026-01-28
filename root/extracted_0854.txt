@@ -1,0 +1,5 @@
+aimport uiScriptLocale
+
+HELP_STICK_IMAGE_FILE_NAME = "d:/ymir work/ui/pattern/help_stick.tga"
+
+START_HEIGHT = 50

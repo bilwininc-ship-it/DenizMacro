@@ -1,0 +1,4 @@
+4player
+
+class StatueRanking(ui.ScriptWindow):
+	def __init__(self

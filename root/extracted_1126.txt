@@ -1,0 +1,1 @@
+ATALS_X = SCREEN_WIDTH * (282) / 800%

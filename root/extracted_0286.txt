@@ -1,0 +1,2 @@
+*.executable == os.getcwd()+os.sep+"metin2client.bin":
+		#

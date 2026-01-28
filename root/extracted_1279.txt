@@ -1,0 +1,4 @@
+4wndMgr
+
+class TextBar(ui.Window):
+	def __init__(self, width, height$

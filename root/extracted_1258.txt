@@ -1,0 +1,10 @@
+^os
+
+MUSIC_FILENAME_MAX_LEN = 25
+
+blockMode = 0
+
+class OptionDialog(ui.ScriptWindow):
+
+	def __init__(self):
+		*

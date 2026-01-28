@@ -1,0 +1,3 @@
+&str(app.GetDefaultCodePage())
+
+def LoadLocaleFile(src

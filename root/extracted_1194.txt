@@ -1,0 +1,5 @@
+AuiScriptLocale
+
+ROOT_PATH = "d:/ymir work/ui/game/wonexchange/"
+
+BOARD_ADD_X = 0

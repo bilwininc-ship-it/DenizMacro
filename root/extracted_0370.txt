@@ -1,0 +1,2 @@
+(class BossTime(ui.ScriptWindow):
+	def __init__(self):

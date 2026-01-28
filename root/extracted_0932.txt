@@ -1,0 +1,1 @@
+%MAIN_FOLDER = "d:/ymir work/ui/kygn_nl/score_board/"8

@@ -1,0 +1,4 @@
+5import uiScriptLocale
+
+window = {
+	"name" : "OfflineShopBuilder",/

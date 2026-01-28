@@ -1,0 +1,1 @@
+("d:/ymir work/ui/pattern/ime/%d.tga" % (y+1)d

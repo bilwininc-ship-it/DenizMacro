@@ -1,0 +1,5 @@
+"
+
+ENABLE_HELP_MULTIPAGE = 0
+
+class HelpWindow(ui.=

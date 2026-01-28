@@ -1,0 +1,4 @@
+:import uiScriptLocale
+ROOT_PATH = "d:/ymir work/ui/public/"
+
+BOARD_WID+

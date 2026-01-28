@@ -1,0 +1,4 @@
+8FISHING_PATH = "d:/ymir work/ui/game/fishing/"
+
+window = {
+	"name" : "F!

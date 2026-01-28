@@ -1,0 +1,1 @@
+.MINI_GAME_RUMI_TITLE, "all_align":"center" }

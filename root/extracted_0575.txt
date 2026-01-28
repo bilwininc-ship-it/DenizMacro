@@ -1,0 +1,1 @@
+class MaintenanceAdminWindow(ui.Script

@@ -1,0 +1,4 @@
+Oimport uiScriptLocale
+
+SMALL_VALUE_FILE = "d:/ymir work/ui/public/Parameter_Slot_01.sub"
+LARGEB

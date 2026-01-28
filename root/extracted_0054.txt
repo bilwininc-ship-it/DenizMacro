@@ -1,0 +1,1 @@
+regPath = r"SOFTWARE\Valen2"

@@ -1,0 +1,4 @@
+0app
+
+class PickMoneyDialog(ui.ScriptWindow):
+	def __init__(self

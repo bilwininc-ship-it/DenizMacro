@@ -1,0 +1,1 @@
+[app.DIK_F5]	= lambda :

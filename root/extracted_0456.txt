@@ -1,0 +1,1 @@
+Image("d:/ymir work/war_gui/%s.tga" % M

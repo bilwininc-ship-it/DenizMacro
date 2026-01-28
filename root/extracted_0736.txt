@@ -1,0 +1,5 @@
+W#blackdragonx61 (28.11.21)
+import uiScriptLocale
+
+PATTERN_PATH			= "d:/ymir work/ui/pattern/"
+CHATTING-
