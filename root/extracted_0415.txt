@@ -1,3 +1,0 @@
-ToolTip
-
-class CubeResultWindow(ui.9

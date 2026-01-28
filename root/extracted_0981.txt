@@ -1,3 +1,0 @@
-(import uiScriptLocale
-
-ROOT = "d:/ymir work/ui/game/""

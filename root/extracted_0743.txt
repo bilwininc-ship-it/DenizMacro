@@ -1,2 +1,0 @@
-SCREEN_WIDTH/2 - 125,
-	"y

@@ -1,6 +1,0 @@
-[ROOT = "d:/ymir work/ui/public/"
-OFFICIAL_QUEST_WINDOW = False
-
-window = {
-	"name" : "QuestDialog",
-	"styl

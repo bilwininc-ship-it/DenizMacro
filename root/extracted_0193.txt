@@ -1,1 +1,0 @@
-.UI_DEF_FONT = "Arial:14"'

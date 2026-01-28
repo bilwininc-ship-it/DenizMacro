@@ -1,4 +1,0 @@
-)ystemSetting
-
-# WEDDING
-class LovePointImage(ui.Expanded

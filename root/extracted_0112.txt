@@ -1,3 +1,0 @@
-.CODEPAGE+"_"
-
-class SelectEmpireWindow(ui.7

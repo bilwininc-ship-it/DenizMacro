@@ -1,1 +1,0 @@
-pyScrLoader = ui.Pythonf

@@ -1,8 +1,0 @@
-Eplayer
-
-blockMode = 0
-
-class OptionDialog(ui.ScriptWindow):
-
-	def __init__(self):
-		*

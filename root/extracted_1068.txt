@@ -1,3 +1,0 @@
-$.ENABLE_CHEQUE_SYSTEM :
-	window = {
-		"name" : "P

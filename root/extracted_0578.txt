@@ -1,5 +1,0 @@
-#
-
-class MapNameShower(ui.ExpandedImageBox):
-
-	MAP_;

@@ -1,6 +1,0 @@
-Gimport uiScriptLocale
-
-ROOT = "d:/ymir work/ui/minimap/"
-
-window = {
-	"name" : "AtlasW

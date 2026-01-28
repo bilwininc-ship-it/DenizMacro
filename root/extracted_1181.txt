@@ -1,5 +1,0 @@
-=import uiScriptLocale
-
-ROOT = "d:/ymir work/ui/game/"
-
-#Y_ADD_POSITION = -2

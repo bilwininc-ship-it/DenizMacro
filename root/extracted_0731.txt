@@ -1,5 +1,0 @@
-`import uiScriptLocale
-
-QUEST_ICON_BACKGROUND = 'd:/ymir work/ui/game/quest/slot_base.sub'
-
-SMALL_VALUE_FILE = "?

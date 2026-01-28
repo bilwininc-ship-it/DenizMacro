@@ -1,5 +1,0 @@
-BROOT = "d:/ymir work/ui/public/"
-
-window = {
-	"name" : "SkillResetDialog",
-	"styl

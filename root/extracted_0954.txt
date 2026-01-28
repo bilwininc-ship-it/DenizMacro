@@ -1,1 +1,0 @@
-.LUCKYDRAW_TITLE, "all_align":"center" }, )

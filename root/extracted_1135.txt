@@ -1,6 +1,0 @@
-/import uiScriptLocale
-
-window = {
-	"name" : "ShopDialog",
-
-	"x

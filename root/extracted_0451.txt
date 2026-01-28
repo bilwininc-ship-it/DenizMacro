@@ -1,2 +1,0 @@
-0class PopupDialog(ui.ScriptWindow):
-	def __init__(self, parent

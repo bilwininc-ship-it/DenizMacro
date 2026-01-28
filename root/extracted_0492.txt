@@ -1,3 +1,0 @@
--hr
-
-SYSTEM_UI_PATH = "d:/ymir work/ui/game/ranking/new/{}"8

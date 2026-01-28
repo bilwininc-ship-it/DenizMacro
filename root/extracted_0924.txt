@@ -1,1 +1,0 @@
-MAIN_FOLDER = "d:/ymir work/ui/kygn_nl/panel/"2

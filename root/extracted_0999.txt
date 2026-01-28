@@ -1,4 +1,0 @@
-B.ENABLE_CHEQUE_SYSTEM:
-	BOARD_HEIGHT = 150
-	window = {
-		"name" : "InputDialog",

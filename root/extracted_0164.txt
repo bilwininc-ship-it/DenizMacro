@@ -1,2 +1,0 @@
-play.inf", "w")
-	except IOErrorB

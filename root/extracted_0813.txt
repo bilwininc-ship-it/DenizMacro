@@ -1,6 +1,0 @@
-6app
-
-ROOT_PATH = "d:/ymir work/ui/public/"
-
-TEMPORARY_X = +14
-BUTTON_

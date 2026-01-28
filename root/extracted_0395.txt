@@ -1,1 +1,0 @@
-GetChild("TitleBar").CloseButtonHide("

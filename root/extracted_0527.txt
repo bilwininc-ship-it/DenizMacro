@@ -1,2 +1,0 @@
-0.1	#sn
-MIN_SEARCH_TEXT_LEN2

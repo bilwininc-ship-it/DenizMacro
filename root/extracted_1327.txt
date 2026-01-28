@@ -1,2 +1,0 @@
-2	(If sys.modules['__main__'] is changed, you can see the hell.)
-	t

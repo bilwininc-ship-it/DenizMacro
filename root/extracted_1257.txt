@@ -1,1 +1,0 @@
-.SetText("Oyunu kapatmak istiyor musun?"@

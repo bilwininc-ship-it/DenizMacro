@@ -1,8 +1,0 @@
-\import uiScriptLocale
-
-ROOT = "d:/ymir work/ui/public/"
-
-window = {
-	"name" : "PartyMemeberInfoBoard",
-
-	"x!

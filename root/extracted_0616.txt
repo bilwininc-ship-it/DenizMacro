@@ -1,4 +1,0 @@
-9localeInfo
-
-class PickItemDialog(ui.ScriptWindow):
-	def __init__(self

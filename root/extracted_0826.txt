@@ -1,4 +1,0 @@
-8import uiScriptLocale
-
-ROOT_PATH = "d:/ymir work/ui/game/guild/"
-LOCALE,

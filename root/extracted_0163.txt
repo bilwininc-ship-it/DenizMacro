@@ -1,3 +1,0 @@
-METIN2THEMA = "M2BG.mp3"
-
-loginMusic="

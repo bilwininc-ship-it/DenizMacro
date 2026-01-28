@@ -1,6 +1,0 @@
-1ROOT = "d:/ymir work/ui/game/"
-
-window = {
-	"name" : "IME",
-
-	"x

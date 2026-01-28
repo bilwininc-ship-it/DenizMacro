@@ -1,4 +1,0 @@
-"Dialog(ui.ScriptWindow):
-
-	def __init__(self):
-		*

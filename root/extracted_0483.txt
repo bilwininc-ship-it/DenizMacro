@@ -1,5 +1,0 @@
-/
-class OptionDialog(ui.ScriptWindow):
-
-	def __init__(self):
-		*

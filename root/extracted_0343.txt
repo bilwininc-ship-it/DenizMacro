@@ -1,4 +1,0 @@
-#app
-
-class AttachMetinDialog(ui.ScriptWindow):
-	if3

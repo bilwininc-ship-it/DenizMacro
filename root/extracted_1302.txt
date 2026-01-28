@@ -1,3 +1,0 @@
-player 
-
-class UnblockWindow(ui.Script

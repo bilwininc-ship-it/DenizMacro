@@ -1,4 +1,0 @@
-5localeInfo
-
-class PickETCDialog(ui.ScriptWindow):
-	def __init__(self

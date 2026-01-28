@@ -1,6 +1,0 @@
-Vplayer
-
-class EquipmentDialog(ui.ScriptWindow):
-
-	def __init__(self):
-		print "NEW EQUIPMENT DIALOG -

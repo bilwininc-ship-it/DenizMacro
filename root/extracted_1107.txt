@@ -1,7 +1,0 @@
-Vimport uiScriptLocale
-
-ROOT = "d:/ymir work/ui/public/"
-
-window = {
-	"name" : "RestartDialog",
-	"styl

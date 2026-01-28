@@ -1,6 +1,0 @@
-gchat
-
-class RefineDialog(ui.ScriptWindow):
-
-	makeSocketSuccessPercentage = ( 100, 33, 20, 15, 10, 5, 0 )
-	upgradeStone?

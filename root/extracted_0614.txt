@@ -1,6 +1,0 @@
-?app
-
-class PhaseCurtain(ui.Bar):
-
-	def __init__(self):
-		print "NEW CURTAIN  -

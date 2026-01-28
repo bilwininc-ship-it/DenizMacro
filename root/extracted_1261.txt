@@ -1,1 +1,0 @@
-.GET_FOG_LEVEL_INDEX($

@@ -1,3 +1,0 @@
-EPATH = "d:/ymir work/ui/game/12zi/element/{}.sub"
-
-	SUB_RACE_FLAG_TO_FILENAME = {

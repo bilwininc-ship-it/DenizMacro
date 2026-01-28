@@ -1,1 +1,0 @@
-.WONEXCHANGE_TITLE_SELL, "all_align":"center" }

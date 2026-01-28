@@ -1,3 +1,0 @@
-net, app
-
-class SelectItemWindow(ui.Script

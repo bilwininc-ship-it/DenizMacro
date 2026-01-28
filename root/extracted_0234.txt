@@ -1,1 +1,0 @@
-21.5*str)*k)	40+100*k			12			ATTACK,USE_MELEE_DAMAGE		NONE				0	0

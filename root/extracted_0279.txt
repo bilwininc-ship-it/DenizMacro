@@ -1,2 +1,0 @@
-#class SvsideDialog(ui.Window):
-	def __init__(self

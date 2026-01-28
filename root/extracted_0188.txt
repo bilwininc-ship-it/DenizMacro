@@ -1,4 +1,0 @@
-..ENABLE_PASTE_FEATURE:
-	ui.EnablePaste(True)
-
-def RunApp():

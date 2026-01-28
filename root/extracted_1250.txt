@@ -1,5 +1,0 @@
--at
-
-STREAMER_IMAGE_DIC = {
-	1	: "streamer/logo1.png",
-	2

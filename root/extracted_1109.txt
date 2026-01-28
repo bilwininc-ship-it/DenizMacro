@@ -1,6 +1,0 @@
-Rimport uiScriptLocale
-
-ROOT = "d:/ymir work/ui/game/taskbar/"
-
-window = {
-	"name" : "RightButtonW!

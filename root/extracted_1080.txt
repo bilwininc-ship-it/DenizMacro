@@ -1,3 +1,0 @@
-.Info
-
-PRIVATESEARCH_PATH = "d:/ymir work/ui/privatesearch/"7

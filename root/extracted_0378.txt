@@ -1,3 +1,0 @@
-wndMgr
-
-class VerticalCandidateBoard(ui.

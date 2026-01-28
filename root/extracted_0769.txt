@@ -1,5 +1,0 @@
-F
-ICON_SLOT_FILE = "d:/ymir work/ui/public/Slot_Base.sub"
-
-window = {
-	"name" : "CubeW

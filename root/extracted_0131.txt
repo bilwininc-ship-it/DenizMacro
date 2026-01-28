@@ -1,6 +1,0 @@
-*Info
-
-
-app.SetGuildMarkPath("test")
-
-class LogoWindow(ui.S

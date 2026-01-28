@@ -1,3 +1,0 @@
-@.ENABLE_ENVIRONMENT_EFFECT_OPTION:
-	window = {
-		"name" : "SystemOptionDialog",!

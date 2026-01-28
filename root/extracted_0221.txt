@@ -1,5 +1,0 @@
-6TextColor
-app.ServerName = None
-
-ENABLE_RANDOM_AUTH_NO_LIB = True
-if $

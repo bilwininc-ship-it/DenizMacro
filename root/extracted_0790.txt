@@ -1,8 +1,0 @@
-Simport uiScriptLocale
-
-ROOT = "d:/ymir work/ui/game/"
-
-window = {
-	"name" : "ExchangeDialog",
-
-	"x

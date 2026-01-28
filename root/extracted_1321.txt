@@ -1,1 +1,0 @@
-MoneyFormat(long(((1.0 +

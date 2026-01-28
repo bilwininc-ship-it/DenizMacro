@@ -1,2 +1,0 @@
-.GUILD_GRADE_NUM,
-		},

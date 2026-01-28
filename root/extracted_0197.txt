@@ -1,2 +1,0 @@
-Extern\\Py2Lib\\lib'
-sys.)

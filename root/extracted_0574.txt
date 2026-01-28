@@ -1,1 +1,0 @@
-.GetScreenWidth()/2 - 420/2, 2):

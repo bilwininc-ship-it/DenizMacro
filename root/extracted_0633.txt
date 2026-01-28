@@ -1,5 +1,0 @@
-6sys
-
-QUEST_BOARD_IMAGE_DIR = 'd:/ymir work/ui/game/questboard/'
-
-cur_

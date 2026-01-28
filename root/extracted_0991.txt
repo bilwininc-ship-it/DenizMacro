@@ -1,6 +1,0 @@
-8ROOT = "d:/ymir work/ui/minimap/"
-
-window = {
-	"name" : "MiniMap",
-
-	"x

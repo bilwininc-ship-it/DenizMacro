@@ -1,1 +1,0 @@
-WARRIOR_M	: "icon/face/warrior_m.tga",A

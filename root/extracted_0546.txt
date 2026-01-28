@@ -1,4 +1,0 @@
-7localeInfo
-
-class CKygnNLPanel(ui.ScriptWindow):
-	def __init__(self

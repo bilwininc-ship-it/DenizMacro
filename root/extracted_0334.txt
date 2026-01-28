@@ -1,4 +1,0 @@
-0onstInfo
-
-class AdminPM(ui.ScriptWindow):
-	def __init__(self

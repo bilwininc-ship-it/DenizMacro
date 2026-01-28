@@ -1,3 +1,0 @@
-constInfo
-
-class WebWindow(ui.f
