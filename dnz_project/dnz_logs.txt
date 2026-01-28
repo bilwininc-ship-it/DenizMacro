@@ -1,0 +1,72 @@
+[2026-01-29 00:15:39] [INFO] Hedef pencere aranıyor...
+[2026-01-29 00:15:39] [WARNING] Hedef pencere bulunamadı
+[2026-01-29 00:15:47] [INFO] Hedef pencere aranıyor...
+[2026-01-29 00:15:47] [WARNING] Hedef pencere bulunamadı
+[2026-01-29 00:23:43] [INFO] Hedef pencere aranıyor...
+[2026-01-29 00:23:43] [SUCCESS] Hedef pencereye başarıyla bağlanıldı (HWND: 1115296)
+[2026-01-29 00:23:43] [WARNING] UYARI: Yönetici yetkileri olmadan çalışıyor
+[2026-01-29 00:23:43] [SUCCESS] DNZ motoru başlatıldı
+[2026-01-29 00:23:43] [INFO] Doğrulama kodu algılandı: 548402
+[2026-01-29 00:23:43] [INFO] İnsan simülasyonu bekleniyor: 11.67 saniye
+[2026-01-29 00:23:54] [SUCCESS] Kod başarıyla onaylandı: 548402
+[2026-01-29 00:23:55] [INFO] Doğrulama kodu algılandı: 272439
+[2026-01-29 00:23:55] [INFO] İnsan simülasyonu bekleniyor: 9.78 saniye
+[2026-01-29 00:24:05] [SUCCESS] Kod başarıyla onaylandı: 272439
+[2026-01-29 00:24:05] [INFO] Doğrulama kodu algılandı: 619041
+[2026-01-29 00:24:05] [INFO] İnsan simülasyonu bekleniyor: 4.95 saniye
+[2026-01-29 00:24:10] [SUCCESS] Kod başarıyla onaylandı: 619041
+[2026-01-29 00:24:11] [INFO] Doğrulama kodu algılandı: 250712
+[2026-01-29 00:24:11] [INFO] İnsan simülasyonu bekleniyor: 5.35 saniye
+[2026-01-29 00:24:16] [SUCCESS] Kod başarıyla onaylandı: 250712
+[2026-01-29 00:24:16] [INFO] Doğrulama kodu algılandı: 550580
+[2026-01-29 00:24:16] [INFO] İnsan simülasyonu bekleniyor: 8.73 saniye
+[2026-01-29 00:24:25] [SUCCESS] Kod başarıyla onaylandı: 550580
+[2026-01-29 00:24:26] [INFO] Doğrulama kodu algılandı: 862441
+[2026-01-29 00:24:26] [INFO] İnsan simülasyonu bekleniyor: 10.85 saniye
+[2026-01-29 00:24:37] [SUCCESS] Kod başarıyla onaylandı: 862441
+[2026-01-29 00:24:37] [INFO] Doğrulama kodu algılandı: 688361
+[2026-01-29 00:24:37] [INFO] İnsan simülasyonu bekleniyor: 11.05 saniye
+[2026-01-29 00:24:48] [SUCCESS] Kod başarıyla onaylandı: 688361
+[2026-01-29 00:24:49] [INFO] Doğrulama kodu algılandı: 839561
+[2026-01-29 00:24:49] [INFO] İnsan simülasyonu bekleniyor: 10.85 saniye
+[2026-01-29 00:24:59] [SUCCESS] Kod başarıyla onaylandı: 839561
+[2026-01-29 00:25:00] [INFO] Doğrulama kodu algılandı: 337675
+[2026-01-29 00:25:00] [INFO] İnsan simülasyonu bekleniyor: 7.23 saniye
+[2026-01-29 00:25:07] [SUCCESS] Kod başarıyla onaylandı: 337675
+[2026-01-29 00:25:08] [INFO] Doğrulama kodu algılandı: 561351
+[2026-01-29 00:25:08] [INFO] İnsan simülasyonu bekleniyor: 8.68 saniye
+[2026-01-29 00:25:16] [SUCCESS] Kod başarıyla onaylandı: 561351
+[2026-01-29 00:25:17] [INFO] Doğrulama kodu algılandı: 677315
+[2026-01-29 00:25:17] [INFO] İnsan simülasyonu bekleniyor: 10.53 saniye
+[2026-01-29 00:25:28] [SUCCESS] Kod başarıyla onaylandı: 677315
+[2026-01-29 00:25:28] [INFO] Doğrulama kodu algılandı: 358126
+[2026-01-29 00:25:28] [INFO] İnsan simülasyonu bekleniyor: 12.44 saniye
+[2026-01-29 00:25:40] [SUCCESS] Kod başarıyla onaylandı: 358126
+[2026-01-29 00:25:41] [INFO] Doğrulama kodu algılandı: 137118
+[2026-01-29 00:25:41] [INFO] İnsan simülasyonu bekleniyor: 12.37 saniye
+[2026-01-29 00:25:53] [SUCCESS] Kod başarıyla onaylandı: 137118
+[2026-01-29 00:25:54] [INFO] Doğrulama kodu algılandı: 393597
+[2026-01-29 00:25:54] [INFO] İnsan simülasyonu bekleniyor: 7.66 saniye
+[2026-01-29 00:26:02] [SUCCESS] Kod başarıyla onaylandı: 393597
+[2026-01-29 00:26:02] [INFO] Doğrulama kodu algılandı: 222730
+[2026-01-29 00:26:02] [INFO] İnsan simülasyonu bekleniyor: 7.70 saniye
+[2026-01-29 00:26:10] [SUCCESS] Kod başarıyla onaylandı: 222730
+[2026-01-29 00:26:10] [INFO] Doğrulama kodu algılandı: 330622
+[2026-01-29 00:26:10] [INFO] İnsan simülasyonu bekleniyor: 12.72 saniye
+[2026-01-29 00:26:23] [SUCCESS] Kod başarıyla onaylandı: 330622
+[2026-01-29 00:26:23] [INFO] Doğrulama kodu algılandı: 394817
+[2026-01-29 00:26:23] [INFO] İnsan simülasyonu bekleniyor: 13.56 saniye
+[2026-01-29 00:26:37] [SUCCESS] Kod başarıyla onaylandı: 394817
+[2026-01-29 00:26:38] [INFO] Doğrulama kodu algılandı: 344997
+[2026-01-29 00:26:38] [INFO] İnsan simülasyonu bekleniyor: 7.25 saniye
+[2026-01-29 00:26:45] [SUCCESS] Kod başarıyla onaylandı: 344997
+[2026-01-29 00:26:45] [INFO] Doğrulama kodu algılandı: 735146
+[2026-01-29 00:26:45] [INFO] İnsan simülasyonu bekleniyor: 12.81 saniye
+[2026-01-29 00:26:58] [SUCCESS] Kod başarıyla onaylandı: 735146
+[2026-01-29 00:26:59] [INFO] Doğrulama kodu algılandı: 151998
+[2026-01-29 00:26:59] [INFO] İnsan simülasyonu bekleniyor: 10.80 saniye
+[2026-01-29 00:27:09] [SUCCESS] Kod başarıyla onaylandı: 151998
+[2026-01-29 00:27:10] [INFO] Doğrulama kodu algılandı: 857769
+[2026-01-29 00:27:10] [INFO] İnsan simülasyonu bekleniyor: 12.21 saniye
+[2026-01-29 00:27:10] [INFO] DNZ motoru durduruldu
+[2026-01-29 00:27:22] [SUCCESS] Kod başarıyla onaylandı: 857769

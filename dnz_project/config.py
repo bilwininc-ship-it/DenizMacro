@@ -46,6 +46,7 @@ STATUS_PAUSED = "Duraklatıldı"
 
 # Hedef Oyun Pencere İsimleri
 TARGET_WINDOW_NAMES = [
+    "Valen2 | www.valen2.com",
     "valen2client",
     "Valen2",
     "VALEN2"
