@@ -31,6 +31,10 @@ PY27_STRING_HEADER_SIZE = 16
 # String objesi içinde uzunluk bilgisinin bulunduğu yer (offset)
 PY27_STRING_SIZE_OFFSET = 12
 
+# String objesi içinde gerçek veri (ob_sval) başlangıç offseti
+# PyStringObject yapısı: ob_refcnt(4) + ob_type(4) + ob_size(4) + ob_shash(4) + ob_sstate(4) = 20
+PY27_STRING_DATA_OFFSET = 20
+
 # Hedef Oyun Pencere İsimleri
 TARGET_WINDOW_NAMES = [
     "Valen2 | www.valen2.com",
@@ -57,6 +61,8 @@ COLOR_INFO = "#00aaff"
 
 # Durum Mesajları
 STATUS_WAITING = "Bekleniyor..."
-STATUS_ACTIVE = "Aktif - Sistem Çalışıyor"
+STATUS_READY = "DNZ Hazır, Oyunu Bekliyor 🎮"
+STATUS_ACTIVE = "Aktif - Captcha İzleniyor 👁️"
 STATUS_PROCESSING = "İşlem Yapılıyor..."
-STATUS_PAUSED = "Duraklatıldı"
+STATUS_PAUSED = "Duraklatıldı ⏸️"
+STATUS_CAPTCHA_FOUND = "Captcha Algılandı! 🎯"

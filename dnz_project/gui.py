@@ -257,7 +257,10 @@ class DNZInterface:
             self.start_button.configure(state=tk.DISABLED)
             self.pause_button.configure(state=tk.NORMAL)
             self.stop_button.configure(state=tk.NORMAL)
-            self.update_status(config.STATUS_ACTIVE, config.COLOR_SUCCESS)
+            self.update_status(config.STATUS_READY, config.COLOR_SUCCESS)
+            
+            # 2 saniye sonra aktif duruma geç
+            self.root.after(2000, lambda: self.update_status(config.STATUS_ACTIVE, config.COLOR_SUCCESS))
     
     def pause_engine(self):
         """Motoru duraklatır/devam ettirir"""
