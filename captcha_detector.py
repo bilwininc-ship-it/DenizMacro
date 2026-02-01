@@ -466,19 +466,33 @@ class CaptchaDetectorPro:
     
     
     def capture_window(self, hwnd):
-        """Pencereyi yakala - İyileştirilmiş Versiyon"""
+        """Pencereyi yakala - İyileştirilmiş Versiyon (Siyah Ekran Düzeltmesi)"""
         try:
             # Önce pencere geçerliliğini kontrol et
             if not win32gui.IsWindow(hwnd):
                 logger.error("Pencere artık geçerli değil")
                 return None
             
-            # Pencereyi öne getir
+            # Pencere minimize mi kontrol et
             try:
-                win32gui.SetForegroundWindow(hwnd)
-                time.sleep(0.1)  # Kısa bekleme
+                if win32gui.IsIconic(hwnd):
+                    logger.info("Pencere minimize, geri yükleniyor...")
+                    win32gui.ShowWindow(hwnd, 9)  # SW_RESTORE
+                    time.sleep(0.5)
             except:
-                pass  # Öne getirilemezse devam et
+                pass
+            
+            # Pencereyi öne getir ve aktif et - GÜÇLENDİRİLMİŞ
+            try:
+                win32gui.ShowWindow(hwnd, 5)  # SW_SHOW
+                time.sleep(0.2)
+                win32gui.SetForegroundWindow(hwnd)
+                time.sleep(0.3)  # Daha uzun bekleme
+                win32gui.BringWindowToTop(hwnd)
+                time.sleep(0.2)
+                logger.debug("Pencere aktif edildi")
+            except Exception as fg_error:
+                logger.warning(f"Pencere öne getirilemedi: {fg_error}")
             
             # Pencere rect
             try:
@@ -496,7 +510,7 @@ class CaptchaDetectorPro:
                 logger.error(f"Geçersiz pencere boyutu: {width}x{height}")
                 return None
             
-            # YÖNTEM 1: PrintWindow (Ana yöntem)
+            # YÖNTEM 1: PrintWindow (Ana yöntem) - GELİŞTİRİLMİŞ
             try:
                 # DC oluştur
                 hwndDC = win32gui.GetWindowDC(hwnd)
@@ -508,16 +522,22 @@ class CaptchaDetectorPro:
                 saveBitMap.CreateCompatibleBitmap(mfcDC, width, height)
                 saveDC.SelectObject(saveBitMap)
                 
-                # PrintWindow - Farklı bayrakları dene
-                # 0 = PW_CLIENTONLY
-                # 1 = PW_RENDERFULLCONTENT  
-                # 2 = PW_RENDERFULLCONTENT
-                # 3 = Her ikisi
-                result = windll.user32.PrintWindow(hwnd, saveDC.GetSafeHdc(), 2)
+                # Render için ekstra bekleme
+                time.sleep(0.1)
                 
-                if result == 0:
-                    logger.warning("PrintWindow başarısız, tekrar deneniyor...")
-                    result = windll.user32.PrintWindow(hwnd, saveDC.GetSafeHdc(), 0)
+                # PrintWindow - Tüm bayrakları sırayla dene
+                # 0x00000002 = PW_RENDERFULLCONTENT
+                # 0x00000000 = PW_CLIENTONLY
+                # 0x00000003 = Her ikisi
+                flags_to_try = [0x00000002, 0x00000003, 0x00000000, 0x00000001]
+                result = 0
+                
+                for flag in flags_to_try:
+                    result = windll.user32.PrintWindow(hwnd, saveDC.GetSafeHdc(), flag)
+                    if result != 0:
+                        logger.debug(f"PrintWindow başarılı (bayrak: {flag})")
+                        break
+                    time.sleep(0.05)
                 
                 # Numpy array'e çevir
                 bmpstr = saveBitMap.GetBitmapBits(True)
@@ -538,8 +558,11 @@ class CaptchaDetectorPro:
                 # BGR'ye çevir
                 img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
                 
-                # Siyah ekran kontrolü
-                if np.mean(img) < 1:
+                # Siyah ekran kontrolü - ESNEK
+                mean_brightness = np.mean(img)
+                logger.debug(f"Görüntü parlaklık ortalaması: {mean_brightness:.2f}")
+                
+                if mean_brightness < 1:
                     logger.warning("Görüntü tamamen siyah, alternatif yöntem deneniyor...")
                     raise Exception("Siyah ekran")
                 
@@ -550,8 +573,9 @@ class CaptchaDetectorPro:
             except Exception as e1:
                 logger.warning(f"PrintWindow hatası: {e1}, BitBlt deneniyor...")
                 
-                # YÖNTEM 2: BitBlt (Alternatif)
+                # YÖNTEM 2: BitBlt (Alternatif) - GELİŞTİRİLMİŞ
                 try:
+                    # DC'leri yeniden oluştur
                     hwndDC = win32gui.GetWindowDC(hwnd)
                     mfcDC = win32ui.CreateDCFromHandle(hwndDC)
                     saveDC = mfcDC.CreateCompatibleDC()
@@ -560,8 +584,18 @@ class CaptchaDetectorPro:
                     saveBitMap.CreateCompatibleBitmap(mfcDC, width, height)
                     saveDC.SelectObject(saveBitMap)
                     
+                    # Pencereyi tekrar aktif et
+                    try:
+                        win32gui.SetForegroundWindow(hwnd)
+                        time.sleep(0.2)
+                    except:
+                        pass
+                    
                     # BitBlt
-                    saveDC.BitBlt((0, 0), (width, height), mfcDC, (0, 0), win32con.SRCCOPY)
+                    result = saveDC.BitBlt((0, 0), (width, height), mfcDC, (0, 0), win32con.SRCCOPY)
+                    
+                    if result == 0:
+                        logger.warning("BitBlt başarısız")
                     
                     # Numpy array'e çevir
                     bmpstr = saveBitMap.GetBitmapBits(True)
@@ -577,6 +611,14 @@ class CaptchaDetectorPro:
                     # BGR'ye çevir
                     img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
                     
+                    # Siyah ekran kontrolü
+                    mean_brightness = np.mean(img)
+                    logger.debug(f"BitBlt - Parlaklık ortalaması: {mean_brightness:.2f}")
+                    
+                    if mean_brightness < 1:
+                        logger.error("BitBlt de siyah ekran verdi")
+                        raise Exception("Siyah ekran - BitBlt")
+                    
                     logger.debug("✓ BitBlt ile yakalama başarılı")
                     self.consecutive_errors = 0
                     return img
@@ -588,9 +630,7 @@ class CaptchaDetectorPro:
         except Exception as e:
             logger.error(f"Tüm yakalama yöntemleri başarısız: {e}")
             self.consecutive_errors += 1
-            return None
-    
-    
+            return None    
     def select_captcha_region(self):
         """Captcha bölgesini seç"""
         if not self.window_handle:
