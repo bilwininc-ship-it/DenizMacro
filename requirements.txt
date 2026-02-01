@@ -1,0 +1,20 @@
+# CAPTCHA Detector - Gerekli Kütüphaneler
+# NumPy 1.x ile uyumlu versiyonlar
+
+# ÖNCE NumPy'yi düşürün!
+numpy<2.0.0
+
+# Görüntü işleme
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Windows işlemleri
+pywin32>=306
+
+# OCR (opsiyonel)
+pytesseract>=0.3.10
+
+# NOT: Eğer şu anda NumPy 2.x yüklüyse, şu komutları çalıştırın:
+# pip uninstall numpy scipy scikit-image -y
+# pip install "numpy<2.0.0"
+# pip install opencv-python Pillow pywin32 pytesseract

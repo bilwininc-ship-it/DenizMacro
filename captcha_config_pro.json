@@ -1,0 +1,13 @@
+{
+  "captcha_region": [
+    322,
+    210,
+    495,
+    449
+  ],
+  "template_path": "C:\\Users\\acika\\OneDrive\\Desktop\\ekranokuma\\captcha_captures\\captcha_template.png",
+  "capture_count": 14,
+  "check_interval": 1.0,
+  "similarity_threshold": 0.6564516129032257,
+  "last_updated": "2026-02-01 21:45:55"
+}
