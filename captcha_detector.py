@@ -93,7 +93,8 @@ class CaptchaDetectorPro:
         self.captcha_region = None
         self.template_image = None
         self.last_detection_time = 0
-        self.detection_cooldown = 3
+        self.detection_cooldown = 300  # 5 dakika = 300 saniye
+        self.last_saved_image_path = None  # Son kaydedilen resmin yolu
         
         # Benzerlik eşiği
         self.similarity_threshold = 0.50  # %50'ye düşürüldü
@@ -833,19 +834,16 @@ class CaptchaDetectorPro:
                 img = self.capture_window(self.window_handle)
                 
                 if img is None:
-                    self.consecutive_errors += 1
-                    
-                    if self.consecutive_errors >= self.max_consecutive_errors:
-                        logger.error(f"⛔ {self.max_consecutive_errors} ardışık hata! İzleme durduruluyor...")
-                        self.root.after(0, self.stop_monitoring_due_to_error)
-                        break
-                    
-                    logger.warning("⚠ Görüntü alınamadı, bekleniyor...")
-                    time.sleep(self.check_interval)
+                    logger.warning("⚠️ Görüntü alınamadı, bekleniyor...")
+                    self.root.after(0, lambda: self.status_label.config(
+                        text="⚠️ Görüntü Alınamıyor - Bekleniyor...", fg="#FF9800"))
+                    time.sleep(5)
                     continue
                 
                 # Hata sayacını sıfırla (başarılı görüntü alındı)
                 self.consecutive_errors = 0
+                self.root.after(0, lambda: self.status_label.config(
+                    text="▶️ Çalışıyor...", fg="#4CAF50"))
                 
                 # Captcha ara
                 captcha_found, similarity, location, captcha_img = self.find_captcha(img)
@@ -864,6 +862,26 @@ class CaptchaDetectorPro:
                         self.save_captcha(captcha_img, similarity, ocr_text)
                         
                         self.last_detection_time = current_time
+                        
+                        # 5 DAKİKA BEKLE
+                        logger.info(f"⏳ 5 dakika bekleniyor... (300 saniye)")
+                        self.root.after(0, lambda: self.status_label.config(
+                            text="⏳ 5 Dakika Bekleniyor...", fg="#2196F3"))
+                        
+                        # 300 saniye (5 dakika) bekle
+                        for i in range(300):
+                            if not self.is_running:  # Durduruldu mu kontrol et
+                                break
+                            time.sleep(1)
+                            
+                            # Her 30 saniyede bir kalan süreyi göster
+                            if i % 30 == 0:
+                                remaining = 300 - i
+                                logger.debug(f"⏳ Kalan süre: {remaining} saniye")
+                        
+                        logger.info("✓ 5 dakika bekleme tamamlandı, taramaya devam ediliyor...")
+                        self.root.after(0, lambda: self.status_label.config(
+                            text="▶️ Çalışıyor...", fg="#4CAF50"))
                     else:
                         remaining = self.detection_cooldown - (current_time - self.last_detection_time)
                         logger.debug(f"⏳ Cooldown aktif (Kalan: {remaining:.1f}s)")
@@ -895,8 +913,20 @@ class CaptchaDetectorPro:
     
     
     def save_captcha(self, img, similarity, ocr_text):
-        """Captcha'yı kaydet - GELİŞTİRİLMİŞ HATA YÖNETİMİ"""
+        """Captcha'yı kaydet - ÖNCEKİ RESİMLERİ SİL"""
         try:
+            # ÖNCEKİ RESMİ SİL
+            if self.last_saved_image_path and os.path.exists(self.last_saved_image_path):
+                try:
+                    # Resim ve metin dosyasını sil
+                    os.remove(self.last_saved_image_path)
+                    txt_path = self.last_saved_image_path.replace('.png', '.txt')
+                    if os.path.exists(txt_path):
+                        os.remove(txt_path)
+                    logger.info(f"🗑️ Önceki resim silindi: {os.path.basename(self.last_saved_image_path)}")
+                except Exception as del_error:
+                    logger.error(f"⚠️ Önceki resim silinemedi: {del_error}")
+            
             self.capture_count += 1
             
             # Klasörün varlığını garantile
@@ -913,6 +943,7 @@ class CaptchaDetectorPro:
             success = cv2.imwrite(filepath, img)
             if success:
                 logger.debug(f"  ✓ Görüntü kaydedildi: {filepath}")
+                self.last_saved_image_path = filepath  # Yolu kaydet
             else:
                 logger.error(f"  ✗ Görüntü kaydedilemedi: {filepath}")
                 return
@@ -936,6 +967,33 @@ class CaptchaDetectorPro:
                 self.save_config()
             except Exception as config_error:
                 logger.error(f"  ✗ Config kaydedilemedi: {config_error}")
+            
+            # OCR İLE DETAYLI ANALİZ YAP
+            try:
+                logger.info("🔍 OCR ile detaylı analiz başlatılıyor...")
+                from ocr import CaptchaNumberReader
+                
+                reader = CaptchaNumberReader()
+                result = reader.process_captcha_image(filepath)
+                
+                if result and result.get('correct_button'):
+                    logger.info(f"✅ OCR SONUCU: Ana sayı: {result['main_number']}, "
+                              f"Doğru buton: {result['correct_button']}")
+                    
+                    # OCR sonucunu metin dosyasına ekle
+                    with open(txt_filepath, 'a', encoding='utf-8') as f:
+                        f.write(f"\n--- OCR ANALİZİ ---\n")
+                        f.write(f"Ana Sayı: {result['main_number']}\n")
+                        f.write(f"Butonlar: {', '.join(result['buttons'])}\n")
+                        f.write(f"Doğru Buton: {result['correct_button']}\n")
+                    
+                    # Sonucu JSON'a kaydet
+                    reader.save_results_to_json()
+                else:
+                    logger.warning("⚠️ OCR ile eşleşme bulunamadı")
+                    
+            except Exception as ocr_error:
+                logger.error(f"⚠️ OCR analizi başarısız: {ocr_error}")
             
             # UI Güncelle
             self.root.after(0, self.update_ui, img, similarity, ocr_text)

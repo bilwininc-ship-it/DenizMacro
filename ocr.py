@@ -46,6 +46,57 @@ class CaptchaNumberReader:
         return binary
     
     
+    def extract_green_number(self, img):
+        """YEŞİL renkteki ana sayıyı bul (üstte)"""
+        try:
+            # HSV'ye çevir
+            hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+            
+            # Yeşil renk maskesi (geniş aralık)
+            lower_green = np.array([40, 40, 40])
+            upper_green = np.array([90, 255, 255])
+            mask = cv2.inRange(hsv, lower_green, upper_green)
+            
+            # Yeşil bölgeleri bul
+            contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            
+            if not contours:
+                print("⚠️ Yeşil bölge bulunamadı, genel tarama yapılıyor...")
+                return None
+            
+            # En büyük yeşil bölgeyi bul
+            largest_contour = max(contours, key=cv2.contourArea)
+            x, y, w, h = cv2.boundingRect(largest_contour)
+            
+            # Bölgeyi genişlet (sayının tamamını almak için)
+            margin = 10
+            x = max(0, x - margin)
+            y = max(0, y - margin)
+            w = min(img.shape[1] - x, w + 2*margin)
+            h = min(img.shape[0] - y, h + 2*margin)
+            
+            # Yeşil sayı bölgesini çıkar
+            green_roi = img[y:y+h, x:x+w]
+            
+            # Ön işleme
+            processed = self.preprocess_image(green_roi)
+            
+            # OCR
+            custom_config = '--psm 7 -c tessedit_char_whitelist=0123456789'
+            text = pytesseract.image_to_string(processed, config=custom_config).strip()
+            text = text.replace(' ', '').replace('\n', '')
+            
+            if text:
+                print(f"  ✅ YEŞİL ANA SAYI: {text}")
+                return text, (x, y, w, h)
+            
+            return None
+            
+        except Exception as e:
+            print(f"⚠️ Yeşil sayı tespit hatası: {e}")
+            return None
+    
+    
     def extract_numbers_from_roi(self, img, roi, label=""):
         """Belirli bir bölgeden sayıları çıkar"""
         x, y, w, h = roi
@@ -127,7 +178,7 @@ class CaptchaNumberReader:
     
     
     def process_captcha_image(self, image_path):
-        """CAPTCHA görselini işle"""
+        """CAPTCHA görselini işle - GELİŞTİRİLMİŞ YEŞIL SAYI TESPİTİ"""
         print(f"\n📷 İşleniyor: {os.path.basename(image_path)}")
         print("-" * 60)
         
@@ -139,16 +190,25 @@ class CaptchaNumberReader:
         
         print(f"✓ Görsel boyutu: {img.shape[1]}x{img.shape[0]}")
         
-        # Bölgeleri tespit et (önce otomatik dene)
-        main_roi, button_rois = self.detect_button_regions_auto(img)
+        # ÖNCE YEŞİL ANA SAYIYI BUL
+        print("\n🔍 Yeşil ana sayı aranıyor...")
+        green_result = self.extract_green_number(img)
         
-        # Ana sayıyı oku
-        print("\n🔍 Sayılar okunuyor...")
-        main_number, main_processed = self.extract_numbers_from_roi(
-            img, main_roi, "ANA SAYI"
-        )
+        main_number = None
+        if green_result:
+            main_number = green_result[0]
+        
+        # Yeşil bulunamadıysa manuel bölgeden dene
+        if not main_number:
+            print("⚠️ Yeşil sayı bulunamadı, manuel bölge kullanılıyor...")
+            main_roi, _ = self.detect_button_regions_manual(img)
+            main_number, _ = self.extract_numbers_from_roi(img, main_roi, "ANA SAYI (Manuel)")
+        
+        # Buton bölgelerini tespit et
+        _, button_rois = self.detect_button_regions_auto(img)
         
         # Buton sayılarını oku
+        print("\n🔍 Buton sayıları okunuyor...")
         button_numbers = []
         for i, roi in enumerate(button_rois, 1):
             number, _ = self.extract_numbers_from_roi(
@@ -162,18 +222,23 @@ class CaptchaNumberReader:
             "image_file": os.path.basename(image_path),
             "main_number": main_number,
             "buttons": button_numbers,
-            "correct_button": None  # Hangi buton doğru - kullanıcı belirtebilir
+            "correct_button": None,
+            "correct_button_value": None
         }
         
         # Doğru butonu bul (ana sayı ile eşleşen)
+        print(f"\n🔍 Eşleşme aranıyor: Ana sayı = {main_number}")
         for i, btn_num in enumerate(button_numbers, 1):
             if btn_num == main_number:
                 result["correct_button"] = i
+                result["correct_button_value"] = btn_num
                 print(f"\n✅ EŞLEŞME BULUNDU! Buton {i}: {btn_num}")
                 break
         
         if result["correct_button"] is None:
-            print(f"\n⚠️  Eşleşme bulunamadı!")
+            print(f"\n⚠️ Eşleşme bulunamadı!")
+            print(f"   Ana sayı: {main_number}")
+            print(f"   Butonlar: {', '.join(button_numbers)}")
         
         self.results.append(result)
         return result
@@ -241,12 +306,15 @@ class CaptchaNumberReader:
         
         print(f"Toplam İşlenen: {total}")
         print(f"Eşleşme Bulunan: {matched}")
-        print(f"Başarı Oranı: {(matched/total*100):.1f}%")
+        if total > 0:
+            print(f"Başarı Oranı: {(matched/total*100):.1f}%")
         
         print("\n🔢 Bulunan Sayılar:")
         for i, result in enumerate(self.results, 1):
             status = "✅" if result['correct_button'] else "❌"
-            print(f"  {status} {result['main_number']} → Butonlar: {', '.join(result['buttons'])}")
+            correct_info = f"→ Buton {result['correct_button']}" if result['correct_button'] else "→ Eşleşme yok"
+            print(f"  {status} {result['main_number']} {correct_info}")
+            print(f"      Butonlar: {', '.join(result['buttons'])}")
 
 
 def main():
