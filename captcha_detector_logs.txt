@@ -575,3 +575,443 @@
 2026-02-02 00:58:32 | ERROR    | Pencere artık mevcut değil
 2026-02-02 00:58:32 | ERROR    | ⛔ 5 ardışık hata! İzleme durduruluyor...
 2026-02-02 00:58:32 | INFO     | ⏹ İzleme döngüsü sonlandırıldı
+2026-02-02 01:15:44 | INFO     | ======================================================================
+2026-02-02 01:15:44 | INFO     | CAPTCHA DEDEKTÖR PRO v6.1 BAŞLATILDI (DÜZELTİLMİŞ)
+2026-02-02 01:15:44 | INFO     | ======================================================================
+2026-02-02 01:15:44 | INFO     | Uygulama başlatılıyor...
+2026-02-02 01:15:44 | DEBUG    | DPI Awareness aktif edildi
+2026-02-02 01:15:44 | INFO     | Kayıt klasörü: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures
+2026-02-02 01:15:44 | INFO     | Config dosyası: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_config_pro.json
+2026-02-02 01:15:44 | INFO     | ✓ Kayıt klasörü hazır: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures
+2026-02-02 01:15:44 | INFO     | Ayarlar yükleniyor...
+2026-02-02 01:15:44 | INFO     | ✓ Captcha bölgesi yüklendi: (317, 208, 496, 455)
+2026-02-02 01:15:44 | INFO     | ✓ Yakalama sayacı: 1
+2026-02-02 01:15:44 | INFO     | ✓ Kontrol sıklığı: 2.024193548387097s
+2026-02-02 01:15:44 | INFO     | ✓ Benzerlik eşiği: 75%
+2026-02-02 01:15:44 | INFO     | ✓ 4 buton koordinatı yüklendi
+2026-02-02 01:15:44 | DEBUG    |   Buton 1: (323, 290, 523, 330)
+2026-02-02 01:15:44 | DEBUG    |   Buton 2: (315, 321, 515, 361)
+2026-02-02 01:15:44 | DEBUG    |   Buton 3: (329, 350, 529, 390)
+2026-02-02 01:15:44 | DEBUG    |   Buton 4: (299, 380, 499, 420)
+2026-02-02 01:15:44 | INFO     | ✓ Şablon görüntü yüklendi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures\captcha_template.png
+2026-02-02 01:15:44 | DEBUG    |   Şablon boyutu: (247, 179, 3)
+2026-02-02 01:15:44 | INFO     | ✓ Tüm ayarlar başarıyla yüklendi!
+2026-02-02 01:15:45 | INFO     | UI başarıyla oluşturuldu
+2026-02-02 01:15:45 | INFO     | ✓ Buton koordinatları yüklendi ve UI güncellendi
+2026-02-02 01:16:29 | INFO     | Oyun penceresi seçimi başlatıldı
+2026-02-02 01:16:32 | INFO     | ✓ Oyun penceresi seçildi: Valen2 | www.valen2.com
+2026-02-02 01:16:34 | INFO     | ======================================================================
+2026-02-02 01:16:34 | INFO     | İZLEME BAŞLATILDI
+2026-02-02 01:16:34 | INFO     | Kontrol Sıklığı: 2.024193548387097s
+2026-02-02 01:16:34 | INFO     | Benzerlik Eşiği: 75%
+2026-02-02 01:16:34 | INFO     | Cooldown: 300s
+2026-02-02 01:16:34 | INFO     | ======================================================================
+2026-02-02 01:16:34 | INFO     | 🔍 İzleme döngüsü başladı...
+2026-02-02 01:16:34 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:16:34 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:16:34 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:16:34 | DEBUG    | Görüntü parlaklık ortalaması: 44.13
+2026-02-02 01:16:34 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:16:34 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-02 01:16:34 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-02 01:16:34 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-02 01:16:37 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:16:37 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:16:37 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:16:37 | DEBUG    | Görüntü parlaklık ortalaması: 44.03
+2026-02-02 01:16:37 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:16:37 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-02 01:16:37 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-02 01:16:37 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-02 01:16:40 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:16:40 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:16:40 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:16:40 | DEBUG    | Görüntü parlaklık ortalaması: 43.95
+2026-02-02 01:16:40 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:16:40 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-02 01:16:40 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-02 01:16:40 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-02 01:16:43 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:16:43 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:16:43 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:16:43 | DEBUG    | Görüntü parlaklık ortalaması: 43.74
+2026-02-02 01:16:43 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:16:43 | DEBUG    | Benzerlik oranı: 3.46%
+2026-02-02 01:16:43 | DEBUG    | Benzerlik düşük: 3.46% < 75.08%
+2026-02-02 01:16:43 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 3%)
+2026-02-02 01:16:46 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:16:46 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:16:46 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:16:46 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:16:46 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:16:46 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:16:46 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:16:46 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:16:49 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:16:49 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:16:49 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:16:49 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:16:49 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:16:49 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:16:49 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:16:49 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:16:52 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:16:52 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:16:52 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:16:52 | DEBUG    | Görüntü parlaklık ortalaması: 43.86
+2026-02-02 01:16:52 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:16:52 | DEBUG    | Benzerlik oranı: 4.17%
+2026-02-02 01:16:52 | DEBUG    | Benzerlik düşük: 4.17% < 75.08%
+2026-02-02 01:16:52 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 4%)
+2026-02-02 01:16:54 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:16:54 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:16:55 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:16:55 | DEBUG    | Görüntü parlaklık ortalaması: 43.88
+2026-02-02 01:16:55 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:16:55 | DEBUG    | Benzerlik oranı: 2.35%
+2026-02-02 01:16:55 | DEBUG    | Benzerlik düşük: 2.35% < 75.08%
+2026-02-02 01:16:55 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 2%)
+2026-02-02 01:16:57 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:16:57 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:16:57 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:16:57 | DEBUG    | Görüntü parlaklık ortalaması: 43.62
+2026-02-02 01:16:57 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:16:57 | DEBUG    | Benzerlik oranı: 6.60%
+2026-02-02 01:16:57 | DEBUG    | Benzerlik düşük: 6.60% < 75.08%
+2026-02-02 01:16:57 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 7%)
+2026-02-02 01:17:00 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:00 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:00 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:00 | DEBUG    | Görüntü parlaklık ortalaması: 43.81
+2026-02-02 01:17:00 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:00 | DEBUG    | Benzerlik oranı: 1.65%
+2026-02-02 01:17:00 | DEBUG    | Benzerlik düşük: 1.65% < 75.08%
+2026-02-02 01:17:00 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 2%)
+2026-02-02 01:17:03 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:03 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:03 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:03 | DEBUG    | Görüntü parlaklık ortalaması: 43.64
+2026-02-02 01:17:03 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:03 | DEBUG    | Benzerlik oranı: 5.49%
+2026-02-02 01:17:03 | DEBUG    | Benzerlik düşük: 5.49% < 75.08%
+2026-02-02 01:17:03 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 5%)
+2026-02-02 01:17:06 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:06 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:06 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:06 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:17:06 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:06 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:17:06 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:17:06 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:17:09 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:09 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:09 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:09 | DEBUG    | Görüntü parlaklık ortalaması: 43.57
+2026-02-02 01:17:09 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:09 | DEBUG    | Benzerlik oranı: 5.10%
+2026-02-02 01:17:09 | DEBUG    | Benzerlik düşük: 5.10% < 75.08%
+2026-02-02 01:17:09 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 5%)
+2026-02-02 01:17:12 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:12 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:12 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:12 | DEBUG    | Görüntü parlaklık ortalaması: 43.29
+2026-02-02 01:17:12 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:12 | DEBUG    | Benzerlik oranı: 9.30%
+2026-02-02 01:17:12 | DEBUG    | Benzerlik düşük: 9.30% < 75.08%
+2026-02-02 01:17:12 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 9%)
+2026-02-02 01:17:15 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:15 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:15 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:15 | DEBUG    | Görüntü parlaklık ortalaması: 43.04
+2026-02-02 01:17:15 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:15 | DEBUG    | Benzerlik oranı: 18.74%
+2026-02-02 01:17:15 | DEBUG    | Benzerlik düşük: 18.74% < 75.08%
+2026-02-02 01:17:15 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 19%)
+2026-02-02 01:17:18 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:18 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:18 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:18 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:17:18 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:18 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:17:18 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:17:18 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:17:21 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:21 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:21 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:21 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:17:21 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:21 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:17:21 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:17:21 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:17:23 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:23 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:24 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:24 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:17:24 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:24 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:17:24 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:17:24 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:17:26 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:26 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:26 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:26 | DEBUG    | Görüntü parlaklık ortalaması: 43.36
+2026-02-02 01:17:26 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:26 | DEBUG    | Benzerlik oranı: 6.53%
+2026-02-02 01:17:26 | DEBUG    | Benzerlik düşük: 6.53% < 75.08%
+2026-02-02 01:17:26 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 7%)
+2026-02-02 01:17:29 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:29 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:29 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:29 | DEBUG    | Görüntü parlaklık ortalaması: 43.25
+2026-02-02 01:17:29 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:29 | DEBUG    | Benzerlik oranı: 12.79%
+2026-02-02 01:17:29 | DEBUG    | Benzerlik düşük: 12.79% < 75.08%
+2026-02-02 01:17:29 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:17:32 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:32 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:32 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:32 | DEBUG    | Görüntü parlaklık ortalaması: 43.44
+2026-02-02 01:17:32 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:32 | DEBUG    | Benzerlik oranı: 11.94%
+2026-02-02 01:17:32 | DEBUG    | Benzerlik düşük: 11.94% < 75.08%
+2026-02-02 01:17:32 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 12%)
+2026-02-02 01:17:35 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:35 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:35 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:35 | DEBUG    | Görüntü parlaklık ortalaması: 43.33
+2026-02-02 01:17:35 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:35 | DEBUG    | Benzerlik oranı: 8.38%
+2026-02-02 01:17:35 | DEBUG    | Benzerlik düşük: 8.38% < 75.08%
+2026-02-02 01:17:35 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 8%)
+2026-02-02 01:17:38 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:38 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:38 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:38 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:17:38 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:38 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:17:38 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:17:38 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:17:41 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:41 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:41 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:41 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:17:41 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:41 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:17:41 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:17:41 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:17:44 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:44 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:44 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:44 | DEBUG    | Görüntü parlaklık ortalaması: 43.40
+2026-02-02 01:17:44 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:44 | DEBUG    | Benzerlik oranı: 8.51%
+2026-02-02 01:17:44 | DEBUG    | Benzerlik düşük: 8.51% < 75.08%
+2026-02-02 01:17:44 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 9%)
+2026-02-02 01:17:47 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:47 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:47 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:47 | DEBUG    | Görüntü parlaklık ortalaması: 44.85
+2026-02-02 01:17:47 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:47 | DEBUG    | Benzerlik oranı: 6.06%
+2026-02-02 01:17:47 | DEBUG    | Benzerlik düşük: 6.06% < 75.08%
+2026-02-02 01:17:47 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 6%)
+2026-02-02 01:17:49 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:49 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:50 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:50 | DEBUG    | Görüntü parlaklık ortalaması: 45.15
+2026-02-02 01:17:50 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:50 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-02 01:17:50 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-02 01:17:50 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-02 01:17:52 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:52 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:52 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:52 | DEBUG    | Görüntü parlaklık ortalaması: 56.12
+2026-02-02 01:17:52 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:52 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-02 01:17:52 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-02 01:17:52 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-02 01:17:55 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:55 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:55 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:55 | DEBUG    | Görüntü parlaklık ortalaması: 45.75
+2026-02-02 01:17:55 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:55 | DEBUG    | Benzerlik oranı: 54.43%
+2026-02-02 01:17:55 | DEBUG    | Benzerlik düşük: 54.43% < 75.08%
+2026-02-02 01:17:55 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 54%)
+2026-02-02 01:17:58 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:17:58 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:17:58 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:17:58 | DEBUG    | Görüntü parlaklık ortalaması: 46.45
+2026-02-02 01:17:58 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:17:58 | DEBUG    | Benzerlik oranı: 20.19%
+2026-02-02 01:17:58 | DEBUG    | Benzerlik düşük: 20.19% < 75.08%
+2026-02-02 01:17:58 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 20%)
+2026-02-02 01:18:01 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:01 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:01 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:01 | DEBUG    | Görüntü parlaklık ortalaması: 43.32
+2026-02-02 01:18:01 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:01 | DEBUG    | Benzerlik oranı: 24.43%
+2026-02-02 01:18:01 | DEBUG    | Benzerlik düşük: 24.43% < 75.08%
+2026-02-02 01:18:01 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 24%)
+2026-02-02 01:18:04 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:04 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:04 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:04 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:18:04 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:04 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:18:04 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:18:04 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:18:07 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:07 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:07 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:07 | DEBUG    | Görüntü parlaklık ortalaması: 43.57
+2026-02-02 01:18:07 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:07 | DEBUG    | Benzerlik oranı: 18.24%
+2026-02-02 01:18:07 | DEBUG    | Benzerlik düşük: 18.24% < 75.08%
+2026-02-02 01:18:07 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 18%)
+2026-02-02 01:18:10 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:10 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:10 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:10 | DEBUG    | Görüntü parlaklık ortalaması: 43.71
+2026-02-02 01:18:10 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:10 | DEBUG    | Benzerlik oranı: 15.62%
+2026-02-02 01:18:10 | DEBUG    | Benzerlik düşük: 15.62% < 75.08%
+2026-02-02 01:18:10 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 16%)
+2026-02-02 01:18:13 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:13 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:13 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:13 | DEBUG    | Görüntü parlaklık ortalaması: 43.53
+2026-02-02 01:18:13 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:13 | DEBUG    | Benzerlik oranı: 19.61%
+2026-02-02 01:18:13 | DEBUG    | Benzerlik düşük: 19.61% < 75.08%
+2026-02-02 01:18:13 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 20%)
+2026-02-02 01:18:16 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:16 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:16 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:16 | DEBUG    | Görüntü parlaklık ortalaması: 43.60
+2026-02-02 01:18:16 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:16 | DEBUG    | Benzerlik oranı: 18.16%
+2026-02-02 01:18:16 | DEBUG    | Benzerlik düşük: 18.16% < 75.08%
+2026-02-02 01:18:16 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 18%)
+2026-02-02 01:18:18 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:18 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:19 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:19 | DEBUG    | Görüntü parlaklık ortalaması: 43.63
+2026-02-02 01:18:19 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:19 | DEBUG    | Benzerlik oranı: 18.17%
+2026-02-02 01:18:19 | DEBUG    | Benzerlik düşük: 18.17% < 75.08%
+2026-02-02 01:18:19 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 18%)
+2026-02-02 01:18:21 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:21 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:21 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:21 | DEBUG    | Görüntü parlaklık ortalaması: 43.45
+2026-02-02 01:18:21 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:21 | DEBUG    | Benzerlik oranı: 25.45%
+2026-02-02 01:18:21 | DEBUG    | Benzerlik düşük: 25.45% < 75.08%
+2026-02-02 01:18:21 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 25%)
+2026-02-02 01:18:24 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:24 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:24 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:24 | DEBUG    | Görüntü parlaklık ortalaması: 43.44
+2026-02-02 01:18:24 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:24 | DEBUG    | Benzerlik oranı: 22.80%
+2026-02-02 01:18:24 | DEBUG    | Benzerlik düşük: 22.80% < 75.08%
+2026-02-02 01:18:24 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 23%)
+2026-02-02 01:18:27 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:27 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:27 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:27 | DEBUG    | Görüntü parlaklık ortalaması: 43.32
+2026-02-02 01:18:27 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:27 | DEBUG    | Benzerlik oranı: 25.19%
+2026-02-02 01:18:27 | DEBUG    | Benzerlik düşük: 25.19% < 75.08%
+2026-02-02 01:18:27 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 25%)
+2026-02-02 01:18:30 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:30 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:30 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:30 | DEBUG    | Görüntü parlaklık ortalaması: 43.45
+2026-02-02 01:18:30 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:30 | DEBUG    | Benzerlik oranı: 22.10%
+2026-02-02 01:18:30 | DEBUG    | Benzerlik düşük: 22.10% < 75.08%
+2026-02-02 01:18:30 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 22%)
+2026-02-02 01:18:33 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:33 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:33 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:33 | DEBUG    | Görüntü parlaklık ortalaması: 43.28
+2026-02-02 01:18:33 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:33 | DEBUG    | Benzerlik oranı: 25.74%
+2026-02-02 01:18:33 | DEBUG    | Benzerlik düşük: 25.74% < 75.08%
+2026-02-02 01:18:33 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 26%)
+2026-02-02 01:18:36 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:36 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:36 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:36 | DEBUG    | Görüntü parlaklık ortalaması: 43.44
+2026-02-02 01:18:36 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:36 | DEBUG    | Benzerlik oranı: 27.43%
+2026-02-02 01:18:36 | DEBUG    | Benzerlik düşük: 27.43% < 75.08%
+2026-02-02 01:18:36 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 27%)
+2026-02-02 01:18:39 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:39 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:39 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:39 | DEBUG    | Görüntü parlaklık ortalaması: 43.42
+2026-02-02 01:18:39 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:39 | DEBUG    | Benzerlik oranı: 26.55%
+2026-02-02 01:18:39 | DEBUG    | Benzerlik düşük: 26.55% < 75.08%
+2026-02-02 01:18:39 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 27%)
+2026-02-02 01:18:41 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:41 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:42 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:42 | DEBUG    | Görüntü parlaklık ortalaması: 7.44
+2026-02-02 01:18:42 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:42 | DEBUG    | Benzerlik oranı: 12.55%
+2026-02-02 01:18:42 | DEBUG    | Benzerlik düşük: 12.55% < 75.08%
+2026-02-02 01:18:42 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-02 01:18:44 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:44 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:44 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:44 | DEBUG    | Görüntü parlaklık ortalaması: 43.22
+2026-02-02 01:18:44 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:44 | DEBUG    | Benzerlik oranı: 32.78%
+2026-02-02 01:18:44 | DEBUG    | Benzerlik düşük: 32.78% < 75.08%
+2026-02-02 01:18:45 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 33%)
+2026-02-02 01:18:47 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:47 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:47 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:47 | DEBUG    | Görüntü parlaklık ortalaması: 43.38
+2026-02-02 01:18:47 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:47 | DEBUG    | Benzerlik oranı: 26.17%
+2026-02-02 01:18:47 | DEBUG    | Benzerlik düşük: 26.17% < 75.08%
+2026-02-02 01:18:47 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 26%)
+2026-02-02 01:18:50 | DEBUG    | Pencere aktif edildi
+2026-02-02 01:18:50 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-02 01:18:50 | DEBUG    | PrintWindow başarılı (bayrak: 2)
+2026-02-02 01:18:50 | DEBUG    | Görüntü parlaklık ortalaması: 42.11
+2026-02-02 01:18:50 | DEBUG    | ✓ PrintWindow ile yakalama başarılı
+2026-02-02 01:18:50 | DEBUG    | Benzerlik oranı: 99.95%
+2026-02-02 01:18:50 | INFO     | ✅ CAPTCHA BULUNDU! Konum: (317, 208)
+2026-02-02 01:18:50 | INFO     | ✅ CAPTCHA ALGILANDI! Benzerlik: 100%
+2026-02-02 01:18:50 | WARNING  | ⚠ OCR metin algılayamadı
+2026-02-02 01:18:50 | INFO     | 💾 Kayıt başlatıldı: Dogrulama2_20260202_011850.png
+2026-02-02 01:18:50 | DEBUG    |   ✓ Görüntü kaydedildi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures\Dogrulama2_20260202_011850.png
+2026-02-02 01:18:50 | DEBUG    |   ✓ Metin dosyası kaydedildi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures\Dogrulama2_20260202_011850.txt
+2026-02-02 01:18:50 | INFO     | Ayarlar kaydediliyor...
+2026-02-02 01:18:50 | DEBUG    | Şablon görüntü kaydedildi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures\captcha_template.png
+2026-02-02 01:18:50 | INFO     | ✓ Ayarlar kaydedildi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_config_pro.json
+2026-02-02 01:18:50 | INFO     | 🔍 OCR ile detaylı analiz başlatılıyor...
+2026-02-02 01:18:55 | INFO     | ✅ OCR SONUCU: Ana sayı: , Doğru buton: 1
+2026-02-02 01:18:55 | INFO     | 🎯 Otomatik tıklama başlatılıyor - Buton 1
+2026-02-02 01:18:55 | INFO     | 🖱️ Buton 1'e tıklanıyor...
+2026-02-02 01:18:55 | DEBUG    |   Lokal: (423, 310)
+2026-02-02 01:18:55 | DEBUG    |   Global: (414, 310)
+2026-02-02 01:18:55 | INFO     | ✅ Buton 1'e başarıyla tıklandı!
+2026-02-02 01:18:55 | INFO     | ✅ Otomatik tıklama BAŞARILI!
+2026-02-02 01:18:55 | INFO     | ✅ KAYIT BAŞARILI! Toplam: 2
+2026-02-02 01:18:55 | INFO     |    Dosya: Dogrulama2_20260202_011850.png
+2026-02-02 01:18:55 | INFO     |    Benzerlik: 99.95%
+2026-02-02 01:18:55 | INFO     |    OCR: Algılanamadı
+2026-02-02 01:18:55 | INFO     | ⏳ 5 dakika bekleniyor... (300 saniye)
+2026-02-02 01:18:56 | DEBUG    | ⏳ Kalan süre: 300 saniye
+2026-02-02 01:19:20 | INFO     | ⏸ İzleme DURDURULDU
+2026-02-02 01:19:21 | INFO     | ✓ 5 dakika bekleme tamamlandı, taramaya devam ediliyor...
+2026-02-02 01:19:23 | INFO     | ⏹ İzleme döngüsü sonlandırıldı

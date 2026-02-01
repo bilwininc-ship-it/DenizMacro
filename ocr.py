@@ -47,15 +47,28 @@ class CaptchaNumberReader:
     
     
     def extract_green_number(self, img):
-        """YEŞİL renkteki ana sayıyı bul (üstte)"""
+        """YEŞİL renkteki ana sayıyı bul (üstte) - İYİLEŞTİRİLMİŞ"""
         try:
             # HSV'ye çevir
             hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
             
-            # Yeşil renk maskesi (geniş aralık)
-            lower_green = np.array([40, 40, 40])
-            upper_green = np.array([90, 255, 255])
-            mask = cv2.inRange(hsv, lower_green, upper_green)
+            # Yeşil renk maskesi (çok geniş aralık - farklı yeşil tonları için)
+            lower_green1 = np.array([35, 50, 50])
+            upper_green1 = np.array([85, 255, 255])
+            mask1 = cv2.inRange(hsv, lower_green1, upper_green1)
+            
+            # Daha açık yeşiller için ikinci maske
+            lower_green2 = np.array([40, 40, 100])
+            upper_green2 = np.array([80, 255, 255])
+            mask2 = cv2.inRange(hsv, lower_green2, upper_green2)
+            
+            # İki maskeyi birleştir
+            mask = cv2.bitwise_or(mask1, mask2)
+            
+            # Morfolojik işlemler - gürültüyü azalt
+            kernel = np.ones((3,3), np.uint8)
+            mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+            mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
             
             # Yeşil bölgeleri bul
             contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -64,12 +77,23 @@ class CaptchaNumberReader:
                 print("⚠️ Yeşil bölge bulunamadı, genel tarama yapılıyor...")
                 return None
             
-            # En büyük yeşil bölgeyi bul
-            largest_contour = max(contours, key=cv2.contourArea)
+            # Sayı gibi görünen bölgeleri filtrele (en az 50x20 boyut)
+            valid_contours = []
+            for cnt in contours:
+                x, y, w, h = cv2.boundingRect(cnt)
+                if w > 50 and h > 15:  # Sayı boyutu kontrolü
+                    valid_contours.append(cnt)
+            
+            if not valid_contours:
+                print("⚠️ Uygun boyutta yeşil bölge bulunamadı")
+                return None
+            
+            # En büyük geçerli bölgeyi al
+            largest_contour = max(valid_contours, key=cv2.contourArea)
             x, y, w, h = cv2.boundingRect(largest_contour)
             
             # Bölgeyi genişlet (sayının tamamını almak için)
-            margin = 10
+            margin = 15
             x = max(0, x - margin)
             y = max(0, y - margin)
             w = min(img.shape[1] - x, w + 2*margin)
@@ -78,107 +102,220 @@ class CaptchaNumberReader:
             # Yeşil sayı bölgesini çıkar
             green_roi = img[y:y+h, x:x+w]
             
-            # Ön işleme
-            processed = self.preprocess_image(green_roi)
+            # GELİŞMİŞ ÖN İŞLEME
+            gray = cv2.cvtColor(green_roi, cv2.COLOR_BGR2GRAY)
             
-            # OCR
-            custom_config = '--psm 7 -c tessedit_char_whitelist=0123456789'
-            text = pytesseract.image_to_string(processed, config=custom_config).strip()
-            text = text.replace(' ', '').replace('\n', '')
+            # Kontrast artır
+            clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
+            gray = clahe.apply(gray)
             
-            if text:
-                print(f"  ✅ YEŞİL ANA SAYI: {text}")
-                return text, (x, y, w, h)
+            # Gürültü azalt
+            gray = cv2.fastNlMeansDenoising(gray, None, h=10, templateWindowSize=7, searchWindowSize=21)
             
+            # Resize (büyüt) - OCR için daha iyi
+            scale = 3
+            gray = cv2.resize(gray, None, fx=scale, fy=scale, interpolation=cv2.INTER_CUBIC)
+            
+            # Binary threshold (birden fazla yöntem dene)
+            methods = []
+            
+            # Yöntem 1: OTSU
+            _, binary1 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+            methods.append(binary1)
+            
+            # Yöntem 2: Adaptive threshold
+            binary2 = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
+                                           cv2.THRESH_BINARY, 11, 2)
+            methods.append(binary2)
+            
+            # Yöntem 3: Inverse OTSU
+            _, binary3 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+            methods.append(binary3)
+            
+            # Her yöntemle OCR dene
+            best_text = ""
+            
+            custom_config = '--psm 7 --oem 3 -c tessedit_char_whitelist=0123456789'
+            
+            for idx, method_img in enumerate(methods):
+                try:
+                    text = pytesseract.image_to_string(method_img, config=custom_config).strip()
+                    text = text.replace(' ', '').replace('\n', '').replace('O', '0').replace('o', '0')
+                    
+                    if text and len(text) >= 4:  # En az 4 rakam
+                        # Sadece rakam içeriyor mu kontrol et
+                        if text.isdigit():
+                            if len(text) > len(best_text):
+                                best_text = text
+                                print(f"    Yöntem {idx+1}: {text} ✓")
+                except Exception:
+                    pass
+            
+            if best_text:
+                print(f"  ✅ YEŞİL ANA SAYI: {best_text}")
+                return best_text, (x, y, w, h)
+            
+            print("⚠️ OCR yeşil sayıyı okuyamadı")
             return None
             
         except Exception as e:
             print(f"⚠️ Yeşil sayı tespit hatası: {e}")
+            import traceback
+            traceback.print_exc()
             return None
     
     
     def extract_numbers_from_roi(self, img, roi, label=""):
-        """Belirli bir bölgeden sayıları çıkar"""
+        """Belirli bir bölgeden sayıları çıkar - İYİLEŞTİRİLMİŞ"""
         x, y, w, h = roi
         
         # ROI'yi çıkar
         roi_img = img[y:y+h, x:x+w]
         
-        # Ön işleme
-        processed = self.preprocess_image(roi_img)
+        # GELİŞMİŞ ÖN İŞLEME
+        gray = cv2.cvtColor(roi_img, cv2.COLOR_BGR2GRAY)
         
-        # OCR - sadece rakamlar
-        custom_config = '--psm 7 -c tessedit_char_whitelist=0123456789'
-        text = pytesseract.image_to_string(processed, config=custom_config).strip()
+        # Kontrast artır
+        clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
+        gray = clahe.apply(gray)
         
-        # Boşlukları temizle
-        text = text.replace(' ', '').replace('\n', '')
+        # Gürültü azalt
+        gray = cv2.fastNlMeansDenoising(gray, None, h=10, templateWindowSize=7, searchWindowSize=21)
         
-        print(f"  {label}: {text}")
+        # Büyüt (3x) - OCR için daha iyi
+        scale = 3
+        gray = cv2.resize(gray, None, fx=scale, fy=scale, interpolation=cv2.INTER_CUBIC)
         
-        return text, processed
+        # Birden fazla threshold yöntemi dene
+        methods = []
+        
+        # Yöntem 1: OTSU
+        _, binary1 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        methods.append(binary1)
+        
+        # Yöntem 2: Adaptive
+        binary2 = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
+                                       cv2.THRESH_BINARY, 11, 2)
+        methods.append(binary2)
+        
+        # Yöntem 3: Inverse OTSU
+        _, binary3 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+        methods.append(binary3)
+        
+        # Her yöntemle OCR dene
+        best_text = ""
+        best_processed = binary1
+        
+        custom_config = '--psm 7 --oem 3 -c tessedit_char_whitelist=0123456789'
+        
+        for method_img in methods:
+            try:
+                text = pytesseract.image_to_string(method_img, config=custom_config).strip()
+                text = text.replace(' ', '').replace('\n', '').replace('O', '0').replace('o', '0')
+                
+                if text and text.isdigit() and len(text) >= 4:
+                    if len(text) > len(best_text):
+                        best_text = text
+                        best_processed = method_img
+            except:
+                pass
+        
+        print(f"  {label}: {best_text if best_text else '❌ Okunamadı'}")
+        
+        return best_text, best_processed
     
     
     def detect_button_regions_auto(self, img):
-        """Butonları otomatik olarak tespit et - Gelişmiş"""
+        """Butonları otomatik olarak tespit et - GELİŞTİRİLMİŞ"""
         height, width = img.shape[:2]
+        
+        # Görseli gri tonlamaya çevir
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         
-        # Kenarları bul
-        edges = cv2.Canny(gray, 50, 150)
+        # Gaussian blur ile gürültüyü azalt
+        blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+        
+        # Kenarları bul - daha hassas
+        edges = cv2.Canny(blurred, 30, 100)
+        
+        # Morfolojik işlemler - kenarları güçlendir
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+        edges = cv2.dilate(edges, kernel, iterations=1)
         
         # Contour bul
         contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         
-        # Dikdörtgen bölgeleri bul
+        # Dikdörtgen bölgeleri bul ve filtrele
         rectangles = []
         for cnt in contours:
             x, y, w, h = cv2.boundingRect(cnt)
             
             # Buton boyutlarına uygun mu?
-            if (50 < w < width * 0.8 and 20 < h < height * 0.15):
-                rectangles.append((x, y, w, h))
+            # Minimum genişlik: görsel genişliğinin %20'si
+            # Maksimum genişlik: görsel genişliğinin %90'ı
+            # Yükseklik: 15-100 piksel arası
+            min_width = int(width * 0.20)
+            max_width = int(width * 0.90)
+            
+            if (min_width < w < max_width and 15 < h < 100):
+                # Aspect ratio kontrolü (çok uzun veya çok kısa olmasın)
+                aspect_ratio = w / h
+                if 2 < aspect_ratio < 15:  # Butonlar genellikle yatay
+                    rectangles.append((x, y, w, h))
         
         # Y koordinatına göre sırala (yukarıdan aşağıya)
         rectangles.sort(key=lambda r: r[1])
         
+        # Ana sayı + 4 buton = 5 bölge bekliyoruz
         if len(rectangles) >= 5:
             # İlk biri ana sayı, sonraki 4'ü butonlar
             main_roi = rectangles[0]
             button_rois = rectangles[1:5]
-            print(f"✓ Otomatik tespit: {len(button_rois)} buton bulundu")
+            print(f"✓ Otomatik tespit: Ana sayı + {len(button_rois)} buton bulundu")
+            return main_roi, button_rois
+        elif len(rectangles) == 4:
+            # Sadece 4 buton varsa, en üsttekini ana sayı kabul et
+            print(f"✓ Otomatik tespit: {len(rectangles)} bölge bulundu")
+            main_roi = rectangles[0]
+            button_rois = rectangles[0:4]  # 4 butonu döndür
             return main_roi, button_rois
         
         # Otomatik tespit başarısız, manuel bölgelere dön
-        print("⚠️  Otomatik tespit başarısız, manuel bölgeler kullanılıyor")
+        print(f"⚠️ Otomatik tespit başarısız ({len(rectangles)} bölge bulundu), manuel bölgeler kullanılıyor")
         return self.detect_button_regions_manual(img)
     
     
     def detect_button_regions_manual(self, img):
-        """Manuel bölge koordinatları"""
+        """Manuel bölge koordinatları - İYİLEŞTİRİLMİŞ"""
         height, width = img.shape[:2]
         
-        # Ana sayı bölgesi - görsel üstte ortada
-        main_number_roi = (int(width * 0.2), int(height * 0.12), 
-                          int(width * 0.6), int(height * 0.10))
+        # Ana sayı bölgesi - üstte, ortada (yeşil sayı)
+        # Görselin üst %15-30 kısmında
+        main_number_roi = (int(width * 0.15), int(height * 0.05), 
+                          int(width * 0.70), int(height * 0.15))
         
         # 4 buton bölgesi (alt alta, ortada)
-        button_height = int(height * 0.08)
-        button_width = int(width * 0.6)
-        button_x = int(width * 0.2)
-        button_start_y = int(height * 0.30)
-        button_spacing = int(height * 0.11)
+        button_height = int(height * 0.10)  # Buton yüksekliği
+        button_width = int(width * 0.70)    # Buton genişliği
+        button_x = int(width * 0.15)        # Sol kenar
+        button_start_y = int(height * 0.25) # İlk butonun Y pozisyonu
+        button_spacing = int(height * 0.13) # Butonlar arası boşluk
         
         button_rois = []
         for i in range(4):
             y = button_start_y + (i * button_spacing)
             button_rois.append((button_x, y, button_width, button_height))
         
+        print(f"ℹ️ Manuel bölgeler kullanılıyor:")
+        print(f"   Ana sayı: {main_number_roi}")
+        for i, btn in enumerate(button_rois, 1):
+            print(f"   Buton {i}: {btn}")
+        
         return main_number_roi, button_rois
     
     
     def process_captcha_image(self, image_path):
-        """CAPTCHA görselini işle - GELİŞTİRİLMİŞ YEŞIL SAYI TESPİTİ"""
+        """CAPTCHA görselini işle - GELİŞTİRİLMİŞ İLK 4 RAKAM EŞLEŞTİRME"""
         print(f"\n📷 İşleniyor: {os.path.basename(image_path)}")
         print("-" * 60)
         
@@ -226,14 +363,36 @@ class CaptchaNumberReader:
             "correct_button_value": None
         }
         
-        # Doğru butonu bul (ana sayı ile eşleşen)
-        print(f"\n🔍 Eşleşme aranıyor: Ana sayı = {main_number}")
-        for i, btn_num in enumerate(button_numbers, 1):
-            if btn_num == main_number:
-                result["correct_button"] = i
-                result["correct_button_value"] = btn_num
-                print(f"\n✅ EŞLEŞME BULUNDU! Buton {i}: {btn_num}")
-                break
+        # İLK 4 RAKAM İLE EŞLEŞTİR (KULLANICININ İSTEĞİ)
+        print(f"\n🔍 İLK 4 RAKAM eşleşmesi aranıyor...")
+        print(f"   Ana sayı: {main_number}")
+        
+        if main_number and len(main_number) >= 4:
+            main_first_4 = main_number[:4]
+            print(f"   Ana sayının ilk 4 rakamı: {main_first_4}")
+            
+            for i, btn_num in enumerate(button_numbers, 1):
+                if btn_num and len(btn_num) >= 4:
+                    btn_first_4 = btn_num[:4]
+                    print(f"   Buton {i} ilk 4 rakamı: {btn_first_4} {'✓' if btn_first_4 == main_first_4 else '✗'}")
+                    
+                    if btn_first_4 == main_first_4:
+                        result["correct_button"] = i
+                        result["correct_button_value"] = btn_num
+                        print(f"\n✅ İLK 4 RAKAM EŞLEŞMESİ BULUNDU!")
+                        print(f"   Ana sayı: {main_number} → İlk 4: {main_first_4}")
+                        print(f"   Buton {i}: {btn_num} → İlk 4: {btn_first_4}")
+                        break
+        
+        # Tam eşleşme de dene (yedek)
+        if result["correct_button"] is None:
+            print(f"\n🔍 Tam sayı eşleşmesi deneniyor...")
+            for i, btn_num in enumerate(button_numbers, 1):
+                if btn_num == main_number:
+                    result["correct_button"] = i
+                    result["correct_button_value"] = btn_num
+                    print(f"\n✅ TAM EŞLEŞME BULUNDU! Buton {i}: {btn_num}")
+                    break
         
         if result["correct_button"] is None:
             print(f"\n⚠️ Eşleşme bulunamadı!")
