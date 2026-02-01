@@ -11,6 +11,7 @@ from datetime import datetime
 import win32gui
 import win32ui
 import win32con
+import win32api
 from ctypes import windll
 import logging
 
@@ -96,6 +97,9 @@ class CaptchaDetectorPro:
         self.detection_cooldown = 300  # 5 dakika = 300 saniye
         self.last_saved_image_path = None  # Son kaydedilen resmin yolu
         
+        # 4 BUTON KOORDİNATLARI (YENİ)
+        self.button_regions = []  # [(x1, y1, x2, y2), ...] 4 buton
+        
         # Benzerlik eşiği
         self.similarity_threshold = 0.50  # %50'ye düşürüldü
         
@@ -120,6 +124,9 @@ class CaptchaDetectorPro:
         
         # UI Oluştur
         self.setup_ui()
+        
+        # Yüklenen ayarlara göre UI'ı güncelle
+        self.update_ui_on_load()
     
     
     def load_config(self):
@@ -145,6 +152,13 @@ class CaptchaDetectorPro:
                     if 'similarity_threshold' in data:
                         self.similarity_threshold = data['similarity_threshold']
                         logger.info(f"✓ Benzerlik eşiği: {self.similarity_threshold:.0%}")
+                    
+                    # BUTON KOORDİNATLARINI YÜKLE (YENİ)
+                    if 'button_regions' in data and data['button_regions']:
+                        self.button_regions = [tuple(btn) for btn in data['button_regions']]
+                        logger.info(f"✓ {len(self.button_regions)} buton koordinatı yüklendi")
+                        for i, btn in enumerate(self.button_regions, 1):
+                            logger.debug(f"  Buton {i}: {btn}")
                     
                     # Şablon görüntüsünü yükle
                     if 'template_path' in data and data['template_path']:
@@ -186,6 +200,7 @@ class CaptchaDetectorPro:
                 'capture_count': self.capture_count,
                 'check_interval': self.check_interval,
                 'similarity_threshold': self.similarity_threshold,
+                'button_regions': [list(btn) for btn in self.button_regions] if self.button_regions else [],
                 'last_updated': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }
             
@@ -226,6 +241,10 @@ class CaptchaDetectorPro:
         self.region_label = tk.Label(status_frame, text="📍 Captcha Bölgesi: ❌ Belirtilmedi",
                                      font=("Arial", 9))
         self.region_label.pack(anchor="w")
+        
+        self.button_label = tk.Label(status_frame, text="🎯 Butonlar: ❌ Seçilmedi (0/4)",
+                                     font=("Arial", 9))
+        self.button_label.pack(anchor="w")
         
         self.count_label = tk.Label(status_frame, text=f"📸 Yakalanan: {self.capture_count}",
                                    font=("Arial", 9, "bold"))
@@ -293,6 +312,15 @@ class CaptchaDetectorPro:
                                     state="disabled")
         self.btn_region.pack(fill="x", pady=3)
         
+        # Buton bölgelerini seç (YENİ)
+        self.btn_buttons = tk.Button(btn_frame, text="🎯 4 Buton Bölgesi Seç",
+                                     command=self.select_button_regions,
+                                     bg="#9C27B0", fg="white",
+                                     font=("Arial", 10, "bold"),
+                                     padx=10, pady=8,
+                                     state="disabled")
+        self.btn_buttons.pack(fill="x", pady=3)
+        
         # Test butonu
         self.btn_test = tk.Button(btn_frame, text="🧪 Test Et",
                                  command=self.test_detection,
@@ -329,6 +357,29 @@ class CaptchaDetectorPro:
         self.preview_label.pack(fill="both", expand=True)
         
         logger.info("UI başarıyla oluşturuldu")
+    
+    
+    def update_ui_on_load(self):
+        """Yüklenen ayarlara göre UI'ı güncelle"""
+        # Captcha bölgesi kontrolü
+        if self.captcha_region:
+            x1, y1, x2, y2 = self.captcha_region
+            self.region_label.config(text=f"📍 Captcha Bölgesi: ✓ ({x2-x1}x{y2-y1})")
+            
+            # Şablon varsa önizleme göster
+            if self.template_image is not None:
+                self.show_preview(self.template_image, "Yüklenen Şablon")
+        
+        # Buton kontrolü
+        if self.button_regions and len(self.button_regions) == 4:
+            self.button_label.config(text=f"🎯 Butonlar: ✅ Seçildi (4/4)")
+            logger.info("✓ Buton koordinatları yüklendi ve UI güncellendi")
+        
+        # Test ve başlat butonlarını aktif et
+        if self.captcha_region and self.template_image is not None:
+            self.btn_test.config(state="normal")
+            if len(self.button_regions) == 4:
+                self.btn_toggle.config(state="normal")
     
     
     def update_interval(self, value):
@@ -410,6 +461,7 @@ class CaptchaDetectorPro:
             self.window_handle, self.window_name = selected_window[0]
             self.window_label.config(text=f"🪟 Oyun Penceresi: ✓ {self.window_name}")
             self.btn_region.config(state="normal")
+            self.btn_buttons.config(state="normal")
             logger.info(f"✓ Oyun penceresi seçildi: {self.window_name}")
     
     
@@ -623,6 +675,92 @@ class CaptchaDetectorPro:
             logger.warning("Bölge seçimi iptal edildi")
     
     
+    def select_button_regions(self):
+        """4 Buton bölgesini seç - SAĞ FARE İLE"""
+        if not self.window_handle:
+            messagebox.showerror("Hata", "Önce oyun penceresini seçin!")
+            return
+        
+        logger.info("4 Buton bölgesi seçimi başlatıldı")
+        
+        # Pencere kontrolü
+        try:
+            if not win32gui.IsWindow(self.window_handle):
+                logger.error("Seçili pencere artık mevcut değil")
+                messagebox.showerror("Hata", "Seçili pencere artık mevcut değil!\nLütfen oyun penceresini yeniden seçin.")
+                return
+        except Exception as e:
+            logger.error(f"Pencere kontrolü hatası: {e}")
+            return
+        
+        # Pencereyi öne getir
+        try:
+            win32gui.ShowWindow(self.window_handle, 9)
+            time.sleep(0.2)
+            win32gui.SetForegroundWindow(self.window_handle)
+            time.sleep(0.5)
+        except Exception as fg_error:
+            logger.warning(f"Pencere öne getirilemedi: {fg_error}")
+        
+        # Pencere görüntüsünü al
+        img = self.capture_window(self.window_handle)
+        
+        if img is None:
+            logger.error("Pencere görüntüsü alınamadı")
+            messagebox.showerror("Hata", "Pencere görüntüsü alınamadı!")
+            return
+        
+        logger.info(f"✓ Görüntü alındı: {img.shape}")
+        
+        # 4 Butonu sırayla seç
+        self.button_regions = []
+        
+        for i in range(1, 5):
+            messagebox.showinfo("Buton Seçimi", 
+                              f"🎯 {i}. BUTONU seçin\n\n"
+                              f"Yukarıdan aşağıya sırayla:\n"
+                              f"{'→ ' if i == 1 else '  '} 1. Buton\n"
+                              f"{'→ ' if i == 2 else '  '} 2. Buton\n"
+                              f"{'→ ' if i == 3 else '  '} 3. Buton\n"
+                              f"{'→ ' if i == 4 else '  '} 4. Buton\n\n"
+                              f"SAĞ FARE TUŞU ile buton üzerine tıklayın!")
+            
+            # Bölge seçiciyi aç (sağ tıklama modunda)
+            selector = ButtonRegionSelector(img, f"{i}. Buton - SAĞ TIKLAMA ile seç")
+            self.root.wait_window(selector.top)
+            
+            if selector.region:
+                self.button_regions.append(selector.region)
+                logger.info(f"✓ {i}. Buton seçildi: {selector.region}")
+            else:
+                logger.warning(f"{i}. Buton seçimi iptal edildi")
+                messagebox.showwarning("İptal", "Buton seçimi iptal edildi.\nBaştan başlayın.")
+                self.button_regions = []
+                return
+        
+        # Tüm butonlar seçildi
+        if len(self.button_regions) == 4:
+            logger.info("✅ 4 buton başarıyla seçildi!")
+            
+            # Kaydet
+            self.save_config()
+            
+            # UI güncelle
+            self.button_label.config(text=f"🎯 Butonlar: ✅ Seçildi (4/4)")
+            
+            # Test ve başlat butonlarını aktif et
+            if self.captcha_region:
+                self.btn_test.config(state="normal")
+                self.btn_toggle.config(state="normal")
+            
+            messagebox.showinfo("Başarılı", 
+                              "✅ 4 buton başarıyla kaydedildi!\n\n"
+                              "Artık otomatik tıklama hazır!")
+            logger.info("✅ Buton koordinatları kaydedildi!")
+        else:
+            logger.error("Buton seçimi tamamlanamadı")
+    
+    
     def test_detection(self):
         """Algılamayı test et"""
         if not self.window_handle or not self.captcha_region or self.template_image is None:
@@ -776,6 +914,65 @@ class CaptchaDetectorPro:
         except Exception as e:
             logger.error(f"OCR hatası: {e}")
             return f"Hata: {str(e)[:20]}"
+    
+    
+    def click_button(self, button_number):
+        """Belirtilen butona otomatik tıkla (1-4)"""
+        if not self.button_regions or button_number < 1 or button_number > 4:
+            logger.error(f"Geçersiz buton numarası: {button_number}")
+            return False
+        
+        try:
+            # Buton koordinatlarını al
+            btn_index = button_number - 1
+            x1, y1, x2, y2 = self.button_regions[btn_index]
+            
+            # Butonun merkezini hesapla
+            center_x = (x1 + x2) // 2
+            center_y = (y1 + y2) // 2
+            
+            # Pencere koordinatlarını al
+            left, top, _, _ = win32gui.GetWindowRect(self.window_handle)
+            
+            # Global koordinatlara çevir
+            global_x = left + center_x
+            global_y = top + center_y
+            
+            logger.info(f"🖱️ Buton {button_number}'e tıklanıyor...")
+            logger.debug(f"  Lokal: ({center_x}, {center_y})")
+            logger.debug(f"  Global: ({global_x}, {global_y})")
+            
+            # Pencereyi öne getir
+            try:
+                win32gui.SetForegroundWindow(self.window_handle)
+                time.sleep(0.1)
+            except:
+                pass
+            
+            # Eski fare pozisyonunu kaydet
+            import win32api
+            old_pos = win32api.GetCursorPos()
+            
+            # Fareyi hareket ettir
+            win32api.SetCursorPos((global_x, global_y))
+            time.sleep(0.05)
+            
+            # Sol tıklama (Mouse down + Mouse up)
+            win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, global_x, global_y, 0, 0)
+            time.sleep(0.05)
+            win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, global_x, global_y, 0, 0)
+            
+            logger.info(f"✅ Buton {button_number}'e başarıyla tıklandı!")
+            
+            # Fareyi eski pozisyona geri al (opsiyonel)
+            time.sleep(0.1)
+            win32api.SetCursorPos(old_pos)
+            
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Tıklama hatası: {e}", exc_info=True)
+            return False
     
     
     def toggle_monitoring(self):
@@ -989,6 +1186,22 @@ class CaptchaDetectorPro:
                     
                     # Sonucu JSON'a kaydet
                     reader.save_results_to_json()
+                    
+                    # OTOMATIK TIKLAMA (YENİ)
+                    if self.button_regions and len(self.button_regions) == 4:
+                        logger.info(f"🎯 Otomatik tıklama başlatılıyor - Buton {result['correct_button']}")
+                        
+                        # Kısa bekleme
+                        time.sleep(0.3)
+                        
+                        # Butona tıkla
+                        if self.click_button(result['correct_button']):
+                            logger.info("✅ Otomatik tıklama BAŞARILI!")
+                        else:
+                            logger.error("❌ Otomatik tıklama BAŞARISIZ!")
+                    else:
+                        logger.warning("⚠️ Buton koordinatları eksik, otomatik tıklama yapılamadı")
+                        
                 else:
                     logger.warning("⚠️ OCR ile eşleşme bulunamadı")
                     
@@ -1042,6 +1255,7 @@ class CaptchaDetectorPro:
             self.captcha_region = None
             self.template_image = None
             self.capture_count = 0
+            self.button_regions = []  # Butonları da sıfırla
             
             # Config sil
             if os.path.exists(self.config_file):
@@ -1049,6 +1263,7 @@ class CaptchaDetectorPro:
             
             # UI güncelle
             self.region_label.config(text="📍 Captcha Bölgesi: ❌ Belirtilmedi")
+            self.button_label.config(text="🎯 Butonlar: ❌ Seçilmedi (0/4)")
             self.count_label.config(text="📸 Yakalanan: 0")
             self.preview_label.config(image="", text="Henüz görüntü yok")
             self.btn_test.config(state="disabled")
@@ -1146,6 +1361,105 @@ class RegionSelector:
         
         self.region = (x1, y1, x2, y2)
         self.top.destroy()
+
+
+class ButtonRegionSelector:
+    """Buton bölgesi seçici - SAĞ FARE İLE"""
+    
+    def __init__(self, cv_image, instruction):
+        self.top = tk.Toplevel()
+        self.top.title("Buton Seç - SAĞ TIKLAMA")
+        self.top.attributes('-topmost', True)
+        
+        # OpenCV → PIL
+        img_rgb = cv2.cvtColor(cv_image, cv2.COLOR_BGR2RGB)
+        self.original_image = Image.fromarray(img_rgb)
+        
+        # Ekran boyutuna sığdır
+        screen_w = self.top.winfo_screenwidth()
+        screen_h = self.top.winfo_screenheight()
+        
+        scale = min((screen_w * 0.9) / self.original_image.width,
+                   (screen_h * 0.9) / self.original_image.height)
+        
+        if scale < 1:
+            new_w = int(self.original_image.width * scale)
+            new_h = int(self.original_image.height * scale)
+            self.display_image = self.original_image.resize((new_w, new_h), 
+                                                            Image.Resampling.LANCZOS)
+            self.scale_factor = scale
+        else:
+            self.display_image = self.original_image
+            self.scale_factor = 1.0
+        
+        # Canvas
+        self.canvas = tk.Canvas(self.top, 
+                               width=self.display_image.width,
+                               height=self.display_image.height,
+                               cursor="crosshair")
+        self.canvas.pack()
+        
+        self.photo = ImageTk.PhotoImage(self.display_image)
+        self.canvas.create_image(0, 0, anchor="nw", image=self.photo)
+        
+        # Talimat
+        info_label = tk.Label(self.top, text=instruction,
+                             font=("Arial", 11, "bold"),
+                             fg="white", bg="#9C27B0",
+                             padx=10, pady=5)
+        info_label.pack(fill="x")
+        
+        # Değişkenler
+        self.click_x = None
+        self.click_y = None
+        self.region = None
+        self.marker = None
+        
+        # Event binding - SAĞ TIKLAMA
+        self.canvas.bind("<Button-3>", self.on_right_click)  # Sağ tıklama
+        self.top.bind("<Escape>", lambda e: self.top.destroy())
+    
+    def on_right_click(self, event):
+        """Sağ tıklama - Butonu işaretle"""
+        self.click_x = event.x
+        self.click_y = event.y
+        
+        # İşaretleyici çiz
+        if self.marker:
+            self.canvas.delete(self.marker)
+        
+        # Kırmızı çarpı işareti
+        size = 20
+        self.marker = self.canvas.create_line(
+            self.click_x - size, self.click_y - size,
+            self.click_x + size, self.click_y + size,
+            fill='red', width=3
+        )
+        self.canvas.create_line(
+            self.click_x - size, self.click_y + size,
+            self.click_x + size, self.click_y - size,
+            fill='red', width=3
+        )
+        
+        # Buton bölgesi oluştur (tıklanan noktanın etrafında)
+        # Ortalama buton boyutu: 200x40 pixel
+        btn_width = 200
+        btn_height = 40
+        
+        # Orijinal koordinatlara çevir
+        orig_x = int(self.click_x / self.scale_factor)
+        orig_y = int(self.click_y / self.scale_factor)
+        
+        # Buton bölgesi (tıklanan nokta merkezde)
+        x1 = max(0, orig_x - btn_width // 2)
+        y1 = max(0, orig_y - btn_height // 2)
+        x2 = min(self.original_image.width, orig_x + btn_width // 2)
+        y2 = min(self.original_image.height, orig_y + btn_height // 2)
+        
+        self.region = (x1, y1, x2, y2)
+        
+        # Kısa bekleme sonra kapat
+        self.top.after(500, self.top.destroy)
 
 
 def main():

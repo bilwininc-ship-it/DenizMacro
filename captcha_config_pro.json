@@ -1,13 +1,34 @@
 {
-  "captcha_region": [
-    319,
-    208,
-    494,
-    454
+  "captcha_region": null,
+  "template_path": null,
+  "capture_count": 0,
+  "check_interval": 2.024193548387097,
+  "similarity_threshold": 0.7508064516129032,
+  "button_regions": [
+    [
+      323,
+      290,
+      523,
+      330
+    ],
+    [
+      315,
+      321,
+      515,
+      361
+    ],
+    [
+      329,
+      350,
+      529,
+      390
+    ],
+    [
+      299,
+      380,
+      499,
+      420
+    ]
   ],
-  "template_path": "C:\\Users\\acika\\OneDrive\\Desktop\\DenizMacro\\captcha_captures\\captcha_template.png",
-  "capture_count": 16,
-  "check_interval": 1.0,
-  "similarity_threshold": 0.6564516129032257,
-  "last_updated": "2026-02-01 23:54:24"
+  "last_updated": "2026-02-02 00:31:54"
 }
