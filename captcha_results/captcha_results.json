@@ -24,5 +24,18 @@
     ],
     "correct_button": 1,
     "correct_button_value": ""
+  },
+  {
+    "timestamp": "2026-02-03 01:22:36",
+    "image_file": "Dogrulama3_20260203_012223.png",
+    "main_number": "330577",
+    "buttons": [
+      "330577",
+      "996962",
+      "",
+      "599977"
+    ],
+    "correct_button": 1,
+    "correct_button_value": "330577"
   }
 ]

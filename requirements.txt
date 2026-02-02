@@ -13,6 +13,7 @@ pywin32>=306
 
 # OCR (opsiyonel)
 pytesseract>=0.3.10
+easyocr>=1.7.0
 
 # NOT: Eğer şu anda NumPy 2.x yüklüyse, şu komutları çalıştırın:
 # pip uninstall numpy scipy scikit-image -y

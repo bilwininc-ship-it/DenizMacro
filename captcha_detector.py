@@ -1150,19 +1150,24 @@ class CaptchaDetectorPro:
     
     
     def save_captcha(self, img, similarity, ocr_text):
-        """Captcha'yı kaydet - ÖNCEKİ RESİMLERİ SİL"""
+        """Captcha'yı kaydet - ÖNCEKİ RESİMLERİ SİL (ŞABLON HARİÇ)"""
         try:
-            # ÖNCEKİ RESMİ SİL
+            # ÖNCEKİ RESMİ SİL (ŞABLON GÖRSEL DEĞİLSE)
             if self.last_saved_image_path and os.path.exists(self.last_saved_image_path):
-                try:
-                    # Resim ve metin dosyasını sil
-                    os.remove(self.last_saved_image_path)
-                    txt_path = self.last_saved_image_path.replace('.png', '.txt')
-                    if os.path.exists(txt_path):
-                        os.remove(txt_path)
-                    logger.info(f"🗑️ Önceki resim silindi: {os.path.basename(self.last_saved_image_path)}")
-                except Exception as del_error:
-                    logger.error(f"⚠️ Önceki resim silinemedi: {del_error}")
+                # Şablon görsel kontrolü
+                template_path = os.path.join(self.save_folder, "captcha_template.png")
+                if self.last_saved_image_path != template_path:
+                    try:
+                        # Resim ve metin dosyasını sil
+                        os.remove(self.last_saved_image_path)
+                        txt_path = self.last_saved_image_path.replace('.png', '.txt')
+                        if os.path.exists(txt_path):
+                            os.remove(txt_path)
+                        logger.info(f"🗑️ Önceki resim silindi: {os.path.basename(self.last_saved_image_path)}")
+                    except Exception as del_error:
+                        logger.error(f"⚠️ Önceki resim silinemedi: {del_error}")
+                else:
+                    logger.debug("ℹ️ Şablon görsel korundu (silinmedi)")
             
             self.capture_count += 1
             
@@ -1235,8 +1240,32 @@ class CaptchaDetectorPro:
                         time.sleep(0.3)
                         
                         # Butona tıkla
-                        if self.click_button(result['correct_button']):
+                        click_success = self.click_button(result['correct_button'])
+                        
+                        if click_success:
                             logger.info("✅ Otomatik tıklama BAŞARILI!")
+                            
+                            # BAŞARILI TIKLAMA SONRASI RESMİ SİL (ŞABLON HARİÇ)
+                            try:
+                                time.sleep(0.5)  # Tıklamanın işlenmesi için kısa bekle
+                                
+                                # Şablon görsel kontrolü
+                                template_path = os.path.join(self.save_folder, "captcha_template.png")
+                                
+                                if os.path.exists(filepath) and filepath != template_path:
+                                    os.remove(filepath)
+                                    logger.info(f"🗑️ Başarılı tıklama sonrası resim silindi: {filename}")
+                                
+                                # Metin dosyasını da sil
+                                if os.path.exists(txt_filepath):
+                                    os.remove(txt_filepath)
+                                    logger.info(f"🗑️ İlgili metin dosyası silindi: {txt_filename}")
+                                
+                                # last_saved_image_path'i None yap (çünkü sildik)
+                                self.last_saved_image_path = None
+                                
+                            except Exception as del_error:
+                                logger.error(f"⚠️ Başarılı tıklama sonrası resim silinemedi: {del_error}")
                         else:
                             logger.error("❌ Otomatik tıklama BAŞARISIZ!")
                     else:
