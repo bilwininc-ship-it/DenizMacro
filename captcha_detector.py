@@ -957,7 +957,7 @@ class CaptchaDetectorPro:
     
     
     def click_button(self, button_number):
-        """Belirtilen butona otomatik tıkla (1-4)"""
+        """Belirtilen butona otomatik tıkla (1-4) - POSTMESSAGE YÖNTEMİ"""
         if not self.button_regions or button_number < 1 or button_number > 4:
             logger.error(f"Geçersiz buton numarası: {button_number}")
             return False
@@ -967,51 +967,55 @@ class CaptchaDetectorPro:
             btn_index = button_number - 1
             x1, y1, x2, y2 = self.button_regions[btn_index]
             
-            # Butonun merkezini hesapla
+            # Butonun merkezini hesapla (LOKAL KOORDİNATLAR)
             center_x = (x1 + x2) // 2
             center_y = (y1 + y2) // 2
             
-            # Pencere koordinatlarını al
-            left, top, _, _ = win32gui.GetWindowRect(self.window_handle)
+            logger.info(f"🖱️ Buton {button_number}'e tıklanıyor (PostMessage yöntemi)...")
+            logger.debug(f"  Buton bölgesi: ({x1}, {y1}, {x2}, {y2})")
+            logger.debug(f"  Buton merkezi (lokal): ({center_x}, {center_y})")
             
-            # Global koordinatlara çevir
-            global_x = left + center_x
-            global_y = top + center_y
-            
-            logger.info(f"🖱️ Buton {button_number}'e tıklanıyor...")
-            logger.debug(f"  Lokal: ({center_x}, {center_y})")
-            logger.debug(f"  Global: ({global_x}, {global_y})")
-            
-            # Pencereyi öne getir
+            # Pencereyi aktif et
             try:
-                win32gui.SetForegroundWindow(self.window_handle)
+                win32gui.ShowWindow(self.window_handle, win32con.SW_RESTORE)
                 time.sleep(0.1)
-            except:
-                pass
+                win32gui.SetForegroundWindow(self.window_handle)
+                time.sleep(0.2)
+            except Exception as focus_error:
+                logger.warning(f"Pencere odaklama hatası: {focus_error}")
             
-            # Eski fare pozisyonunu kaydet
-            import win32api
-            old_pos = win32api.GetCursorPos()
+            # LPARAM oluştur (koordinatları birleştir)
+            lparam = win32api.MAKELONG(center_x, center_y)
             
-            # Fareyi hareket ettir
-            win32api.SetCursorPos((global_x, global_y))
+            logger.debug(f"  LPARAM: {lparam} (X={center_x}, Y={center_y})")
+            
+            # WM_LBUTTONDOWN mesajı gönder
+            result_down = win32gui.SendMessage(
+                self.window_handle, 
+                win32con.WM_LBUTTONDOWN, 
+                win32con.MK_LBUTTON, 
+                lparam
+            )
             time.sleep(0.05)
             
-            # Sol tıklama (Mouse down + Mouse up)
-            win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, global_x, global_y, 0, 0)
-            time.sleep(0.05)
-            win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, global_x, global_y, 0, 0)
+            # WM_LBUTTONUP mesajı gönder
+            result_up = win32gui.SendMessage(
+                self.window_handle, 
+                win32con.WM_LBUTTONUP, 
+                0, 
+                lparam
+            )
             
-            logger.info(f"✅ Buton {button_number}'e başarıyla tıklandı!")
-            
-            # Fareyi eski pozisyona geri al (opsiyonel)
-            time.sleep(0.1)
-            win32api.SetCursorPos(old_pos)
+            logger.info(f"✅ Buton {button_number}'e başarıyla tıklandı (PostMessage)!")
+            logger.debug(f"  Koordinat: ({center_x}, {center_y})")
+            logger.debug(f"  SendMessage sonuçları - Down: {result_down}, Up: {result_up}")
             
             return True
             
         except Exception as e:
             logger.error(f"❌ Tıklama hatası: {e}", exc_info=True)
+            import traceback
+            traceback.print_exc()
             return False
     
     
