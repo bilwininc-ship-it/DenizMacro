@@ -252,31 +252,54 @@ class CaptchaNumberReader:
                     if 5 <= len(digits) <= 7 and conf > 0.2:
                         y_coord = bbox[0][1]
                         x_coord = bbox[0][0]
-                        width_box = bbox[1][0] - bbox[0][0]
-                        height_box = bbox[2][1] - bbox[0][1]
+                        # Bounding box genişlik ve yükseklik hesaplama
+                        x_min = min(bbox[0][0], bbox[1][0], bbox[2][0], bbox[3][0])
+                        x_max = max(bbox[0][0], bbox[1][0], bbox[2][0], bbox[3][0])
+                        y_min = min(bbox[0][1], bbox[1][1], bbox[2][1], bbox[3][1])
+                        y_max = max(bbox[0][1], bbox[1][1], bbox[2][1], bbox[3][1])
+                        
+                        width_box = int(x_max - x_min)
+                        height_box = int(y_max - y_min)
+                        
+                        # Margin ekle (daha iyi okuma için)
+                        margin = 5
+                        x_final = max(0, int(x_min - margin))
+                        y_final = max(0, int(y_min - margin))
+                        w_final = min(width - x_final, width_box + 2*margin)
+                        h_final = min(height - y_final, height_box + 2*margin)
                         
                         found_numbers.append({
-                            'roi': (int(x_coord), int(y_coord), int(width_box), int(height_box)),
+                            'roi': (x_final, y_final, w_final, h_final),
                             'y': y_coord,
                             'digits': digits
                         })
+                        print(f"  DEBUG ROI: Y={int(y_coord)}, Sayı={digits}, Koordinat=({x_final},{y_final},{w_final},{h_final})")
                 
-                # Y koordinatına göre sırala
+                # Y koordinatına göre sırala (yukarıdan aşağıya)
                 found_numbers.sort(key=lambda x: x['y'])
+                
+                print(f"\n📊 Toplam {len(found_numbers)} sayı bulundu (Y koordinatına göre sıralı):")
+                for idx, num in enumerate(found_numbers, 1):
+                    print(f"  [{idx}] Y={int(num['y']):3d} -> {num['digits']}")
                 
                 if len(found_numbers) >= 5:
                     # İlk biri ana sayı, sonraki 4'ü butonlar
                     main_roi = found_numbers[0]['roi']
                     button_rois = [num['roi'] for num in found_numbers[1:5]]
-                    print(f"✓ EasyOCR otomatik tespit: Ana sayı + {len(button_rois)} buton")
+                    print(f"\n✓ EasyOCR otomatik tespit: 1 ana sayı + 4 buton")
+                    print(f"  Ana Sayı: {found_numbers[0]['digits']} (Y={int(found_numbers[0]['y'])})")
+                    for i in range(1, 5):
+                        print(f"  Buton {i}: {found_numbers[i]['digits']} (Y={int(found_numbers[i]['y'])})")
                     return main_roi, button_rois
                 elif len(found_numbers) == 4:
-                    main_roi = found_numbers[0]['roi']
-                    button_rois = [num['roi'] for num in found_numbers[0:4]]
-                    print(f"✓ EasyOCR otomatik tespit: {len(found_numbers)} bölge")
-                    return main_roi, button_rois
+                    # 4 sayı bulundu, muhtemelen ana sayı + 3 buton (1 buton eksik)
+                    # Manuel bölgelere geç
+                    print(f"⚠️ Sadece 4 sayı bulundu - manuel bölgelere geçiliyor")
+                    return self.detect_button_regions_manual(img)
             except Exception as e:
                 print(f"⚠️ EasyOCR otomatik tespit hatası: {e}")
+                import traceback
+                traceback.print_exc()
         
         # Manuel bölgelere dön
         print(f"⚠️ Otomatik tespit başarısız, manuel bölgeler kullanılıyor")
@@ -287,23 +310,32 @@ class CaptchaNumberReader:
         """Manuel bölge koordinatları - Optimize edilmiş"""
         height, width = img.shape[:2]
         
-        # Ana sayı bölgesi - üstte, ortada (daha büyük alan)
-        main_number_roi = (int(width * 0.10), int(height * 0.02), 
-                          int(width * 0.80), int(height * 0.20))
+        print(f"ℹ️ Manuel bölgeler kullanılıyor (Görsel: {width}x{height})")
+        
+        # Ana sayı bölgesi - üstte, ortada (yeşil sayı için)
+        main_number_roi = (int(width * 0.05), int(height * 0.15), 
+                          int(width * 0.85), int(height * 0.14))
         
         # 4 buton bölgesi (alt alta, ortada)
-        button_height = int(height * 0.12)
-        button_width = int(width * 0.75)
-        button_x = int(width * 0.12)
-        button_start_y = int(height * 0.22)
-        button_spacing = int(height * 0.15)
+        # Görsele göre: Y=96, 123, 156, 190 civarı
+        button_width = int(width * 0.85)  # Daha geniş
+        button_height = int(height * 0.10)  # Daha küçük yükseklik
+        button_x = int(width * 0.05)  # Sol margin
+        
+        # Y pozisyonları (görseldeki gerçek konumlara göre ayarlandı)
+        button_y_positions = [
+            int(height * 0.37),  # Buton 1: ~Y=91 (996962)
+            int(height * 0.48),  # Buton 2: ~Y=118 (192021)
+            int(height * 0.59),  # Buton 3: ~Y=145 (330577) ⭐
+            int(height * 0.73)   # Buton 4: ~Y=180 (599977)
+        ]
         
         button_rois = []
-        for i in range(4):
-            y = button_start_y + (i * button_spacing)
+        for i, y in enumerate(button_y_positions):
             button_rois.append((button_x, y, button_width, button_height))
+            print(f"  Manuel Buton {i+1} ROI: x={button_x}, y={y}, w={button_width}, h={button_height}")
         
-        print(f"ℹ️ Manuel bölgeler kullanılıyor")
+        print(f"  Manuel Ana Sayı ROI: {main_number_roi}")
         
         return main_number_roi, button_rois
     

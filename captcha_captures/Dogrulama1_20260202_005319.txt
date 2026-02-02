@@ -1,8 +1,0 @@
-Yakalanma Zamanı: 2026-02-02 00:53:19
-Benzerlik: 99.97%
-OCR Metni: Algılanamadı
-
---- OCR ANALİZİ ---
-Ana Sayı: 
-Butonlar: , , , 
-Doğru Buton: 1
