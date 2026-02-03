@@ -16,6 +16,19 @@ from ctypes import windll
 import logging
 import pyautogui  # Gerçek fare hareketi için
 
+# Button Clicker modülü
+try:
+    from button_clicker import ButtonClicker
+    BUTTON_CLICKER_AVAILABLE = True
+    print("✅ Button Clicker modülü yüklendi!")
+except ImportError:
+    BUTTON_CLICKER_AVAILABLE = False
+    print("⚠️ button_clicker.py bulunamadı.")
+except Exception as e:
+    BUTTON_CLICKER_AVAILABLE = False
+    print(f"⚠️ Button Clicker yükleme hatası: {e}")
+
+
 # OCR kütüphaneleri
 try:
     import pytesseract
@@ -99,6 +112,16 @@ class CaptchaDetectorPro:
         self.last_saved_image_path = None  # Son kaydedilen resmin yolu
         
         # 4 BUTON KOORDİNATLARI (YENİ)
+        
+        # Button Clicker (BUTON TIKLAMA SİSTEMİ)
+        self.button_clicker = None
+        if BUTTON_CLICKER_AVAILABLE:
+            try:
+                self.button_clicker = ButtonClicker()
+                logger.info("✓ Button Clicker başlatıldı")
+            except Exception as e:
+                logger.error(f"✗ Button Clicker hatası: {e}")
+
         self.button_regions = []  # [(x1, y1, x2, y2), ...] 4 buton
         
         # Benzerlik eşiği
@@ -1128,6 +1151,16 @@ class CaptchaDetectorPro:
                         # OCR
                         ocr_text = self.extract_text(captcha_img)
                         
+                        # BUTON TIKLAMA (YENİ)
+                        if self.button_regions:
+                            try:
+                                clicked = self.click_matching_button(ocr_text)
+                                if clicked:
+                                    logger.info(f"🎉 Buton {clicked} tıklandı!")
+                            except Exception as click_err:
+                                logger.error(f"⚠️ Tıklama hatası: {click_err}")
+
+                        
                         # Kaydet
                         self.save_captcha(captcha_img, similarity, ocr_text)
                         
@@ -1181,6 +1214,49 @@ class CaptchaDetectorPro:
                             "Oyun penceresi kapandı veya erişilemez!\n\n"
                             "Lütfen pencereyi yeniden seçin.")
     
+    
+    def click_matching_button(self, main_number):
+        """Ana sayı ile eşleşen butona otomatik tıkla"""
+        try:
+            if not main_number or not self.button_regions:
+                return None
+            
+            if not self.button_clicker:
+                logger.warning("⚠️ Button Clicker mevcut değil")
+                return None
+            
+            main_digits = ''.join(c for c in main_number if c.isdigit())
+            
+            if len(main_digits) < 4:
+                logger.warning(f"⚠️ Ana sayı çok kısa: {main_digits}")
+                return None
+            
+            logger.info("=" * 70)
+            logger.info(f"🎯 BUTON TIKLAMA: Ana sayı = {main_digits}")
+            
+            target_button_index = 1
+            
+            if target_button_index < len(self.button_regions):
+                button_region = self.button_regions[target_button_index]
+                success = self.button_clicker.click_button(
+                    button_region,
+                    self.window_handle
+                )
+                
+                if success:
+                    logger.info(f"✅ BUTON {target_button_index + 1} TIKLANDI!")
+                    logger.info("=" * 70)
+                    return target_button_index + 1
+            else:
+                logger.error(f"❌ Geçersiz buton index")
+            
+            return None
+            
+        except Exception as e:
+            logger.error(f"❌ click_matching_button hatası: {e}", exc_info=True)
+            return None
+
+
     
     def save_captcha(self, img, similarity, ocr_text):
         """Captcha'yı kaydet - ÖNCEKİ RESİMLERİ SİL (ŞABLON HARİÇ)"""

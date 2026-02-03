@@ -6,7 +6,7 @@
     455
   ],
   "template_path": "C:\\Users\\acika\\OneDrive\\Desktop\\DenizMacro\\captcha_captures\\captcha_template.png",
-  "capture_count": 9,
+  "capture_count": 12,
   "check_interval": 2.024193548387097,
   "similarity_threshold": 0.7508064516129032,
   "button_regions": [
@@ -35,5 +35,5 @@
       420
     ]
   ],
-  "last_updated": "2026-02-03 20:02:23"
+  "last_updated": "2026-02-03 21:15:01"
 }
