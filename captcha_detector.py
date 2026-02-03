@@ -16,6 +16,16 @@ from ctypes import windll
 import logging
 import pyautogui  # Gerçek fare hareketi için
 
+# Mause modülünü import et
+try:
+    import mause
+    MAUSE_AVAILABLE = True
+    print("✅ mause.py modülü yüklendi!")
+except ImportError:
+    MAUSE_AVAILABLE = False
+    print("⚠️ mause.py modülü yüklenemedi, varsayılan tıklama kullanılacak")
+
+
 # OCR kütüphaneleri
 try:
     import pytesseract
@@ -963,16 +973,37 @@ class CaptchaDetectorPro:
             logger.error(f"Geçersiz buton numarası: {button_number}")
             return False
         
+        # Buton koordinatlarını al
+        btn_index = button_number - 1
+        button_region = self.button_regions[btn_index]
+        
+        # ÖNCE mause.py'deki fonksiyonu kullanmayı dene
+        if MAUSE_AVAILABLE:
+            try:
+                logger.info(f"🖱️ mause.py modülü ile buton {button_number}'e tıklanıyor...")
+                result = mause.butona_gercek_tiklama(
+                    self.window_handle, 
+                    button_region, 
+                    button_number
+                )
+                
+                if result:
+                    logger.info(f"✅ mause.py ile tıklama başarılı!")
+                    return True
+                else:
+                    logger.warning(f"⚠️ mause.py ile tıklama başarısız, varsayılan yöntem deneniyor...")
+            except Exception as mause_error:
+                logger.error(f"❌ mause.py hatası: {mause_error}, varsayılan yöntem deneniyor...")
+        
+        # YEDEK: Varsayılan tıklama yöntemi
         try:
-            # Buton koordinatlarını al
-            btn_index = button_number - 1
-            x1, y1, x2, y2 = self.button_regions[btn_index]
+            x1, y1, x2, y2 = button_region
             
             # Butonun merkezini hesapla (LOKAL KOORDİNATLAR)
             center_x = (x1 + x2) // 2
             center_y = (y1 + y2) // 2
             
-            logger.info(f"🖱️ Buton {button_number}'e GERÇEK fare ile tıklanıyor...")
+            logger.info(f"🖱️ Buton {button_number}'e VARSAYILAN yöntem ile tıklanıyor...")
             logger.debug(f"  Buton bölgesi: ({x1}, {y1}, {x2}, {y2})")
             logger.debug(f"  Buton merkezi (lokal): ({center_x}, {center_y})")
             
@@ -1031,7 +1062,7 @@ class CaptchaDetectorPro:
             pyautogui.click(clicks=1, interval=0.1, button='left')
             time.sleep(0.15)
             
-            logger.info(f"✅ Buton {button_number}'e GERÇEK fare ile başarıyla tıklandı!")
+            logger.info(f"✅ Buton {button_number}'e VARSAYILAN yöntem ile başarıyla tıklandı!")
             logger.debug(f"  Koordinat: ({global_x}, {global_y})")
             
             # Fareyi eski pozisyona yavaşça geri al (opsiyonel)

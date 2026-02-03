@@ -7332,3 +7332,1052 @@ pywintypes.error: (0, 'SetCursorPos', 'No error message is available')
 2026-02-03 03:02:47 | INFO     | ⏳ 5 dakika bekleniyor... (300 saniye)
 2026-02-03 03:02:48 | DEBUG    | ⏳ Kalan süre: 300 saniye
 2026-02-03 03:03:18 | DEBUG    | ⏳ Kalan süre: 270 saniye
+2026-02-03 19:57:16 | INFO     | ======================================================================
+2026-02-03 19:57:16 | INFO     | CAPTCHA DEDEKTÖR PRO v6.1 BAŞLATILDI (DÜZELTİLMİŞ)
+2026-02-03 19:57:16 | INFO     | ======================================================================
+2026-02-03 19:57:16 | INFO     | Uygulama başlatılıyor...
+2026-02-03 19:57:16 | DEBUG    | DPI Awareness aktif edildi
+2026-02-03 19:57:16 | INFO     | Kayıt klasörü: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures
+2026-02-03 19:57:16 | INFO     | Config dosyası: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_config_pro.json
+2026-02-03 19:57:16 | INFO     | ✓ Kayıt klasörü hazır: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures
+2026-02-03 19:57:16 | INFO     | Ayarlar yükleniyor...
+2026-02-03 19:57:16 | INFO     | ✓ Captcha bölgesi yüklendi: (317, 208, 496, 455)
+2026-02-03 19:57:16 | INFO     | ✓ Yakalama sayacı: 8
+2026-02-03 19:57:16 | INFO     | ✓ Kontrol sıklığı: 2.024193548387097s
+2026-02-03 19:57:16 | INFO     | ✓ Benzerlik eşiği: 75%
+2026-02-03 19:57:16 | INFO     | ✓ 4 buton koordinatı yüklendi
+2026-02-03 19:57:16 | DEBUG    |   Buton 1: (323, 290, 523, 330)
+2026-02-03 19:57:16 | DEBUG    |   Buton 2: (315, 321, 515, 361)
+2026-02-03 19:57:16 | DEBUG    |   Buton 3: (329, 350, 529, 390)
+2026-02-03 19:57:16 | DEBUG    |   Buton 4: (299, 380, 499, 420)
+2026-02-03 19:57:16 | INFO     | ✓ Şablon görüntü yüklendi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures\captcha_template.png
+2026-02-03 19:57:16 | DEBUG    |   Şablon boyutu: (247, 179, 3)
+2026-02-03 19:57:16 | INFO     | ✓ Tüm ayarlar başarıyla yüklendi!
+2026-02-03 19:57:17 | INFO     | UI başarıyla oluşturuldu
+2026-02-03 19:57:17 | INFO     | ✓ Buton koordinatları yüklendi ve UI güncellendi
+2026-02-03 19:57:44 | INFO     | Oyun penceresi seçimi başlatıldı
+2026-02-03 19:57:46 | INFO     | ✓ Oyun penceresi seçildi: Valen2 | www.valen2.com
+2026-02-03 19:57:53 | INFO     | ======================================================================
+2026-02-03 19:57:53 | INFO     | İZLEME BAŞLATILDI
+2026-02-03 19:57:53 | INFO     | Kontrol Sıklığı: 2.024193548387097s
+2026-02-03 19:57:53 | INFO     | Benzerlik Eşiği: 75%
+2026-02-03 19:57:53 | INFO     | Cooldown: 300s
+2026-02-03 19:57:53 | INFO     | ======================================================================
+2026-02-03 19:57:53 | INFO     | 🔍 İzleme döngüsü başladı...
+2026-02-03 19:57:54 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 19:57:54 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:57:54 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:57:54 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:57:54 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:57:54 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.51
+2026-02-03 19:57:54 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:57:54 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:57:54 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:57:54 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:57:57 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 19:57:57 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:57:57 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:57:57 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:57:57 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:57:57 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.51
+2026-02-03 19:57:57 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:57:57 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:57:57 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:57:57 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:57:59 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:57:59 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:00 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:00 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:00 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:00 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.68
+2026-02-03 19:58:00 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:00 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:00 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:00 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:02 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:02 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:02 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:02 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:02 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:02 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.51
+2026-02-03 19:58:02 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:02 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:02 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:02 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:04 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:04 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:05 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:05 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:05 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:05 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.57
+2026-02-03 19:58:05 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:05 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:05 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:05 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:07 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:07 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:07 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:07 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:07 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:07 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.56
+2026-02-03 19:58:07 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:07 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:07 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:07 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:10 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:10 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:10 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:10 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:10 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:10 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.51
+2026-02-03 19:58:10 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:10 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:10 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:10 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:12 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:12 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:12 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:12 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:12 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:12 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.56
+2026-02-03 19:58:12 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:12 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:12 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:12 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:15 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:15 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:15 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:15 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:15 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:15 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.52
+2026-02-03 19:58:15 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:15 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:15 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:15 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:17 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:17 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:18 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:18 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:18 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:18 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.54
+2026-02-03 19:58:18 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:18 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:18 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:18 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:20 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:20 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:20 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:20 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:20 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:20 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.09
+2026-02-03 19:58:20 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:20 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:20 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:20 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:22 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:22 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:23 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:23 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:23 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:23 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.07
+2026-02-03 19:58:23 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:23 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:23 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:23 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:25 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:25 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:25 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:25 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:25 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:25 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.56
+2026-02-03 19:58:25 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:25 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:25 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:25 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:27 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:27 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:28 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:28 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:28 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:28 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.52
+2026-02-03 19:58:28 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:28 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:28 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:28 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:30 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:30 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:30 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:30 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:30 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:30 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.50
+2026-02-03 19:58:30 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:30 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:30 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:30 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:32 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:32 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:33 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:33 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:33 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:33 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.54
+2026-02-03 19:58:33 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:33 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:33 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:33 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:35 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:35 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:35 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:35 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:35 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:35 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.53
+2026-02-03 19:58:35 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:35 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:35 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:35 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:38 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:38 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:38 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:38 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:38 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:38 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.58
+2026-02-03 19:58:38 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:38 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:38 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:38 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:40 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:40 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:40 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:40 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:40 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:40 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.57
+2026-02-03 19:58:40 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:40 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:40 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:40 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:43 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:43 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:43 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:43 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:43 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:43 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.59
+2026-02-03 19:58:43 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:43 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:43 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:43 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:45 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:45 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:45 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:45 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:45 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:45 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.63
+2026-02-03 19:58:45 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:45 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:45 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:45 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:48 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:48 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:48 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:48 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:48 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:48 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.58
+2026-02-03 19:58:48 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:48 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:48 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:48 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:50 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:50 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:51 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:51 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:51 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:51 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.63
+2026-02-03 19:58:51 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:51 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:51 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:51 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:53 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:53 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:53 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:53 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:53 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:53 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.58
+2026-02-03 19:58:53 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:53 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:53 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:53 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:55 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:55 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:56 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:56 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:56 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:56 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.60
+2026-02-03 19:58:56 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:56 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:56 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:56 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:58:58 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:58:58 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:58:58 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:58:58 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:58:58 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:58:58 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.65
+2026-02-03 19:58:58 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:58:58 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:58:58 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:58:58 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:00 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:00 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:01 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:01 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:01 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:01 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.59
+2026-02-03 19:59:01 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:01 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:01 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:01 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:03 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:03 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:03 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:03 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:03 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:03 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.68
+2026-02-03 19:59:03 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:03 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:03 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:03 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:06 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:06 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:06 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:06 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:06 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:06 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.65
+2026-02-03 19:59:06 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:06 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:06 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:06 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:08 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:08 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:08 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:08 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:08 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:08 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.27
+2026-02-03 19:59:08 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:08 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:08 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:08 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:11 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:11 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:11 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:11 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:11 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:11 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.29
+2026-02-03 19:59:11 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:11 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:11 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:11 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:13 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:13 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:13 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:13 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:13 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:13 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.64
+2026-02-03 19:59:13 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:13 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:13 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:13 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:16 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:16 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:16 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:16 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:16 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:16 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.70
+2026-02-03 19:59:16 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:16 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:16 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:16 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:18 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:18 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:19 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:19 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:19 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:19 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.65
+2026-02-03 19:59:19 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:19 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:19 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:19 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:21 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:21 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:21 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:21 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:21 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:21 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.64
+2026-02-03 19:59:21 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:21 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:21 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:21 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:23 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:23 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:24 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:24 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:24 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:24 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.65
+2026-02-03 19:59:24 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:24 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:24 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:24 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:26 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:26 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:26 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:26 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:26 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:26 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.69
+2026-02-03 19:59:26 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:26 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:26 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:26 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:28 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:28 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:29 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:29 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:29 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:29 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.80
+2026-02-03 19:59:29 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:29 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:29 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:29 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:31 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:31 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:31 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:31 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:31 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:31 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.78
+2026-02-03 19:59:31 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:31 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:31 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:31 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:34 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:34 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:34 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:34 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:34 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:34 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.75
+2026-02-03 19:59:34 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:34 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:34 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:34 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:36 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:36 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:36 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:36 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:36 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:36 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.79
+2026-02-03 19:59:36 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:36 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:36 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:36 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:39 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:39 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:39 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:39 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:39 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:39 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.74
+2026-02-03 19:59:39 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:39 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:39 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:39 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:41 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:41 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:41 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:41 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:41 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:41 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.79
+2026-02-03 19:59:41 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:41 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:41 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:41 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:44 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:44 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:44 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:44 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:44 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:44 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.77
+2026-02-03 19:59:44 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:44 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:44 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:44 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:46 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:46 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:47 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:47 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:47 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:47 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.74
+2026-02-03 19:59:47 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:47 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:47 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:47 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:49 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:49 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:49 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:49 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:49 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:49 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.79
+2026-02-03 19:59:49 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:49 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:49 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:49 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:51 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:51 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:52 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:52 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:52 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:52 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.75
+2026-02-03 19:59:52 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:52 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:52 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:52 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:54 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:54 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:54 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:54 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:54 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:54 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.78
+2026-02-03 19:59:54 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:54 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:54 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:54 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:56 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:56 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:57 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:57 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:57 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:57 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.72
+2026-02-03 19:59:57 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:57 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:57 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:57 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 19:59:59 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 19:59:59 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 19:59:59 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 19:59:59 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 19:59:59 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 19:59:59 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.68
+2026-02-03 19:59:59 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 19:59:59 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 19:59:59 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 19:59:59 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:01 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 20:00:01 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:02 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:02 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:02 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:02 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.70
+2026-02-03 20:00:02 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:02 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:02 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:02 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:04 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 20:00:04 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:04 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:04 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:04 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:04 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.76
+2026-02-03 20:00:04 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:04 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:04 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:04 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:07 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 20:00:07 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:07 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:07 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:07 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:07 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.77
+2026-02-03 20:00:07 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:07 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:07 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:07 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:09 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 20:00:09 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:09 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:09 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:09 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:09 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.77
+2026-02-03 20:00:09 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:09 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:09 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:09 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:12 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 20:00:12 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:12 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:12 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:12 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:12 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.74
+2026-02-03 20:00:12 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:12 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:12 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:12 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:14 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 20:00:14 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:15 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:15 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:15 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:15 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.81
+2026-02-03 20:00:15 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:15 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:15 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:15 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:17 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 20:00:17 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:17 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:17 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:17 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:17 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.74
+2026-02-03 20:00:17 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:17 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:17 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:17 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:19 | WARNING  | Pencere öne getirilemedi: (0, 'SetForegroundWindow', 'No error message is available')
+2026-02-03 20:00:19 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:20 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:20 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:20 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:20 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.75
+2026-02-03 20:00:20 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:20 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:20 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:20 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:20 | INFO     | Oyun penceresi seçimi başlatıldı
+2026-02-03 20:00:22 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:22 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:22 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:22 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:22 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:23 | DEBUG    | BitBlt - Parlaklık ortalaması: 52.69
+2026-02-03 20:00:23 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:23 | DEBUG    | Benzerlik oranı: 11.71%
+2026-02-03 20:00:23 | DEBUG    | Benzerlik düşük: 11.71% < 75.08%
+2026-02-03 20:00:23 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 12%)
+2026-02-03 20:00:25 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:25 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:25 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:25 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:25 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:26 | DEBUG    | BitBlt - Parlaklık ortalaması: 53.10
+2026-02-03 20:00:26 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:26 | DEBUG    | Benzerlik oranı: 9.57%
+2026-02-03 20:00:26 | DEBUG    | Benzerlik düşük: 9.57% < 75.08%
+2026-02-03 20:00:26 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 10%)
+2026-02-03 20:00:28 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:28 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:29 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:29 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:29 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:29 | DEBUG    | BitBlt - Parlaklık ortalaması: 53.05
+2026-02-03 20:00:29 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:29 | DEBUG    | Benzerlik oranı: 10.21%
+2026-02-03 20:00:29 | DEBUG    | Benzerlik düşük: 10.21% < 75.08%
+2026-02-03 20:00:29 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 10%)
+2026-02-03 20:00:31 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:31 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:32 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:32 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:32 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:32 | DEBUG    | BitBlt - Parlaklık ortalaması: 53.02
+2026-02-03 20:00:32 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:32 | DEBUG    | Benzerlik oranı: 12.02%
+2026-02-03 20:00:32 | DEBUG    | Benzerlik düşük: 12.02% < 75.08%
+2026-02-03 20:00:32 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 12%)
+2026-02-03 20:00:34 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:34 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:35 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:35 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:35 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:35 | DEBUG    | BitBlt - Parlaklık ortalaması: 53.04
+2026-02-03 20:00:35 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:35 | DEBUG    | Benzerlik oranı: 10.56%
+2026-02-03 20:00:35 | DEBUG    | Benzerlik düşük: 10.56% < 75.08%
+2026-02-03 20:00:35 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 11%)
+2026-02-03 20:00:37 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:37 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:38 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:38 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:38 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:38 | DEBUG    | BitBlt - Parlaklık ortalaması: 55.25
+2026-02-03 20:00:38 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:38 | DEBUG    | Benzerlik oranı: 0.82%
+2026-02-03 20:00:38 | DEBUG    | Benzerlik düşük: 0.82% < 75.08%
+2026-02-03 20:00:38 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 1%)
+2026-02-03 20:00:40 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:40 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:41 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:41 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:41 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:41 | DEBUG    | BitBlt - Parlaklık ortalaması: 55.24
+2026-02-03 20:00:41 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:41 | DEBUG    | Benzerlik oranı: 2.22%
+2026-02-03 20:00:41 | DEBUG    | Benzerlik düşük: 2.22% < 75.08%
+2026-02-03 20:00:41 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 2%)
+2026-02-03 20:00:43 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:43 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:44 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:44 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:44 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:44 | DEBUG    | BitBlt - Parlaklık ortalaması: 55.26
+2026-02-03 20:00:44 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:44 | DEBUG    | Benzerlik oranı: 0.83%
+2026-02-03 20:00:44 | DEBUG    | Benzerlik düşük: 0.83% < 75.08%
+2026-02-03 20:00:44 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 1%)
+2026-02-03 20:00:47 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:47 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:47 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:47 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:47 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:47 | DEBUG    | BitBlt - Parlaklık ortalaması: 55.14
+2026-02-03 20:00:47 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:47 | DEBUG    | Benzerlik oranı: 1.72%
+2026-02-03 20:00:47 | DEBUG    | Benzerlik düşük: 1.72% < 75.08%
+2026-02-03 20:00:47 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 2%)
+2026-02-03 20:00:50 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:50 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:50 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:50 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:50 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:50 | DEBUG    | BitBlt - Parlaklık ortalaması: 55.09
+2026-02-03 20:00:50 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:50 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:50 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:50 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:53 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:53 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:53 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:53 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:53 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:53 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.94
+2026-02-03 20:00:53 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:53 | DEBUG    | Benzerlik oranı: 3.05%
+2026-02-03 20:00:53 | DEBUG    | Benzerlik düşük: 3.05% < 75.08%
+2026-02-03 20:00:53 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 3%)
+2026-02-03 20:00:56 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:56 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:56 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:56 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:56 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:56 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.04
+2026-02-03 20:00:56 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:56 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:00:56 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:00:56 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:00:59 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:00:59 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:00:59 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:00:59 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:00:59 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:00:59 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.73
+2026-02-03 20:00:59 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:00:59 | DEBUG    | Benzerlik oranı: 8.54%
+2026-02-03 20:00:59 | DEBUG    | Benzerlik düşük: 8.54% < 75.08%
+2026-02-03 20:00:59 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 9%)
+2026-02-03 20:01:02 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:02 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:02 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:02 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:02 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:02 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.57
+2026-02-03 20:01:02 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:02 | DEBUG    | Benzerlik oranı: 10.51%
+2026-02-03 20:01:02 | DEBUG    | Benzerlik düşük: 10.51% < 75.08%
+2026-02-03 20:01:02 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 11%)
+2026-02-03 20:01:05 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:05 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:05 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:05 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:05 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:05 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.58
+2026-02-03 20:01:05 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:05 | DEBUG    | Benzerlik oranı: 11.28%
+2026-02-03 20:01:05 | DEBUG    | Benzerlik düşük: 11.28% < 75.08%
+2026-02-03 20:01:05 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 11%)
+2026-02-03 20:01:08 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:08 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:08 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:08 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:08 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:08 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.74
+2026-02-03 20:01:08 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:08 | DEBUG    | Benzerlik oranı: 10.49%
+2026-02-03 20:01:08 | DEBUG    | Benzerlik düşük: 10.49% < 75.08%
+2026-02-03 20:01:08 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 10%)
+2026-02-03 20:01:11 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:11 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:11 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:11 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:11 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:11 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.82
+2026-02-03 20:01:11 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:11 | DEBUG    | Benzerlik oranı: 10.32%
+2026-02-03 20:01:11 | DEBUG    | Benzerlik düşük: 10.32% < 75.08%
+2026-02-03 20:01:11 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 10%)
+2026-02-03 20:01:14 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:14 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:14 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:14 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:14 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:14 | DEBUG    | BitBlt - Parlaklık ortalaması: 50.83
+2026-02-03 20:01:14 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:14 | DEBUG    | Benzerlik oranı: 8.56%
+2026-02-03 20:01:14 | DEBUG    | Benzerlik düşük: 8.56% < 75.08%
+2026-02-03 20:01:14 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 9%)
+2026-02-03 20:01:17 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:17 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:17 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:17 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:17 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:18 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.48
+2026-02-03 20:01:18 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:18 | DEBUG    | Benzerlik oranı: 10.71%
+2026-02-03 20:01:18 | DEBUG    | Benzerlik düşük: 10.71% < 75.08%
+2026-02-03 20:01:18 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 11%)
+2026-02-03 20:01:20 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:20 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:20 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:20 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:20 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:21 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.46
+2026-02-03 20:01:21 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:21 | DEBUG    | Benzerlik oranı: 10.55%
+2026-02-03 20:01:21 | DEBUG    | Benzerlik düşük: 10.55% < 75.08%
+2026-02-03 20:01:21 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 11%)
+2026-02-03 20:01:23 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:23 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:23 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:23 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:23 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:24 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.65
+2026-02-03 20:01:24 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:24 | DEBUG    | Benzerlik oranı: 10.23%
+2026-02-03 20:01:24 | DEBUG    | Benzerlik düşük: 10.23% < 75.08%
+2026-02-03 20:01:24 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 10%)
+2026-02-03 20:01:26 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:26 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:26 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:26 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:26 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:27 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.50
+2026-02-03 20:01:27 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:27 | DEBUG    | Benzerlik oranı: 10.58%
+2026-02-03 20:01:27 | DEBUG    | Benzerlik düşük: 10.58% < 75.08%
+2026-02-03 20:01:27 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 11%)
+2026-02-03 20:01:29 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:29 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:30 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:30 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:30 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:30 | DEBUG    | BitBlt - Parlaklık ortalaması: 53.95
+2026-02-03 20:01:30 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:30 | DEBUG    | Benzerlik oranı: 10.85%
+2026-02-03 20:01:30 | DEBUG    | Benzerlik düşük: 10.85% < 75.08%
+2026-02-03 20:01:30 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 11%)
+2026-02-03 20:01:32 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:32 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:33 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:33 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:33 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:33 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.50
+2026-02-03 20:01:33 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:33 | DEBUG    | Benzerlik oranı: 11.27%
+2026-02-03 20:01:33 | DEBUG    | Benzerlik düşük: 11.27% < 75.08%
+2026-02-03 20:01:33 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 11%)
+2026-02-03 20:01:35 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:35 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:36 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:36 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:36 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:36 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.49
+2026-02-03 20:01:36 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:36 | DEBUG    | Benzerlik oranı: 12.20%
+2026-02-03 20:01:36 | DEBUG    | Benzerlik düşük: 12.20% < 75.08%
+2026-02-03 20:01:36 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 12%)
+2026-02-03 20:01:38 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:38 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:39 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:39 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:39 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:39 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.67
+2026-02-03 20:01:39 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:39 | DEBUG    | Benzerlik oranı: 10.59%
+2026-02-03 20:01:39 | DEBUG    | Benzerlik düşük: 10.59% < 75.08%
+2026-02-03 20:01:39 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 11%)
+2026-02-03 20:01:41 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:41 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:42 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:42 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:42 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:42 | DEBUG    | BitBlt - Parlaklık ortalaması: 54.45
+2026-02-03 20:01:42 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:42 | DEBUG    | Benzerlik oranı: 12.43%
+2026-02-03 20:01:42 | DEBUG    | Benzerlik düşük: 12.43% < 75.08%
+2026-02-03 20:01:42 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 12%)
+2026-02-03 20:01:44 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:44 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:45 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:45 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:45 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:45 | DEBUG    | BitBlt - Parlaklık ortalaması: 57.54
+2026-02-03 20:01:45 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:45 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:01:45 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:01:45 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:01:48 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:48 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:48 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:48 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:48 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:48 | DEBUG    | BitBlt - Parlaklık ortalaması: 56.12
+2026-02-03 20:01:48 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:48 | DEBUG    | Benzerlik oranı: 1.27%
+2026-02-03 20:01:48 | DEBUG    | Benzerlik düşük: 1.27% < 75.08%
+2026-02-03 20:01:48 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 1%)
+2026-02-03 20:01:51 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:51 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:51 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:51 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:51 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:51 | DEBUG    | BitBlt - Parlaklık ortalaması: 55.88
+2026-02-03 20:01:51 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:51 | DEBUG    | Benzerlik oranı: 0.00%
+2026-02-03 20:01:51 | DEBUG    | Benzerlik düşük: 0.00% < 75.08%
+2026-02-03 20:01:51 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 0%)
+2026-02-03 20:01:54 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:54 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:54 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:54 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:54 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:54 | DEBUG    | BitBlt - Parlaklık ortalaması: 48.07
+2026-02-03 20:01:54 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:54 | DEBUG    | Benzerlik oranı: 18.61%
+2026-02-03 20:01:54 | DEBUG    | Benzerlik düşük: 18.61% < 75.08%
+2026-02-03 20:01:54 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 19%)
+2026-02-03 20:01:57 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:01:57 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:01:57 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:01:57 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:01:57 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:01:57 | DEBUG    | BitBlt - Parlaklık ortalaması: 49.25
+2026-02-03 20:01:57 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:01:57 | DEBUG    | Benzerlik oranı: 20.11%
+2026-02-03 20:01:57 | DEBUG    | Benzerlik düşük: 20.11% < 75.08%
+2026-02-03 20:01:57 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 20%)
+2026-02-03 20:02:00 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:02:00 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:02:00 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:02:00 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:02:00 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:02:00 | DEBUG    | BitBlt - Parlaklık ortalaması: 47.62
+2026-02-03 20:02:00 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:02:00 | DEBUG    | Benzerlik oranı: 10.19%
+2026-02-03 20:02:00 | DEBUG    | Benzerlik düşük: 10.19% < 75.08%
+2026-02-03 20:02:00 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 10%)
+2026-02-03 20:02:03 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:02:03 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:02:03 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:02:03 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:02:03 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:02:03 | DEBUG    | BitBlt - Parlaklık ortalaması: 47.44
+2026-02-03 20:02:03 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:02:03 | DEBUG    | Benzerlik oranı: 13.12%
+2026-02-03 20:02:03 | DEBUG    | Benzerlik düşük: 13.12% < 75.08%
+2026-02-03 20:02:03 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 13%)
+2026-02-03 20:02:06 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:02:06 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:02:06 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:02:06 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:02:06 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:02:06 | DEBUG    | BitBlt - Parlaklık ortalaması: 47.51
+2026-02-03 20:02:06 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:02:06 | DEBUG    | Benzerlik oranı: 13.92%
+2026-02-03 20:02:06 | DEBUG    | Benzerlik düşük: 13.92% < 75.08%
+2026-02-03 20:02:06 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 14%)
+2026-02-03 20:02:09 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:02:09 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:02:09 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:02:09 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:02:09 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:02:09 | DEBUG    | BitBlt - Parlaklık ortalaması: 47.45
+2026-02-03 20:02:09 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:02:09 | DEBUG    | Benzerlik oranı: 15.58%
+2026-02-03 20:02:09 | DEBUG    | Benzerlik düşük: 15.58% < 75.08%
+2026-02-03 20:02:09 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 16%)
+2026-02-03 20:02:12 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:02:12 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:02:12 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:02:12 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:02:12 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:02:12 | DEBUG    | BitBlt - Parlaklık ortalaması: 47.50
+2026-02-03 20:02:12 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:02:12 | DEBUG    | Benzerlik oranı: 14.25%
+2026-02-03 20:02:12 | DEBUG    | Benzerlik düşük: 14.25% < 75.08%
+2026-02-03 20:02:12 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 14%)
+2026-02-03 20:02:15 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:02:15 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:02:15 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:02:15 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:02:15 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:02:15 | DEBUG    | BitBlt - Parlaklık ortalaması: 47.39
+2026-02-03 20:02:15 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:02:15 | DEBUG    | Benzerlik oranı: 15.35%
+2026-02-03 20:02:15 | DEBUG    | Benzerlik düşük: 15.35% < 75.08%
+2026-02-03 20:02:15 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 15%)
+2026-02-03 20:02:18 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:02:18 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:02:18 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:02:18 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:02:18 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:02:18 | DEBUG    | BitBlt - Parlaklık ortalaması: 47.40
+2026-02-03 20:02:19 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:02:19 | DEBUG    | Benzerlik oranı: 14.00%
+2026-02-03 20:02:19 | DEBUG    | Benzerlik düşük: 14.00% < 75.08%
+2026-02-03 20:02:19 | DEBUG    | ❌ Captcha bulunamadı (Benzerlik: 14%)
+2026-02-03 20:02:21 | WARNING  | Pencere öne getirilemedi: (5, 'BringWindowToTop', 'Erişim engellendi.')
+2026-02-03 20:02:21 | DEBUG    | Pencere boyutu: 1020x799
+2026-02-03 20:02:21 | DEBUG    | Görüntü parlaklık ortalaması: 0.00
+2026-02-03 20:02:21 | WARNING  | Görüntü tamamen siyah, alternatif yöntem deneniyor...
+2026-02-03 20:02:21 | WARNING  | PrintWindow hatası: Siyah ekran, BitBlt deneniyor...
+2026-02-03 20:02:22 | DEBUG    | BitBlt - Parlaklık ortalaması: 45.93
+2026-02-03 20:02:22 | DEBUG    | ✓ BitBlt ile yakalama başarılı
+2026-02-03 20:02:22 | DEBUG    | Benzerlik oranı: 93.11%
+2026-02-03 20:02:22 | INFO     | ✅ CAPTCHA BULUNDU! Konum: (317, 208)
+2026-02-03 20:02:22 | INFO     | ✅ CAPTCHA ALGILANDI! Benzerlik: 93%
+2026-02-03 20:02:23 | WARNING  | ⚠ OCR metin algılayamadı
+2026-02-03 20:02:23 | INFO     | 💾 Kayıt başlatıldı: Dogrulama9_20260203_200223.png
+2026-02-03 20:02:23 | DEBUG    |   ✓ Görüntü kaydedildi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures\Dogrulama9_20260203_200223.png
+2026-02-03 20:02:23 | DEBUG    |   ✓ Metin dosyası kaydedildi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures\Dogrulama9_20260203_200223.txt
+2026-02-03 20:02:23 | INFO     | Ayarlar kaydediliyor...
+2026-02-03 20:02:23 | DEBUG    | Şablon görüntü kaydedildi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_captures\captcha_template.png
+2026-02-03 20:02:23 | INFO     | ✓ Ayarlar kaydedildi: C:\Users\acika\OneDrive\Desktop\DenizMacro\captcha_config_pro.json
+2026-02-03 20:02:23 | INFO     | 🔍 OCR ile detaylı analiz başlatılıyor...
+2026-02-03 20:02:42 | WARNING  | ⚠️ OCR ile eşleşme bulunamadı
+2026-02-03 20:02:42 | INFO     | ✅ KAYIT BAŞARILI! Toplam: 9
+2026-02-03 20:02:42 | INFO     |    Dosya: Dogrulama9_20260203_200223.png
+2026-02-03 20:02:42 | INFO     |    Benzerlik: 93.11%
+2026-02-03 20:02:42 | INFO     |    OCR: Algılanamadı
+2026-02-03 20:02:42 | INFO     | ⏳ 5 dakika bekleniyor... (300 saniye)
+2026-02-03 20:02:43 | DEBUG    | ⏳ Kalan süre: 300 saniye
+2026-02-03 20:03:13 | DEBUG    | ⏳ Kalan süre: 270 saniye
+2026-02-03 20:03:43 | DEBUG    | ⏳ Kalan süre: 240 saniye
+2026-02-03 20:04:13 | DEBUG    | ⏳ Kalan süre: 210 saniye
+2026-02-03 20:04:43 | DEBUG    | ⏳ Kalan süre: 180 saniye
+2026-02-03 20:05:13 | DEBUG    | ⏳ Kalan süre: 150 saniye
+2026-02-03 20:05:43 | DEBUG    | ⏳ Kalan süre: 120 saniye
+2026-02-03 20:06:13 | DEBUG    | ⏳ Kalan süre: 90 saniye
+2026-02-03 20:06:43 | DEBUG    | ⏳ Kalan süre: 60 saniye
+2026-02-03 20:07:13 | DEBUG    | ⏳ Kalan süre: 30 saniye
+2026-02-03 20:07:42 | INFO     | ✓ 5 dakika bekleme tamamlandı, taramaya devam ediliyor...
+2026-02-03 20:07:44 | ERROR    | Pencere artık mevcut değil
+2026-02-03 20:07:44 | WARNING  | ⚠ Görüntü alınamadı, bekleniyor...
+2026-02-03 20:07:46 | ERROR    | Pencere artık mevcut değil
+2026-02-03 20:07:46 | WARNING  | ⚠ Görüntü alınamadı, bekleniyor...
+2026-02-03 20:07:48 | ERROR    | Pencere artık mevcut değil
+2026-02-03 20:07:48 | WARNING  | ⚠ Görüntü alınamadı, bekleniyor...
+2026-02-03 20:07:50 | ERROR    | Pencere artık mevcut değil
+2026-02-03 20:07:50 | WARNING  | ⚠ Görüntü alınamadı, bekleniyor...
+2026-02-03 20:07:52 | ERROR    | Pencere artık mevcut değil
+2026-02-03 20:07:52 | ERROR    | ⛔ 5 ardışık hata! İzleme durduruluyor...
+2026-02-03 20:07:52 | INFO     | ⏹ İzleme döngüsü sonlandırıldı

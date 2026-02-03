@@ -11,6 +11,10 @@ Pillow>=10.0.0
 # Windows işlemleri
 pywin32>=306
 
+# Otomasyon (Fare ve Klavye kontrolü)
+pyautogui>=0.9.54
+
+
 # OCR (opsiyonel)
 pytesseract>=0.3.10
 easyocr>=1.7.0
