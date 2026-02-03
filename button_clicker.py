@@ -93,19 +93,12 @@ class ButtonClicker:
             try:
                 # Fareyi hedefe taşı
                 win32api.SetCursorPos((screen_x, screen_y))
-                time.sleep(0.3)
+                time.sleep(0.05)  # Minimal gecikme
                 
                 # Fare pozisyonunu doğrula
                 current_pos = win32api.GetCursorPos()
                 logger.info(f"✓ Fare pozisyonu: {current_pos}")
                 
-                if abs(current_pos[0] - screen_x) > 5 or abs(current_pos[1] - screen_y) > 5:
-                    logger.warning(f"⚠️ Fare hedeften uzak! Hedef: ({screen_x}, {screen_y}), Gerçek: {current_pos}")
-                    # Tekrar dene
-                    win32api.SetCursorPos((screen_x, screen_y))
-                    time.sleep(0.2)
-                    current_pos = win32api.GetCursorPos()
-                    logger.info(f"   2. deneme pozisyon: {current_pos}")
                 
             except Exception as move_error:
                 logger.error(f"❌ Fare hareket hatası: {move_error}")
@@ -117,10 +110,9 @@ class ButtonClicker:
             try:
                 # YÖNTEM 1: mouse_event (en güvenilir)
                 logger.info("   Yöntem 1: mouse_event kullanılıyor")
-                win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, screen_x, screen_y, 0, 0)
-                time.sleep(0.05)
-                win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, screen_x, screen_y, 0, 0)
-                time.sleep(0.1)
+                win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                time.sleep(0.01)  # Minimal gecikme
+                win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
                 logger.info("   ✓ mouse_event tamamlandı")
                 
             except Exception as click_error:
@@ -136,16 +128,6 @@ class ButtonClicker:
                 except Exception as pag_error:
                     logger.error(f"❌ PyAutoGUI hatası: {pag_error}")
                     return False
-            
-            # Kısa bekle
-            time.sleep(0.2)
-            
-            # Fareyi eski pozisyona döndür (opsiyonel)
-            try:
-                win32api.SetCursorPos(old_pos)
-                logger.info(f"↩️  Fare eski pozisyona döndü: {old_pos}")
-            except:
-                pass
             
             logger.info("✅ Tıklama başarılı!")
             return True

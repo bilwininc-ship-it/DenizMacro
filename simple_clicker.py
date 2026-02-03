@@ -15,7 +15,7 @@ class SimpleCaptchaClicker:
     def __init__(self, config_file="captcha_config_pro.json"):
         # Güvenlik
         pyautogui.FAILSAFE = True
-        pyautogui.PAUSE = 0.3
+        pyautogui.PAUSE = 0.05  # Minimal gecikme için optimize edildi
         
         # Config dosyasından buton koordinatlarını yükle
         self.button_regions = []
@@ -78,9 +78,9 @@ class SimpleCaptchaClicker:
             print(f"\n🎯 Buton {button_index + 1} tıklanıyor...")
             print(f"   Koordinat: ({center_x}, {center_y})")
             
-            # Fareyi götür
-            pyautogui.moveTo(center_x, center_y, duration=0.5)
-            time.sleep(0.2)
+            # Fareyi götür ve hemen tıkla
+            pyautogui.moveTo(center_x, center_y, duration=0.1)
+ 
             
             # Tıkla
             pyautogui.click()
