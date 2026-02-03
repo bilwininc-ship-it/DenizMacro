@@ -14,6 +14,7 @@ import win32con
 import win32api
 from ctypes import windll
 import logging
+import pyautogui  # Gerçek fare hareketi için
 
 # OCR kütüphaneleri
 try:
@@ -957,7 +958,7 @@ class CaptchaDetectorPro:
     
     
     def click_button(self, button_number):
-        """Belirtilen butona otomatik tıkla (1-4) - POSTMESSAGE YÖNTEMİ"""
+        """Belirtilen butona GERÇEK fare hareketi ile otomatik tıkla (1-4)"""
         if not self.button_regions or button_number < 1 or button_number > 4:
             logger.error(f"Geçersiz buton numarası: {button_number}")
             return False
@@ -971,44 +972,72 @@ class CaptchaDetectorPro:
             center_x = (x1 + x2) // 2
             center_y = (y1 + y2) // 2
             
-            logger.info(f"🖱️ Buton {button_number}'e tıklanıyor (PostMessage yöntemi)...")
+            logger.info(f"🖱️ Buton {button_number}'e GERÇEK fare ile tıklanıyor...")
             logger.debug(f"  Buton bölgesi: ({x1}, {y1}, {x2}, {y2})")
             logger.debug(f"  Buton merkezi (lokal): ({center_x}, {center_y})")
             
             # Pencereyi aktif et
             try:
                 win32gui.ShowWindow(self.window_handle, win32con.SW_RESTORE)
-                time.sleep(0.1)
+                time.sleep(0.15)
                 win32gui.SetForegroundWindow(self.window_handle)
-                time.sleep(0.2)
+                time.sleep(0.25)
             except Exception as focus_error:
                 logger.warning(f"Pencere odaklama hatası: {focus_error}")
             
-            # LPARAM oluştur (koordinatları birleştir)
-            lparam = win32api.MAKELONG(center_x, center_y)
+            # CLIENT AREA koordinatlarını al (global koordinat için)
+            try:
+                client_to_screen = win32gui.ClientToScreen(self.window_handle, (0, 0))
+                
+                # Global koordinatlara çevir
+                global_x = client_to_screen[0] + center_x
+                global_y = client_to_screen[1] + center_y
+                
+                logger.debug(f"  Client area offset: {client_to_screen}")
+                logger.debug(f"  Global koordinat: ({global_x}, {global_y})")
+                
+            except Exception as coord_error:
+                logger.error(f"Koordinat hesaplama hatası: {coord_error}")
+                # Yedek yöntem: GetWindowRect
+                left, top, _, _ = win32gui.GetWindowRect(self.window_handle)
+                global_x = left + center_x
+                global_y = top + center_y
+                logger.warning(f"  Yedek koordinat kullanılıyor: ({global_x}, {global_y})")
             
-            logger.debug(f"  LPARAM: {lparam} (X={center_x}, Y={center_y})")
+            # Eski fare pozisyonunu kaydet
+            old_x, old_y = pyautogui.position()
+            logger.debug(f"  Eski fare pozisyonu: ({old_x}, {old_y})")
             
-            # WM_LBUTTONDOWN mesajı gönder
-            result_down = win32gui.SendMessage(
-                self.window_handle, 
-                win32con.WM_LBUTTONDOWN, 
-                win32con.MK_LBUTTON, 
-                lparam
-            )
-            time.sleep(0.05)
+            # PyAutoGUI güvenlik ayarı (failsafe devre dışı - isteğe bağlı)
+            pyautogui.FAILSAFE = False
             
-            # WM_LBUTTONUP mesajı gönder
-            result_up = win32gui.SendMessage(
-                self.window_handle, 
-                win32con.WM_LBUTTONUP, 
-                0, 
-                lparam
-            )
+            # GERÇEK FARE HAREKETİ - Yavaş ve insansı hareket
+            logger.info(f"  🐭 Fare hedefe hareket ediyor: ({global_x}, {global_y})")
+            pyautogui.moveTo(global_x, global_y, duration=0.5, tween=pyautogui.easeInOutQuad)
+            time.sleep(0.1)
             
-            logger.info(f"✅ Buton {button_number}'e başarıyla tıklandı (PostMessage)!")
-            logger.debug(f"  Koordinat: ({center_x}, {center_y})")
-            logger.debug(f"  SendMessage sonuçları - Down: {result_down}, Up: {result_up}")
+            # Fare pozisyonunu doğrula
+            actual_x, actual_y = pyautogui.position()
+            logger.debug(f"  Gerçek fare pozisyonu: ({actual_x}, {actual_y})")
+            
+            if abs(actual_x - global_x) > 5 or abs(actual_y - global_y) > 5:
+                logger.warning(f"  ⚠️ Fare hedeften uzakta! Hedef: ({global_x}, {global_y}), Gerçek: ({actual_x}, {actual_y})")
+                # Tekrar deneme
+                pyautogui.moveTo(global_x, global_y, duration=0.2)
+                time.sleep(0.1)
+            
+            # GERÇEK TIKLAMA - PyAutoGUI ile
+            logger.info(f"  👆 TIKLAMA yapılıyor...")
+            pyautogui.click(clicks=1, interval=0.1, button='left')
+            time.sleep(0.15)
+            
+            logger.info(f"✅ Buton {button_number}'e GERÇEK fare ile başarıyla tıklandı!")
+            logger.debug(f"  Koordinat: ({global_x}, {global_y})")
+            
+            # Fareyi eski pozisyona yavaşça geri al (opsiyonel)
+            time.sleep(0.2)
+            pyautogui.moveTo(old_x, old_y, duration=0.4, tween=pyautogui.easeInOutQuad)
+            logger.debug(f"  Fare eski pozisyona döndü: ({old_x}, {old_y})")
             
             return True
             

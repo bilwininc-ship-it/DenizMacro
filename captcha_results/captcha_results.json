@@ -76,5 +76,31 @@
     ],
     "correct_button": 3,
     "correct_button_value": "249187"
+  },
+  {
+    "timestamp": "2026-02-03 02:57:22",
+    "image_file": "Dogrulama7_20260203_025705.png",
+    "main_number": "",
+    "buttons": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "correct_button": 1,
+    "correct_button_value": ""
+  },
+  {
+    "timestamp": "2026-02-03 03:02:43",
+    "image_file": "Dogrulama8_20260203_030231.png",
+    "main_number": "353867",
+    "buttons": [
+      "448869",
+      "636649",
+      "353867",
+      "162425"
+    ],
+    "correct_button": 3,
+    "correct_button_value": "353867"
   }
 ]
