@@ -7331,3 +7331,4 @@ pywintypes.error: (0, 'SetCursorPos', 'No error message is available')
 2026-02-03 03:02:47 | INFO     |    OCR: Algılanamadı
 2026-02-03 03:02:47 | INFO     | ⏳ 5 dakika bekleniyor... (300 saniye)
 2026-02-03 03:02:48 | DEBUG    | ⏳ Kalan süre: 300 saniye
+2026-02-03 03:03:18 | DEBUG    | ⏳ Kalan süre: 270 saniye
