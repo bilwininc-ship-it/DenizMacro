@@ -154,5 +154,44 @@
     ],
     "correct_button": 2,
     "correct_button_value": "846018"
+  },
+  {
+    "timestamp": "2026-02-05 17:23:47",
+    "image_file": "Dogrulama14_20260205_172330.png",
+    "main_number": "173923",
+    "buttons": [
+      "173923",
+      "322933",
+      "688635",
+      "717768"
+    ],
+    "correct_button": 1,
+    "correct_button_value": "173923"
+  },
+  {
+    "timestamp": "2026-02-05 18:07:39",
+    "image_file": "Dogrulama15_20260205_180722.png",
+    "main_number": "",
+    "buttons": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "correct_button": 1,
+    "correct_button_value": ""
+  },
+  {
+    "timestamp": "2026-02-05 19:17:45",
+    "image_file": "Dogrulama16_20260205_191733.png",
+    "main_number": "451045",
+    "buttons": [
+      "997068",
+      "693326",
+      "451045",
+      "442255"
+    ],
+    "correct_button": 3,
+    "correct_button_value": "451045"
   }
 ]

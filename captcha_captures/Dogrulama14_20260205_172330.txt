@@ -1,0 +1,8 @@
+Yakalanma Zamanı: 2026-02-05 17:23:30
+Benzerlik: 93.25%
+OCR Metni: Algılanamadı
+
+--- OCR ANALİZİ ---
+Ana Sayı: 173923
+Butonlar: 173923, 322933, 688635, 717768
+Doğru Buton: 1

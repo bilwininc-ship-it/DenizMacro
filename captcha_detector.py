@@ -981,7 +981,7 @@ class CaptchaDetectorPro:
     
     
     def click_button(self, button_number):
-        """Belirtilen butona GERÇEK fare hareketi ile otomatik tıkla (1-4)"""
+        """Belirtilen butona GERÇEK fare hareketi ile otomatik tıkla (1-4) - DÜZELTİLMİŞ"""
         if not self.button_regions or button_number < 1 or button_number > 4:
             logger.error(f"Geçersiz buton numarası: {button_number}")
             return False
@@ -991,76 +991,94 @@ class CaptchaDetectorPro:
             btn_index = button_number - 1
             x1, y1, x2, y2 = self.button_regions[btn_index]
             
-            # Butonun merkezini hesapla (LOKAL KOORDİNATLAR)
+            # Butonun merkezini hesapla (IMAGE ÜZERİNDE LOKAL KOORDİNATLAR)
             center_x = (x1 + x2) // 2
             center_y = (y1 + y2) // 2
             
             logger.info(f"🖱️ Buton {button_number}'e GERÇEK fare ile tıklanıyor...")
-            logger.debug(f"  Buton bölgesi: ({x1}, {y1}, {x2}, {y2})")
-            logger.debug(f"  Buton merkezi (lokal): ({center_x}, {center_y})")
+            logger.debug(f"  Buton bölgesi (image): ({x1}, {y1}, {x2}, {y2})")
+            logger.debug(f"  Buton merkezi (image): ({center_x}, {center_y})")
             
-            # Pencereyi aktif et
+            # ÖNEMLİ: Buton koordinatları CAPTCHA IMAGE üzerinde, 
+            # pencere client area'sına çevirmek için captcha_region offset'i ekle
+            if self.captcha_region:
+                captcha_x1, captcha_y1, _, _ = self.captcha_region
+                # Image koordinatlarını client area koordinatlarına çevir
+                client_x = captcha_x1 + center_x
+                client_y = captcha_y1 + center_y
+                logger.debug(f"  Captcha region offset: ({captcha_x1}, {captcha_y1})")
+                logger.debug(f"  Client area koordinat: ({client_x}, {client_y})")
+            else:
+                # Captcha region yoksa direkt kullan (yedek)
+                client_x = center_x
+                client_y = center_y
+                logger.warning(f"  ⚠️ Captcha region yok, direkt koordinat kullanılıyor")
+            
+            # Pencereyi aktif et - GÜÇLENDİRİLMİŞ
             try:
                 win32gui.ShowWindow(self.window_handle, win32con.SW_RESTORE)
-                time.sleep(0.15)
+                time.sleep(0.2)
                 win32gui.SetForegroundWindow(self.window_handle)
-                time.sleep(0.25)
+                time.sleep(0.3)
+                win32gui.BringWindowToTop(self.window_handle)
+                time.sleep(0.15)
+                logger.info("  ✓ Pencere aktif edildi")
             except Exception as focus_error:
                 logger.warning(f"Pencere odaklama hatası: {focus_error}")
             
-            # CLIENT AREA koordinatlarını al (global koordinat için)
+            # CLIENT AREA koordinatlarını SCREEN koordinatlarına çevir
             try:
                 client_to_screen = win32gui.ClientToScreen(self.window_handle, (0, 0))
                 
-                # Global koordinatlara çevir
-                global_x = client_to_screen[0] + center_x
-                global_y = client_to_screen[1] + center_y
+                # Global (screen) koordinatlara çevir
+                global_x = client_to_screen[0] + client_x
+                global_y = client_to_screen[1] + client_y
                 
-                logger.debug(f"  Client area offset: {client_to_screen}")
-                logger.debug(f"  Global koordinat: ({global_x}, {global_y})")
+                logger.debug(f"  Client-to-screen offset: {client_to_screen}")
+                logger.info(f"  ✅ HEDEF EKRAN KOORDİNATI: ({global_x}, {global_y})")
                 
             except Exception as coord_error:
                 logger.error(f"Koordinat hesaplama hatası: {coord_error}")
-                # Yedek yöntem: GetWindowRect
+                # Yedek yöntem: GetWindowRect (title bar dahil)
                 left, top, _, _ = win32gui.GetWindowRect(self.window_handle)
-                global_x = left + center_x
-                global_y = top + center_y
+                # Window rect title bar içerir, client area için düzeltme gerekebilir
+                global_x = left + client_x + 8  # Border offset (yaklaşık)
+                global_y = top + client_y + 31  # Title bar offset (yaklaşık)
                 logger.warning(f"  Yedek koordinat kullanılıyor: ({global_x}, {global_y})")
             
             # Eski fare pozisyonunu kaydet
             old_x, old_y = pyautogui.position()
             logger.debug(f"  Eski fare pozisyonu: ({old_x}, {old_y})")
             
-            # PyAutoGUI güvenlik ayarı (failsafe devre dışı - isteğe bağlı)
+            # PyAutoGUI güvenlik ayarı
             pyautogui.FAILSAFE = False
             
-            # GERÇEK FARE HAREKETİ - Yavaş ve insansı hareket
+            # GERÇEK FARE HAREKETİ - Daha hızlı ve kesin
             logger.info(f"  🐭 Fare hedefe hareket ediyor: ({global_x}, {global_y})")
-            pyautogui.moveTo(global_x, global_y, duration=0.5, tween=pyautogui.easeInOutQuad)
-            time.sleep(0.1)
+            pyautogui.moveTo(global_x, global_y, duration=0.3, tween=pyautogui.easeInOutQuad)
+            time.sleep(0.15)
             
             # Fare pozisyonunu doğrula
             actual_x, actual_y = pyautogui.position()
-            logger.debug(f"  Gerçek fare pozisyonu: ({actual_x}, {actual_y})")
+            logger.info(f"  📍 Gerçek fare pozisyonu: ({actual_x}, {actual_y})")
             
-            if abs(actual_x - global_x) > 5 or abs(actual_y - global_y) > 5:
+            if abs(actual_x - global_x) > 10 or abs(actual_y - global_y) > 10:
                 logger.warning(f"  ⚠️ Fare hedeften uzakta! Hedef: ({global_x}, {global_y}), Gerçek: ({actual_x}, {actual_y})")
-                # Tekrar deneme
-                pyautogui.moveTo(global_x, global_y, duration=0.2)
+                logger.warning(f"  ⚠️ Fark: X={abs(actual_x - global_x)}px, Y={abs(actual_y - global_y)}px")
+                # Tekrar deneme - daha kesin
+                pyautogui.moveTo(global_x, global_y, duration=0.1)
                 time.sleep(0.1)
+                actual_x, actual_y = pyautogui.position()
+                logger.info(f"  📍 Düzeltilmiş pozisyon: ({actual_x}, {actual_y})")
             
             # GERÇEK TIKLAMA - PyAutoGUI ile
             logger.info(f"  👆 TIKLAMA yapılıyor...")
             pyautogui.click(clicks=1, interval=0.1, button='left')
-            time.sleep(0.15)
+            time.sleep(0.2)
             
             logger.info(f"✅ Buton {button_number}'e GERÇEK fare ile başarıyla tıklandı!")
-            logger.debug(f"  Koordinat: ({global_x}, {global_y})")
-            
-            # Fareyi eski pozisyona yavaşça geri al (opsiyonel)
-            time.sleep(0.2)
-            pyautogui.moveTo(old_x, old_y, duration=0.4, tween=pyautogui.easeInOutQuad)
-            logger.debug(f"  Fare eski pozisyona döndü: ({old_x}, {old_y})")
+            logger.info(f"   Hedef koordinat: ({global_x}, {global_y})")
+            logger.info(f"   Gerçek tıklama: ({actual_x}, {actual_y})")
             
             return True
             
@@ -1070,7 +1088,7 @@ class CaptchaDetectorPro:
             traceback.print_exc()
             return False
     
-    
+
     def toggle_monitoring(self):
         """İzlemeyi başlat/durdur"""
         if self.is_running:
@@ -1381,7 +1399,8 @@ class CaptchaDetectorPro:
                         logger.warning("⚠️ Buton koordinatları eksik, otomatik tıklama yapılamadı")
                         
                 else:
-                    logger.warning("⚠️ OCR ile eşleşme bulunamadı")
+                    logger.warning("⚠️ OCR ile eşleşme bulunamadı - TIKLAMA YAPILMAYACAK")
+                    logger.info("ℹ️ Doğru sayı ekranda yok, beklemeye devam ediliyor...")
                     
             except Exception as ocr_error:
                 logger.error(f"⚠️ OCR analizi başarısız: {ocr_error}")

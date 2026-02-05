@@ -52,15 +52,15 @@ class ButtonClicker:
                         logger.error("❌ Pencere handle geçersiz!")
                         return False
                     
-                    # Pencereyi öne getir ve aktif et
+                    # Pencereyi öne getir ve aktif et - OPTİMİZE EDİLDİ (0.7s → 0.2s)
                     logger.info("🪟 Pencere aktif ediliyor...")
                     try:
                         win32gui.ShowWindow(window_handle, win32con.SW_RESTORE)
-                        time.sleep(0.2)
+                        time.sleep(0.05)
                         win32gui.SetForegroundWindow(window_handle)
-                        time.sleep(0.3)
+                        time.sleep(0.1)
                         win32gui.BringWindowToTop(window_handle)
-                        time.sleep(0.2)
+                        time.sleep(0.05)
                         logger.info("   ✓ Pencere aktif edildi")
                     except Exception as fg_error:
                         logger.warning(f"   ⚠️ Pencere öne getirilemedi: {fg_error}")
@@ -83,35 +83,26 @@ class ButtonClicker:
                 screen_x, screen_y = center_x, center_y
                 logger.info(f"🖥️  Direkt koordinat kullanılıyor: ({screen_x}, {screen_y})")
             
-            # Eski fare pozisyonunu kaydet
-            old_pos = win32api.GetCursorPos()
-            logger.info(f"💾 Eski fare pozisyonu: {old_pos}")
-            
-            # YÖNTEM 1: Windows API ile fare hareketi
+            # YÖNTEM 1: Windows API ile fare hareketi - OPTİMİZE EDİLDİ
             logger.info(f"🖱️  Fare hareket ediyor ({screen_x}, {screen_y})...")
             
             try:
                 # Fareyi hedefe taşı
                 win32api.SetCursorPos((screen_x, screen_y))
-                time.sleep(0.05)  # Minimal gecikme
-                
-                # Fare pozisyonunu doğrula
-                current_pos = win32api.GetCursorPos()
-                logger.info(f"✓ Fare pozisyonu: {current_pos}")
-                
+                time.sleep(0.02)  # Minimal gecikme - OPTİMİZE EDİLDİ
                 
             except Exception as move_error:
                 logger.error(f"❌ Fare hareket hatası: {move_error}")
                 return False
             
-            # TIKLAMA - 3 yöntem dene
+            # TIKLAMA - OPTİMİZE EDİLDİ
             logger.info("👆 Tıklama yapılıyor...")
             
             try:
                 # YÖNTEM 1: mouse_event (en güvenilir)
                 logger.info("   Yöntem 1: mouse_event kullanılıyor")
                 win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-                time.sleep(0.01)  # Minimal gecikme
+                time.sleep(0.005)  # Minimal gecikme - OPTİMİZE EDİLDİ
                 win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
                 logger.info("   ✓ mouse_event tamamlandı")
                 
